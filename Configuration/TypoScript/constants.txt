@@ -1,0 +1,66 @@
+plugin.tx_hypedirectory {
+	settings {
+		
+		common {
+			
+		}
+		
+		object {
+			contact {
+				
+				field {
+					images {
+						path = uploads/hype/directory/contact/images/
+					}
+				}
+			}
+			
+			register {
+				
+			}
+			
+			role {
+				
+			}
+		}
+		
+		view {
+			directory {
+				pid =
+				
+				action {
+					index {
+						common {
+							
+						}
+						
+						object {
+							contact {
+								field {
+									images {
+										width =
+										height =
+										maxWidth = 80
+										maxHeight =
+									}
+								}
+							}
+							
+							register {
+								
+							}
+							
+							role {
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	persistence {
+		storagePid = 
+	}
+}

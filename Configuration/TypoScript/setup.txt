@@ -1,0 +1,90 @@
+plugin.tx_hypedirectory {
+	persistence {
+		classes {
+			Tx_HypeDirectory_Domain_Model_Contact {
+				mapping {
+					tableName = tx_hypedirectory_domain_model_contact
+				}
+			}
+			
+			Tx_HypeDirectory_Domain_Model_Register {
+				mapping {
+					tableName = tx_hypedirectory_domain_model_register
+				}
+			}
+			
+			Tx_HypeDirectory_Domain_Model_Role {
+				mapping {
+					tableName = tx_hypedirectory_domain_model_role
+				}
+			}
+		}
+	}
+}
+
+plugin.tx_hypedirectory {
+	settings {
+		
+		common {
+			
+		}
+		
+		object {
+			contact {
+				
+				field {
+					images {
+						path = {$plugin.tx_hypedirectory.settings.object.contact.field.images.path}
+					}
+				}
+			}
+			
+			register {
+				
+			}
+			
+			role {
+				
+			}
+		}
+		
+		view {
+			directory {
+				pid =
+				
+				action {
+					index {
+						common {
+							
+						}
+						
+						object {
+							contact {
+								field {
+									images {
+										width = {$plugin.tx_hypedirectory.settings.view.directory.action.index.object.contact.field.images.width}
+										height = {$plugin.tx_hypedirectory.settings.view.directory.action.index.object.contact.field.images.height}
+										maxWidth = {$plugin.tx_hypedirectory.settings.view.directory.action.index.object.contact.field.images.maxWidth}
+										maxHeight = {$plugin.tx_hypedirectory.settings.view.directory.action.index.object.contact.field.images.maxHeight}
+									}
+								}
+							}
+							
+							register {
+								
+							}
+							
+							role {
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	template {
+		
+	}
+}

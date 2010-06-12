@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'hype_directory'</description>
+	</meta>
+	
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_hypedirectory.tabs.contact">Contact</label>
+			<label index="tx_hypedirectory.tabs.relations">Relations</label>
+			
+			<label index="tx_hypedirectory_domain_model_contact">Contact</label>
+			<label index="tx_hypedirectory_domain_model_contact.form_of_address">Form of address</label>
+				<label index="tx_hypedirectory_domain_model_contact.form_of_address.mister">Mister</label>
+				<label index="tx_hypedirectory_domain_model_contact.form_of_address.misses">Misses</label>
+				<label index="tx_hypedirectory_domain_model_contact.form_of_address.family">Family</label>
+				<label index="tx_hypedirectory_domain_model_contact.form_of_address.company">Company</label>
+			<label index="tx_hypedirectory_domain_model_contact.academic_title">Academic title</label>
+			<label index="tx_hypedirectory_domain_model_contact.first_name">First name</label>
+			<label index="tx_hypedirectory_domain_model_contact.middle_name">Middle name</label>
+			<label index="tx_hypedirectory_domain_model_contact.last_name">Last name</label>
+			<label index="tx_hypedirectory_domain_model_contact.images">Images</label>
+			<label index="tx_hypedirectory_domain_model_contact.gender">Gender</label>
+				<label index="tx_hypedirectory_domain_model_contact.gender.female">female</label>
+				<label index="tx_hypedirectory_domain_model_contact.gender.male">male</label>
+			<label index="tx_hypedirectory_domain_model_contact.date_of_birth">Date of birth</label>
+			<label index="tx_hypedirectory_domain_model_contact.street">Street</label>
+			<label index="tx_hypedirectory_domain_model_contact.postal_code">Postal code</label>
+			<label index="tx_hypedirectory_domain_model_contact.city">City</label>
+			<label index="tx_hypedirectory_domain_model_contact.stair">Stair</label>
+			<label index="tx_hypedirectory_domain_model_contact.floor">Floor</label>
+			<label index="tx_hypedirectory_domain_model_contact.door">Flat</label>
+			<label index="tx_hypedirectory_domain_model_contact.state">State</label>
+			<label index="tx_hypedirectory_domain_model_contact.country">Country</label>
+			<label index="tx_hypedirectory_domain_model_contact.telephone">Telephone number</label>
+			<label index="tx_hypedirectory_domain_model_contact.cellphone">Cellphone number</label>
+			<label index="tx_hypedirectory_domain_model_contact.fax">Fax number</label>
+			<label index="tx_hypedirectory_domain_model_contact.email">Email address</label>
+			<label index="tx_hypedirectory_domain_model_contact.website">Website address</label>
+			<label index="tx_hypedirectory_domain_model_contact.frontend_user">Frontend user</label>
+			<label index="tx_hypedirectory_domain_model_contact.backend_user">Backend user</label>
+			<label index="tx_hypedirectory_domain_model_contact.remark">Remark</label>
+			
+			<label index="tx_hypedirectory_domain_model_role">Role</label>
+			<label index="tx_hypedirectory_domain_model_role.title">Title</label>
+			<label index="tx_hypedirectory_domain_model_role.contact">Contact</label>
+			
+			<label index="tx_hypedirectory_domain_model_register">Register</label>
+			<label index="tx_hypedirectory_domain_model_register.name">Name</label>
+			<label index="tx_hypedirectory_domain_model_register.contacts">Contacts</label>
+			<label index="tx_hypedirectory_domain_model_register.roles">Roles</label>
+		</languageKey>
+		
+		<languageKey index="de" type="array">
+			<label index="tx_hypedirectory.tabs.contact">Kontakt</label>
+			<label index="tx_hypedirectory.tabs.relations">Verknüpfungen</label>
+			
+			<label index="tx_hypedirectory_domain_model_contact">Kontakt</label>
+			<label index="tx_hypedirectory_domain_model_contact.form_of_address">Anrede</label>
+				<label index="tx_hypedirectory_domain_model_contact.form_of_address.mister">Herr</label>
+				<label index="tx_hypedirectory_domain_model_contact.form_of_address.misses">Frau</label>
+				<label index="tx_hypedirectory_domain_model_contact.form_of_address.family">Familie</label>
+				<label index="tx_hypedirectory_domain_model_contact.form_of_address.company">Unternehmen</label>
+			<label index="tx_hypedirectory_domain_model_contact.academic_title">Titel</label>
+			<label index="tx_hypedirectory_domain_model_contact.first_name">Vorname</label>
+			<label index="tx_hypedirectory_domain_model_contact.middle_name">Zweiter Vorname</label>
+			<label index="tx_hypedirectory_domain_model_contact.last_name">Nachname</label>
+			<label index="tx_hypedirectory_domain_model_contact.images">Bilder</label>
+			<label index="tx_hypedirectory_domain_model_contact.gender">Geschlecht</label>
+				<label index="tx_hypedirectory_domain_model_contact.gender.female">weiblich</label>
+				<label index="tx_hypedirectory_domain_model_contact.gender.male">männlich</label>
+			<label index="tx_hypedirectory_domain_model_contact.date_of_birth">Geburtsdatum</label>
+			<label index="tx_hypedirectory_domain_model_contact.street">Straße</label>
+			<label index="tx_hypedirectory_domain_model_contact.postal_code">PLZ</label>
+			<label index="tx_hypedirectory_domain_model_contact.city">Ort</label>
+			<label index="tx_hypedirectory_domain_model_contact.stair">Stiege</label>
+			<label index="tx_hypedirectory_domain_model_contact.floor">Stockwerk</label>
+			<label index="tx_hypedirectory_domain_model_contact.door">Türnummer</label>
+			<label index="tx_hypedirectory_domain_model_contact.state">Bundesland</label>
+			<label index="tx_hypedirectory_domain_model_contact.country">Land</label>
+			<label index="tx_hypedirectory_domain_model_contact.telephone">Telefonnummer</label>
+			<label index="tx_hypedirectory_domain_model_contact.cellphone">Mobilnummer</label>
+			<label index="tx_hypedirectory_domain_model_contact.fax">Faxnummer</label>
+			<label index="tx_hypedirectory_domain_model_contact.email">Email Adresse</label>
+			<label index="tx_hypedirectory_domain_model_contact.website">Website Adresse</label>
+			<label index="tx_hypedirectory_domain_model_contact.frontend_user">Website Benutzer</label>
+			<label index="tx_hypedirectory_domain_model_contact.backend_user">TYPO3 Benutzer</label>
+			<label index="tx_hypedirectory_domain_model_contact.remark">Anmerkung</label>
+			
+			<label index="tx_hypedirectory_domain_model_role">Rolle</label>
+			<label index="tx_hypedirectory_domain_model_role.title">Titel</label>
+			<label index="tx_hypedirectory_domain_model_role.contact">Kontakt</label>
+			
+			<label index="tx_hypedirectory_domain_model_register">Liste</label>
+			<label index="tx_hypedirectory_domain_model_register.name">Name</label>
+			<label index="tx_hypedirectory_domain_model_register.contacts">Kontakte</label>
+			<label index="tx_hypedirectory_domain_model_register.roles">Positionen</label>
+		</languageKey>
+	</data>
+</T3locallang>
