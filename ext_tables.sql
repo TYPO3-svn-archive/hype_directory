@@ -57,35 +57,6 @@ CREATE TABLE tx_hypedirectory_domain_model_contact (
 
 
 #
-# Table structure for table 'tx_hypedirectory_domain_model_role'
-#
-CREATE TABLE tx_hypedirectory_domain_model_role (
-	uid int(11) NOT NULL auto_increment,
-	pid int(11) DEFAULT '0' NOT NULL,
-	tstamp int(11) DEFAULT '0' NOT NULL,
-	crdate int(11) DEFAULT '0' NOT NULL,
-	cruser_id int(11) DEFAULT '0' NOT NULL,
-	sys_language_uid int(11) DEFAULT '0' NOT NULL,
-	l10n_parent int(11) DEFAULT '0' NOT NULL,
-	l10n_diffsource mediumtext,
-	sorting int(10) DEFAULT '0' NOT NULL,
-	deleted tinyint(4) DEFAULT '0' NOT NULL,
-	hidden tinyint(4) DEFAULT '0' NOT NULL,
-	starttime int(11) DEFAULT '0' NOT NULL,
-	endtime int(11) DEFAULT '0' NOT NULL,
-	fe_group int(11) DEFAULT '0' NOT NULL,
-	
-	title varchar(255) DEFAULT '' NOT NULL,
-	contact int(11) DEFAULT '0' NOT NULL,
-	register int(11) DEFAULT '0' NOT NULL,
-	
-	PRIMARY KEY (uid),
-	KEY parent (pid)
-);
-
-
-
-#
 # Table structure for table 'tx_hypedirectory_domain_model_register'
 #
 CREATE TABLE tx_hypedirectory_domain_model_register (
@@ -107,6 +78,35 @@ CREATE TABLE tx_hypedirectory_domain_model_register (
 	name varchar(255) DEFAULT '' NOT NULL,
 	roles int(11) DEFAULT '0' NOT NULL,
 	contacts int(11) DEFAULT '0' NOT NULL,
+	
+	PRIMARY KEY (uid),
+	KEY parent (pid)
+);
+
+
+
+#
+# Table structure for table 'tx_hypedirectory_domain_model_role'
+#
+CREATE TABLE tx_hypedirectory_domain_model_role (
+	uid int(11) NOT NULL auto_increment,
+	pid int(11) DEFAULT '0' NOT NULL,
+	tstamp int(11) DEFAULT '0' NOT NULL,
+	crdate int(11) DEFAULT '0' NOT NULL,
+	cruser_id int(11) DEFAULT '0' NOT NULL,
+	sys_language_uid int(11) DEFAULT '0' NOT NULL,
+	l10n_parent int(11) DEFAULT '0' NOT NULL,
+	l10n_diffsource mediumtext,
+	sorting int(10) DEFAULT '0' NOT NULL,
+	deleted tinyint(4) DEFAULT '0' NOT NULL,
+	hidden tinyint(4) DEFAULT '0' NOT NULL,
+	starttime int(11) DEFAULT '0' NOT NULL,
+	endtime int(11) DEFAULT '0' NOT NULL,
+	fe_group int(11) DEFAULT '0' NOT NULL,
+	
+	title varchar(255) DEFAULT '' NOT NULL,
+	contact int(11) DEFAULT '0' NOT NULL,
+	register int(11) DEFAULT '0' NOT NULL,
 	
 	PRIMARY KEY (uid),
 	KEY parent (pid)

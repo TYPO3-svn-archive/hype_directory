@@ -1,0 +1,54 @@
+{namespace h=Tx_Hype_ViewHelpers}
+
+<f:layout name="default" />
+
+<f:section name="content">
+	<f:if condition="{registers}">
+		<f:then>
+			<f:for each="{registers}" as="register">
+				<!-- register.name -->
+				<h2>{register.name}</h2>
+					
+				<div class="register">
+					<f:if condition="{register.roles}">
+						<div class="roles">
+							<h3>Zuständigkeiten</h3>
+							
+							<f:for each="{register.roles}" as="role">
+								<p>
+									<strong>{role.contact.name}</strong><br />
+									<em>{role.title}</em><br />
+									
+									<f:if condition="{role.contact.images.0}">
+										<f:image src="uploads/hype/directory/contact/images/{role.contact.images.0}" maxWidth="100" alt="" /><br />
+									</f:if>
+									
+									<f:if condition="{role.contact.telephone}">Telefonnummer: {role.contact.telephone}<br /></f:if>
+									<f:if condition="{role.contact.cellphone}">Mobilnummer: {role.contact.cellphone}<br /></f:if>
+									<f:if condition="{role.contact.email}">E-Mail: {role.contact.email}<br /></f:if>
+									<f:if condition="{role.contact.website}">E-Mail: {role.contact.website}<br /></f:if>
+								</p>
+							</f:for>
+						</div>
+					</f:if>
+					
+					<f:if condition="{register.contacts}">
+						<div class="contacts">
+							<h3>Mitglieder</h3>
+							
+							<ul>
+								<f:for each="{register.contacts}" as="contact">
+									<li>{contact.name}</li>
+								</f:for>
+							</ul>
+						</div>
+					</f:if>
+				</div>
+			</f:for>
+		</f:then>
+		
+		<f:else>
+			<p>Keine Kontakte gefunden.</p>
+		</f:else>
+	</f:if>
+</f:section>
