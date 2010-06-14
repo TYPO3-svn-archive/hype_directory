@@ -25,7 +25,7 @@ plugin.tx_hypedirectory {
 		}
 		
 		view {
-			directory {
+			register {
 				pid =
 				
 				action {
@@ -45,13 +45,26 @@ plugin.tx_hypedirectory {
 									}
 								}
 							}
+						}
+					}
+				}
+			}
+			
+			contact {
+				pid =
+				
+				action {
+					index {
+						common {
 							
-							register {
-								
-							}
-							
-							role {
-								
+						}
+						
+						field {
+							images {
+								width =
+								height =
+								maxWidth = 160
+								maxHeight =
 							}
 						}
 					}

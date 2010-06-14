@@ -153,7 +153,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				'internal_type' => 'file',
 				'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
 				'max_size' => 10240,
-				'uploadfolder' => 'uploads/hype/directory/contact/images',
+				'uploadfolder' => 'uploads/hype/directory/contact/images/',
 				'size' => 1,
 				'maxitems' => 1,
 				'show_thumbs' => TRUE,
@@ -497,9 +497,10 @@ $TCA['tx_hypedirectory_domain_model_register'] = array(
 			'config' => array(
 				'type'						=> 'select',
 				'foreign_table'				=> 'tx_hypedirectory_domain_model_contact',
+				'foreign_table_where'		=> 'ORDER BY last_name ASC, first_name ASC',
 				'MM'						=> 'tx_hypedirectory_relation_register_contact',
 				'MM_opposite_field'			=> 'registers',
-				'size'						=> 3,
+				'size'						=> 10,
 				'autoSizeMax'				=> 20,
 				'minitems'					=> 0,
 				'maxitems'					=> 999999,
@@ -542,7 +543,7 @@ $TCA['tx_hypedirectory_domain_model_register'] = array(
 $TCA['tx_hypedirectory_domain_model_role'] = array(
 	'ctrl' => $TCA['tx_hypedirectory_domain_model_role']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,starttime,endtime,fe_group,title,contact,register'
+		'showRecordFieldList' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,starttime,endtime,fe_group,title,additional_title,contacts,register'
 	),
 	'feInterface' => $TCA['tx_hypedirectory_domain_model_role']['feInterface'],
 	'columns' => array(
@@ -636,14 +637,28 @@ $TCA['tx_hypedirectory_domain_model_role'] = array(
 				'eval' => 'required,trim',
 			),
 		),
-		'contact' => array(
-			'exclude' => 0,
-			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_role.contact',
+		'additional_title' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_role.additional_title',
 			'config' => array(
-				'type' => 'select',
-				'foreign_table' => 'tx_hypedirectory_domain_model_contact',
-				'size' => 1,
-				'autoSizeMax' => 20,
+				'type' => 'input',
+				'size' => '20',
+				'eval' => 'trim',
+			),
+		),
+		'contacts' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_role.contacts',
+			'config' => array(
+				'type'						=> 'select',
+				'foreign_table'				=> 'tx_hypedirectory_domain_model_contact',
+				'foreign_table_where'		=> 'ORDER BY last_name ASC, first_name ASC',
+				'MM'						=> 'tx_hypedirectory_relation_contact_role',
+				'MM_opposite_field'			=> 'roles',
+				'size'						=> 10,
+				'autoSizeMax'				=> 20,
+				'minitems'					=> 1,
+				'maxitems'					=> 999999,
 			),
 		),
 		'register' => array(
@@ -660,7 +675,7 @@ $TCA['tx_hypedirectory_domain_model_role'] = array(
 	),
 	'types' => array(
 		'0' => array('showitem' => '
-			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title;;;;1-1-1, contact, register
+			hidden, title;;;;1-1-1, additional_title, contacts;;;;1-1-1, register
 		'),
 	),
 	'palettes' => array(

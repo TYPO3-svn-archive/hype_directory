@@ -5,12 +5,20 @@ if(!defined('TYPO3_MODE'))
 
 
 
-# Directory plugin
+# Register plugin
 Tx_Extbase_Utility_Extension::configurePlugin(
 	$_EXTKEY,
-	'Directory',
-	array('Directory' => 'index'),
-	array('Directory' => '')
+	'Register',
+	array('Register' => 'index'),
+	array('Register' => '')
+);
+
+# Contact plugin
+Tx_Extbase_Utility_Extension::configurePlugin(
+	$_EXTKEY,
+	'Contact',
+	array('Contact' => 'index'),
+	array('Contact' => '')
 );
 
 ?>

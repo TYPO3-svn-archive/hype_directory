@@ -1,0 +1,39 @@
+{namespace h=Tx_Hype_ViewHelpers}
+
+<f:layout name="contact" />
+
+<f:section name="content">
+	<f:if condition="{contact}">
+		<f:then>
+			<h1>{contact.name}</h1>
+			<f:if condition="{role}">
+				<h2>
+					{role.title}
+					<f:if condition="{role.additionalTitle}"><br />{role.additionalTitle}</f:if>
+				</h2>
+			</f:if>
+			
+			<f:if condition="{contact.images.0}">
+				<p><f:image src="{settings.object.contact.field.images.path}{contact.images.0}" maxWidth="{settings.view.contact.action.index.field.images.maxWidth}" alt="{contact.name}" /></p>
+			</f:if>
+			
+			<p class="address">
+				<f:if condition="{contact.street}">{contact.street}<br /></f:if>
+				<f:if condition="{contact.postalCode}">{contact.postalCode}</f:if>
+				<f:if condition="{contact.city}">{contact.city}<br /></f:if>
+			</p>
+			
+			<p class="contact">
+				<f:if condition="{contact.telephone}">Telefonnummer: {contact.telephone}<br /></f:if>
+				<f:if condition="{contact.cellphone}">Mobilnummer: {contact.cellphone}<br /></f:if>
+				<f:if condition="{contact.fax}">Faxnummer: {contact.fax}<br /></f:if>
+				<f:if condition="{contact.email}">E-Mail: <f:link.email email="{contact.email}">{contact.email}</f:link.email><br /></f:if>
+				<f:if condition="{contact.website}">Website: <f:link.external uri="{contact.website}">{contact.website}</f:link.external><br /></f:if>
+			</p>
+		</f:then>
+		
+		<f:else>
+			<p>Kontakt nicht gefunden.</p>
+		</f:else>
+	</f:if>
+</f:section>

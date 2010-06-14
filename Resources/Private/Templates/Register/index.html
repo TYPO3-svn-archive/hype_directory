@@ -1,0 +1,53 @@
+{namespace h=Tx_Hype_ViewHelpers}
+
+<f:layout name="register" />
+
+<f:section name="content">
+	<f:if condition="{registers}">
+		<f:then>
+			<f:for each="{registers}" as="register">
+				<div class="register">
+					
+					<!-- register.name -->
+					<f:if condition="{f:count(subject: registers)} > 1">
+						<h2>{register.name}</h2>
+					</f:if>
+					
+					<f:if condition="{register.roles}">
+						<f:if condition="{register.contacts}">
+							<h3>Zuständigkeiten</h3>
+						</f:if>
+						
+						<div class="roles">
+							<f:for each="{register.roles}" as="role">
+								<dl class="role">
+									<dt>{role.title}</dt>
+									
+									<f:for each="{role.contacts}" as="contact">
+										<dd><f:link.action pageUid="{settings.view.contact.pid}" extensionName="HypeDirectory" pluginName="Contact" controller="Contact" arguments="{contact: contact, role: role}">{contact.completeName}</f:link.action></dd>
+									</f:for>
+								</dl>
+							</f:for>
+						</div>
+					</f:if>
+					
+					<f:if condition="{register.contacts}">
+						<div class="contacts">
+							<h3>Mitglieder</h3>
+							
+							<ul>
+								<f:for each="{register.contacts}" as="contact">
+									<li><f:link.action pageUid="{settings.view.contact.pid}" extensionName="HypeDirectory" pluginName="Contact" controller="Contact" arguments="{contact: contact}">{contact.completeName}</f:link.action></li>
+								</f:for>
+							</ul>
+						</div>
+					</f:if>
+				</div>
+			</f:for>
+		</f:then>
+		
+		<f:else>
+			<p>Keine Kontakte gefunden.</p>
+		</f:else>
+	</f:if>
+</f:section>

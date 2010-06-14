@@ -49,7 +49,7 @@ plugin.tx_hypedirectory {
 		}
 		
 		view {
-			directory {
+			register {
 				pid =
 				
 				action {
@@ -62,26 +62,43 @@ plugin.tx_hypedirectory {
 							contact {
 								field {
 									images {
-										width = {$plugin.tx_hypedirectory.settings.view.directory.action.index.object.contact.field.images.width}
-										height = {$plugin.tx_hypedirectory.settings.view.directory.action.index.object.contact.field.images.height}
-										maxWidth = {$plugin.tx_hypedirectory.settings.view.directory.action.index.object.contact.field.images.maxWidth}
-										maxHeight = {$plugin.tx_hypedirectory.settings.view.directory.action.index.object.contact.field.images.maxHeight}
+										width = {$plugin.tx_hypedirectory.settings.view.register.action.index.object.contact.field.images.width}
+										height = {$plugin.tx_hypedirectory.settings.view.register.action.index.object.contact.field.images.height}
+										maxWidth = {$plugin.tx_hypedirectory.settings.view.register.action.index.object.contact.field.images.maxWidth}
+										maxHeight = {$plugin.tx_hypedirectory.settings.view.register.action.index.object.contact.field.images.maxHeight}
 									}
 								}
 							}
+						}
+					}
+				}
+			}
+			
+			contact {
+				pid =
+				
+				action {
+					index {
+						common {
 							
-							register {
-								
-							}
-							
-							role {
-								
+						}
+						
+						field {
+							images {
+								width = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.images.width}
+								height = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.images.height}
+								maxWidth = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.images.maxWidth}
+								maxHeight = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.images.maxHeight}
 							}
 						}
 					}
 				}
 			}
 		}
+	}
+	
+	persistence {
+		storagePid = {$plugin.tx_hypedirectory.persistence.storagePid}
 	}
 	
 	template {

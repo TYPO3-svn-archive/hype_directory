@@ -342,6 +342,101 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	}
 	
 	/**
+	 * Getter for street
+	 *
+	 * @return string
+	 */
+	public function getStreet() {
+		return $this->street;
+	}
+	
+	/**
+	 * Setter for street
+	 *
+	 * @param string $street
+	 * @return void
+	 */
+	public function setStreet($street) {
+		$this->street = $street;
+	}
+	
+	/**
+	 * Getter for city
+	 *
+	 * @return string
+	 */
+	public function getCity() {
+		return $this->city;
+	}
+	
+	/**
+	 * Setter for city
+	 *
+	 * @param string $city
+	 * @return void
+	 */
+	public function setCity($city) {
+		$this->city = $city;
+	}
+	
+	/**
+	 * Getter for stair
+	 *
+	 * @return string
+	 */
+	public function getStair() {
+		return $this->stair;
+	}
+	
+	/**
+	 * Setter for stair
+	 *
+	 * @param string $stair
+	 * @return void
+	 */
+	public function setStair($stair) {
+		$this->stair = $stair;
+	}
+	
+	/**
+	 * Getter for floor
+	 *
+	 * @return string
+	 */
+	public function getFloor() {
+		return $this->floor;
+	}
+	
+	/**
+	 * Setter for floor
+	 *
+	 * @param string $floor
+	 * @return void
+	 */
+	public function setFloor($floor) {
+		$this->floor = $floor;
+	}
+	
+	/**
+	 * Getter for door
+	 *
+	 * @return string
+	 */
+	public function getDoor() {
+		return $this->door;
+	}
+	
+	/**
+	 * Setter for door
+	 *
+	 * @param string $door
+	 * @return void
+	 */
+	public function setDoor($door) {
+		$this->door = $door;
+	}
+	
+	/**
 	 * Getter for postalCode
 	 *
 	 * @return string
@@ -673,7 +768,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	 * @return string
 	 */
 	public function getCompleteName() {
-		return implode(' ', array_filter(array($this->getFormOfAddress(), $this->getAcademicTitle(), $this->getName())));
+		return implode(' ', array_filter(array($this->getAcademicTitle(), $this->getName())));
 	}
 	
 	

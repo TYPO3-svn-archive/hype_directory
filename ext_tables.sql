@@ -105,7 +105,8 @@ CREATE TABLE tx_hypedirectory_domain_model_role (
 	fe_group int(11) DEFAULT '0' NOT NULL,
 	
 	title varchar(255) DEFAULT '' NOT NULL,
-	contact int(11) DEFAULT '0' NOT NULL,
+	additional_title varchar(255) DEFAULT '' NOT NULL,
+	contacts int(11) DEFAULT '0' NOT NULL,
 	register int(11) DEFAULT '0' NOT NULL,
 	
 	PRIMARY KEY (uid),

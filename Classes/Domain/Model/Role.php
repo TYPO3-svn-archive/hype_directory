@@ -40,10 +40,16 @@ class Tx_HypeDirectory_Domain_Model_Role extends Tx_Extbase_DomainObject_Abstrac
 	protected $title;
 	
 	/**
-	 * @var Tx_HypeDirectory_Domain_Model_Contact
+	 * @var string
+	 * @validate String
+	 */
+	protected $additionalTitle;
+	
+	/**
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_HypeDirectory_Domain_Model_Contact>
 	 * @lazy
 	 */
-	protected $contact;
+	protected $contacts;
 	
 	/**
 	 * @var Tx_HypeDirectory_Domain_Model_Register
@@ -71,22 +77,74 @@ class Tx_HypeDirectory_Domain_Model_Role extends Tx_Extbase_DomainObject_Abstrac
 	}
 	
 	/**
-	 * Getter for contact
+	 * Getter for additionalTitle
 	 *
-	 * @return Tx_HypeDirectory_Domain_Model_Contact
+	 * @return string
 	 */
-	public function getContact() {
-		return $this->contact;
+	public function getAdditionalTitle() {
+		return $this->additionalTitle;
 	}
 	
 	/**
-	 * Setter for contact
+	 * Setter for additionalTitle
 	 *
-	 * @param Tx_HypeDirectory_Domain_Model_Contact $contact
+	 * @param string $additionalTitle
 	 * @return void
 	 */
-	public function setContact(Tx_HypeDirectory_Domain_Model_Contact $contact) {
-		$this->contact = $contact;
+	public function setAdditionalTitle($additionalTitle) {
+		$this->additionalTitle = $additionalTitle;
+	}
+	
+	/**
+	 * Setter for contacts
+	 *
+	 * @param Tx_Extbase_Persistence_ObjectStorage $contacts
+	 * @return void
+	 */
+	public function setContacts(Tx_Extbase_Persistence_ObjectStorage $contacts) {
+		$this->contacts = clone $contacts;
+	}
+	
+	/**
+	 * Adds a contact
+	 *
+	 * @param Tx_HypeStore_Domain_Model_Contact $contact
+	 * @return void
+	 */
+	public function addContact(Tx_HypeStore_Domain_Model_Contact $contact) {
+		$this->contacts->attach($contact);
+	}
+	
+	/**
+	 * Removes a contact
+	 *
+	 * @param Tx_HypeStore_Domain_Model_Contact $contact
+	 * @return void
+	 */
+	public function removeContact(Tx_HypeStore_Domain_Model_Contact $contact) {
+		$this->contacts->detach($contact);
+	}
+	
+	/**
+	 * Remove all contacts
+	 *
+	 * @return void
+	 */
+	public function removeContacts() {
+		$this->contacts = new Tx_Extbase_Persistence_ObjectStorage();
+	}
+	
+	/**
+	 * Getter for contacts
+	 *
+	 * @return Tx_Extbase_Persistence_ObjectStorage
+	 */
+	public function getContacts() {
+		if($this->contacts instanceof Tx_Extbase_Persistence_LazyLoadingProxy) {
+			$this->contacts->_loadRealInstance();
+		}
+		
+		return clone $this->contacts;
 	}
 	
 	/**

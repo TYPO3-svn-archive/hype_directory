@@ -9,14 +9,28 @@ if(!defined('TYPO3_MODE'))
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/', 'Hype Directory');
 
 
-# Plugins
-Tx_Extbase_Utility_Extension::registerPlugin($_EXTKEY, 'Directory', 'Hype Directory');
+
+# PLUGINS
+
+# Register
+Tx_Extbase_Utility_Extension::registerPlugin($_EXTKEY, 'Register', 'Hype Directory, Register');
+
+# Contact
+Tx_Extbase_Utility_Extension::registerPlugin($_EXTKEY, 'Contact', 'Hype Directory, Contact');
 
 
-# Flexforms
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['hypedirectory_directory'] = 'layout,select_key';
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['hypedirectory_directory'] = 'pi_flexform';
-t3lib_extMgm::addPiFlexFormValue('hypedirectory_directory', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/directory.flexform.xml');
+
+# FLEXFORMS
+
+# Register
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['hypedirectory_register'] = 'layout,select_key';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['hypedirectory_register'] = 'pi_flexform';
+t3lib_extMgm::addPiFlexFormValue('hypedirectory_register', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/register.flexform.xml');
+
+# Contact
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['hypedirectory_contact'] = 'layout,select_key';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['hypedirectory_contact'] = 'pi_flexform';
+t3lib_extMgm::addPiFlexFormValue('hypedirectory_contact', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/contact.flexform.xml');
 
 
 

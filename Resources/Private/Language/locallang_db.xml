@@ -44,6 +44,7 @@
 			
 			<label index="tx_hypedirectory_domain_model_role">Role</label>
 			<label index="tx_hypedirectory_domain_model_role.title">Title</label>
+			<label index="tx_hypedirectory_domain_model_role.additional_title">Additional title</label>
 			<label index="tx_hypedirectory_domain_model_role.contact">Contact</label>
 			
 			<label index="tx_hypedirectory_domain_model_register">Register</label>
@@ -90,6 +91,7 @@
 			
 			<label index="tx_hypedirectory_domain_model_role">Rolle</label>
 			<label index="tx_hypedirectory_domain_model_role.title">Titel</label>
+			<label index="tx_hypedirectory_domain_model_role.additional_title">Zusatztitel</label>
 			<label index="tx_hypedirectory_domain_model_role.contact">Kontakt</label>
 			
 			<label index="tx_hypedirectory_domain_model_register">Liste</label>
