@@ -329,7 +329,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'tx_hypedirectory_domain_model_role',
-				//'foreign_table_where' => 'AND tx_hypestore_domain_model_category.uid != ###THIS_UID###',
+				//'foreign_table_where' => 'AND tx_hypedirectory_domain_model_category.uid != ###THIS_UID###',
 				'size' => 10,
 				'autoSizeMax' => 20,
 				'minitems' => 0,
@@ -344,7 +344,6 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'tx_hypedirectory_domain_model_register',
-				//'foreign_table_where' => 'AND tx_hypestore_domain_model_category.uid != ###THIS_UID###',
 				'size' => 10,
 				'autoSizeMax' => 20,
 				'minitems' => 0,
@@ -378,10 +377,10 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	),
 	'types' => array(
 		'0' => array('showitem' => '
-			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, form_of_address;;;;1-1-1, academic_title, first_name;;;;1-1-1, middle_name, last_name, images;;;;1-1-1, gender, date_of_birth, remark;;;;1-1-1,
+			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, form_of_address;;;;1-1-1, academic_title, first_name;;2;;1-1-1, last_name, images;;;;1-1-1, gender;;;;1-1-1, date_of_birth;;;;1-1-1, remark;;;;1-1-1,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.contact,
-				street, postal_code, city, stair, floor, door, state, country, telephone;;;;1-1-1, cellphone, fax, email, website,
+				street;;3;;, postal_code, city, country;;4;;, telephone;;;;1-1-1, cellphone, fax, email;;;;1-1-1, website,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.relations,
 				frontend_user, backend_user
@@ -389,7 +388,9 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	),
 	'palettes' => array(
 		'1' => array('showitem' => 'starttime, endtime, fe_group'),
-		'2' => array('showitem' => 'subtitle'),
+		'2' => array('showitem' => 'middle_name'),
+		'3' => array('showitem' => 'stair, floor, door'),
+		'4' => array('showitem' => 'state'),
 	),
 );
 
@@ -529,13 +530,12 @@ $TCA['tx_hypedirectory_domain_model_register'] = array(
 		0 => array('showitem' => '
 			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name;;;;1-1-1, contacts;;;;1-1-1,
 			
-			--div--;Roles,
+			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.roles,
 				roles;;;;1-1-1
 		'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => 'starttime, endtime, fe_group'),
-		'2' => array('showitem' => 'subtitle'),
 	),
 );
 

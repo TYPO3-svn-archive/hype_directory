@@ -9,6 +9,7 @@
 		<languageKey index="default" type="array">
 			<label index="tx_hypedirectory.tabs.contact">Contact</label>
 			<label index="tx_hypedirectory.tabs.relations">Relations</label>
+			<label index="tx_hypedirectory.tabs.roles">Roles</label>
 			
 			<label index="tx_hypedirectory_domain_model_contact">Contact</label>
 			<label index="tx_hypedirectory_domain_model_contact.form_of_address">Form of address</label>
@@ -56,6 +57,7 @@
 		<languageKey index="de" type="array">
 			<label index="tx_hypedirectory.tabs.contact">Kontakt</label>
 			<label index="tx_hypedirectory.tabs.relations">Verknüpfungen</label>
+			<label index="tx_hypedirectory.tabs.roles">Funktionen</label>
 			
 			<label index="tx_hypedirectory_domain_model_contact">Kontakt</label>
 			<label index="tx_hypedirectory_domain_model_contact.form_of_address">Anrede</label>
@@ -89,7 +91,7 @@
 			<label index="tx_hypedirectory_domain_model_contact.backend_user">TYPO3 Benutzer</label>
 			<label index="tx_hypedirectory_domain_model_contact.remark">Anmerkung</label>
 			
-			<label index="tx_hypedirectory_domain_model_role">Rolle</label>
+			<label index="tx_hypedirectory_domain_model_role">Funktion</label>
 			<label index="tx_hypedirectory_domain_model_role.title">Titel</label>
 			<label index="tx_hypedirectory_domain_model_role.additional_title">Zusatztitel</label>
 			<label index="tx_hypedirectory_domain_model_role.contact">Kontakt</label>
