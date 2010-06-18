@@ -22,6 +22,7 @@ CREATE TABLE tx_hypedirectory_domain_model_contact (
 	first_name varchar(255) DEFAULT '' NOT NULL,
 	middle_name varchar(255) DEFAULT '' NOT NULL,
 	last_name varchar(255) DEFAULT '' NOT NULL,
+	nickname varchar(64) DEFAULT '' NOT NULL,
 	
 	images text,
 	gender tinyint(1) DEFAULT '0' NOT NULL,
@@ -46,6 +47,9 @@ CREATE TABLE tx_hypedirectory_domain_model_contact (
 	
 	roles int(11) DEFAULT '0' NOT NULL,
 	registers int(11) DEFAULT '0' NOT NULL,
+	
+	related_page int(11) DEFAULT '0' NOT NULL,
+	related_address varchar(255) DEFAULT '' NOT NULL,
 	
 	frontend_user int(11) DEFAULT '0' NOT NULL,
 	backend_user int(11) DEFAULT '0' NOT NULL,

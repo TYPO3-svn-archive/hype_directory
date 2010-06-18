@@ -5,7 +5,11 @@
 <f:section name="content">
 	<f:if condition="{contact}">
 		<f:then>
-			<h1>{contact.name}</h1>
+			<h1>
+				{contact.name}
+				<f:if condition="{contact.nickname}">&ndash; &quot;{contact.nickname}&quot;</f:if>
+			</h1>
+			
 			<f:if condition="{role}">
 				<h2>
 					{role.title}
@@ -29,6 +33,11 @@
 				<f:if condition="{contact.fax}">Faxnummer: {contact.fax}<br /></f:if>
 				<f:if condition="{contact.email}">E-Mail: <f:link.email email="{contact.email}">{contact.email}</f:link.email><br /></f:if>
 				<f:if condition="{contact.website}">Website: <f:link.external uri="{contact.website}">{contact.website}</f:link.external><br /></f:if>
+			</p>
+			
+			<p class="relations">
+				<f:if condition="{contact.relatedPage}"><f:link.page pageUid="{contact.relatedPage}">Mehr Informationen über <strong>{contact.name}</strong>.</f:link.page><br /></f:if>
+				<f:if condition="{contact.relatedAddress}"><f:link.external uri="{contact.relatedAddress}">Weitere Informationen über <strong>{contact.name}</strong>.</f:link.external><br /></f:if>
 			</p>
 		</f:then>
 		

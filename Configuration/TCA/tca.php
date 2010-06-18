@@ -9,7 +9,7 @@ if(!defined('TYPO3_MODE'))
 $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	'ctrl' => $TCA['tx_hypedirectory_domain_model_contact']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,starttime,endtime,fe_group,form_of_address, academic_title, first_name, middle_name, last_name, images, gender, date_of_birth, street, postal_code, city, stair, floor, door, state, country, telephone, cellphone, fax, email, website, frontend_user, backend_user, remark'
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, starttime, endtime ,fe_group, form_of_address, academic_title, first_name, middle_name, last_name, nickname, images, gender, date_of_birth, street, postal_code, city, stair, floor, door, state, country, telephone, cellphone, fax, email, website, remark, related_page, related_address, frontend_user, backend_user'
 	),
 	'feInterface' => $TCA['tx_hypedirectory_domain_model_contact']['feInterface'],
 	'columns' => array(
@@ -132,7 +132,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.middle_name',
 			'config' => array(
 				'type' => 'input',
-				'size' => '20',
+				'size' => '10',
 				'eval' => 'trim',
 			),
 		),
@@ -142,6 +142,15 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => '20',
+				'eval' => 'trim',
+			),
+		),
+		'nickname' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.nickname',
+			'config' => array(
+				'type' => 'input',
+				'size' => '10',
 				'eval' => 'trim',
 			),
 		),
@@ -240,7 +249,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.state',
 			'config' => array(
 				'type' => 'input',
-				'size' => '20',
+				'size' => '10',
 				'eval' => 'trim',
 			),
 		),
@@ -352,6 +361,35 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				'MM_opposite_field' => 'contacts',
 			),
 		),
+		'related_page' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.related_page',
+			'config' => array(
+				'type' => 'group',
+				'internal_type' => 'db',
+				'allowed' => 'pages',
+				'size' => 1,
+				'maxitems' => 1,
+			),
+		),
+		'related_address' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.related_address',
+			'config' => array(
+				'type' => 'input',
+				'size' => '20',
+				'eval' => 'trim',
+				'wizards'  => array(
+					'link'	 => array(
+						'type'		 => 'popup',
+						'title'		=> 'Related address',
+						'icon'		 => 'link_popup.gif',
+						'script'	   => 'browse_links.php?mode=wizard&act=url',
+						'JSopenParams' => 'height=320,width=800,status=0,menubar=0,scrollbars=1'
+					),
+				),
+			),
+		),					   
 		'frontend_user' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.frontend_user',
@@ -383,12 +421,12 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				street;;3;;, postal_code, city, country;;4;;, telephone;;;;1-1-1, cellphone, fax, email;;;;1-1-1, website,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.relations,
-				frontend_user, backend_user
+				related_page, related_address, frontend_user;;;;1-1-1, backend_user
 		'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => 'starttime, endtime, fe_group'),
-		'2' => array('showitem' => 'middle_name'),
+		'2' => array('showitem' => 'middle_name, nickname'),
 		'3' => array('showitem' => 'stair, floor, door'),
 		'4' => array('showitem' => 'state'),
 	),

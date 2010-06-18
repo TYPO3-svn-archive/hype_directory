@@ -21,6 +21,7 @@
 			<label index="tx_hypedirectory_domain_model_contact.first_name">First name</label>
 			<label index="tx_hypedirectory_domain_model_contact.middle_name">Middle name</label>
 			<label index="tx_hypedirectory_domain_model_contact.last_name">Last name</label>
+			<label index="tx_hypedirectory_domain_model_contact.nickname">Nickname</label>
 			<label index="tx_hypedirectory_domain_model_contact.images">Images</label>
 			<label index="tx_hypedirectory_domain_model_contact.gender">Gender</label>
 				<label index="tx_hypedirectory_domain_model_contact.gender.female">female</label>
@@ -39,9 +40,11 @@
 			<label index="tx_hypedirectory_domain_model_contact.fax">Fax number</label>
 			<label index="tx_hypedirectory_domain_model_contact.email">Email address</label>
 			<label index="tx_hypedirectory_domain_model_contact.website">Website address</label>
+			<label index="tx_hypedirectory_domain_model_contact.remark">Remark</label>
+			<label index="tx_hypedirectory_domain_model_contact.related_page">Related page</label>
+			<label index="tx_hypedirectory_domain_model_contact.related_address">Related address</label>
 			<label index="tx_hypedirectory_domain_model_contact.frontend_user">Frontend user</label>
 			<label index="tx_hypedirectory_domain_model_contact.backend_user">Backend user</label>
-			<label index="tx_hypedirectory_domain_model_contact.remark">Remark</label>
 			
 			<label index="tx_hypedirectory_domain_model_role">Role</label>
 			<label index="tx_hypedirectory_domain_model_role.title">Title</label>
@@ -69,6 +72,7 @@
 			<label index="tx_hypedirectory_domain_model_contact.first_name">Vorname</label>
 			<label index="tx_hypedirectory_domain_model_contact.middle_name">Zweiter Vorname</label>
 			<label index="tx_hypedirectory_domain_model_contact.last_name">Nachname</label>
+			<label index="tx_hypedirectory_domain_model_contact.nickname">Spitzname</label>
 			<label index="tx_hypedirectory_domain_model_contact.images">Bilder</label>
 			<label index="tx_hypedirectory_domain_model_contact.gender">Geschlecht</label>
 				<label index="tx_hypedirectory_domain_model_contact.gender.female">weiblich</label>
@@ -87,9 +91,11 @@
 			<label index="tx_hypedirectory_domain_model_contact.fax">Faxnummer</label>
 			<label index="tx_hypedirectory_domain_model_contact.email">Email Adresse</label>
 			<label index="tx_hypedirectory_domain_model_contact.website">Website Adresse</label>
+			<label index="tx_hypedirectory_domain_model_contact.remark">Anmerkung</label>
+			<label index="tx_hypedirectory_domain_model_contact.related_page">Zugehörige Seite</label>
+			<label index="tx_hypedirectory_domain_model_contact.related_address">Zugehörige Adresse</label>
 			<label index="tx_hypedirectory_domain_model_contact.frontend_user">Website Benutzer</label>
 			<label index="tx_hypedirectory_domain_model_contact.backend_user">TYPO3 Benutzer</label>
-			<label index="tx_hypedirectory_domain_model_contact.remark">Anmerkung</label>
 			
 			<label index="tx_hypedirectory_domain_model_role">Funktion</label>
 			<label index="tx_hypedirectory_domain_model_role.title">Titel</label>

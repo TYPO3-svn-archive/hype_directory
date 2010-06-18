@@ -67,6 +67,12 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	 * @var string
 	 * @validate String
 	 */
+	protected $nickname;
+	
+	/**
+	 * @var string
+	 * @validate String
+	 */
 	protected $images;
 	
 	/**
@@ -178,6 +184,17 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	protected $registers;
 	
 	/**
+	 * @var integer
+	 * @validate Integer
+	 */
+	protected $relatedPage;
+	
+	/**
+	 * @var string
+	 * @validate String
+	 */
+	protected $relatedAddress;
+	/**
 	 * @var Tx_Extbase_Domain_Model_FrontendUser
 	 * @lazy
 	 */
@@ -282,6 +299,25 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	 */
 	public function setLastName($lastName) {
 		$this->lastName = $lastName;
+	}
+	
+	/**
+	 * Getter for nickname
+	 *
+	 * @return string
+	 */
+	public function getNickname() {
+		return $this->nickname;
+	}
+	
+	/**
+	 * Setter for nickname
+	 *
+	 * @param string $nickname
+	 * @return void
+	 */
+	public function setNickname($nickname) {
+		$this->nickname = $nickname;
 	}
 	
 	/**
@@ -589,44 +625,6 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	}
 	
 	/**
-	 * Getter for frontendUser
-	 *
-	 * @return string
-	 */
-	public function getFrontendUser() {
-		return $this->frontendUser;
-	}
-	
-	/**
-	 * Setter for frontendUser
-	 *
-	 * @param Tx_Extbase_Domain_Model_FrontendUser $frontendUser
-	 * @return void
-	 */
-	public function setFrontendUser(Tx_Extbase_Domain_Model_FrontendUser $frontendUser) {
-		$this->frontendUser = $frontendUser;
-	}
-	
-	/**
-	 * Getter for backendUser
-	 *
-	 * @return Tx_Extbase_Domain_Model_FrontendUser
-	 */
-	public function getBackendUser() {
-		return $this->backendUser;
-	}
-	
-	/**
-	 * Setter for backendUser
-	 *
-	 * @param Tx_Extbase_Domain_Model_BackendUser $backendUser
-	 * @return void
-	 */
-	public function setBackendUser(Tx_Extbase_Domain_Model_BackendUser $backendUser) {
-		$this->backendUser = $backendUser;
-	}
-	
-	/**
 	 * Getter for remark
 	 *
 	 * @return string
@@ -747,6 +745,82 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 		}
 		
 		return clone $this->registers;
+	}
+	
+	/**
+	 * Getter for relatedPage
+	 *
+	 * @return integer
+	 */
+	public function getRelatedPage() {
+		return $this->relatedPage;
+	}
+	
+	/**
+	 * Setter for relatedPage
+	 *
+	 * @param integer $relatedPage
+	 * @return void
+	 */
+	public function setRelatedPage($relatedPage) {
+		$this->relatedPage = $relatedPage;
+	}
+	
+	/**
+	 * Getter for relatedAddress
+	 *
+	 * @return string
+	 */
+	public function getRelatedAddress() {
+		return $this->relatedAddress;
+	}
+	
+	/**
+	 * Setter for relatedAddress
+	 *
+	 * @param string $relatedAddress
+	 * @return void
+	 */
+	public function setRelatedAddress($relatedAddress) {
+		$this->relatedAddress = $relatedAddress;
+	}
+	
+	/**
+	 * Getter for frontendUser
+	 *
+	 * @return string
+	 */
+	public function getFrontendUser() {
+		return $this->frontendUser;
+	}
+	
+	/**
+	 * Setter for frontendUser
+	 *
+	 * @param Tx_Extbase_Domain_Model_FrontendUser $frontendUser
+	 * @return void
+	 */
+	public function setFrontendUser(Tx_Extbase_Domain_Model_FrontendUser $frontendUser) {
+		$this->frontendUser = $frontendUser;
+	}
+	
+	/**
+	 * Getter for backendUser
+	 *
+	 * @return Tx_Extbase_Domain_Model_FrontendUser
+	 */
+	public function getBackendUser() {
+		return $this->backendUser;
+	}
+	
+	/**
+	 * Setter for backendUser
+	 *
+	 * @param Tx_Extbase_Domain_Model_BackendUser $backendUser
+	 * @return void
+	 */
+	public function setBackendUser(Tx_Extbase_Domain_Model_BackendUser $backendUser) {
+		$this->backendUser = $backendUser;
 	}
 	
 	
