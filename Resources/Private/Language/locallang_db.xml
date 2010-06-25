@@ -55,6 +55,8 @@
 			<label index="tx_hypedirectory_domain_model_register.name">Name</label>
 			<label index="tx_hypedirectory_domain_model_register.contacts">Contacts</label>
 			<label index="tx_hypedirectory_domain_model_register.roles">Roles</label>
+			
+			<label index="fe_users.tx_hypestore_domain_model_addresses">Addresses</label>
 		</languageKey>
 		
 		<languageKey index="de" type="array">
@@ -106,6 +108,8 @@
 			<label index="tx_hypedirectory_domain_model_register.name">Name</label>
 			<label index="tx_hypedirectory_domain_model_register.contacts">Kontakte</label>
 			<label index="tx_hypedirectory_domain_model_register.roles">Positionen</label>
+			
+			<label index="fe_users.tx_hypestore_domain_model_addresses">Adressen</label>
 		</languageKey>
 	</data>
 </T3locallang>

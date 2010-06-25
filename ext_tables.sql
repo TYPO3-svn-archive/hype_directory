@@ -59,7 +59,6 @@ CREATE TABLE tx_hypedirectory_domain_model_contact (
 );
 
 
-
 #
 # Table structure for table 'tx_hypedirectory_domain_model_register'
 #
@@ -86,7 +85,6 @@ CREATE TABLE tx_hypedirectory_domain_model_register (
 	PRIMARY KEY (uid),
 	KEY parent (pid)
 );
-
 
 
 #
@@ -118,7 +116,6 @@ CREATE TABLE tx_hypedirectory_domain_model_role (
 );
 
 
-
 #
 # Table structure for table 'tx_hypedirectory_relation_contact_role'
 #
@@ -134,7 +131,6 @@ CREATE TABLE tx_hypedirectory_relation_contact_role (
 	KEY uid_local (uid_local),
 	KEY uid_foreign (uid_foreign)
 );
-
 
 
 #
@@ -154,7 +150,6 @@ CREATE TABLE tx_hypedirectory_relation_register_contact (
 );
 
 
-
 #
 # Table structure for table 'tx_hypedirectory_relation_register_role'
 #
@@ -169,4 +164,12 @@ CREATE TABLE tx_hypedirectory_relation_register_role (
 	PRIMARY KEY (uid),
 	KEY uid_local (uid_local),
 	KEY uid_foreign (uid_foreign)
+);
+
+
+#
+# Table structure for table 'fe_users'
+#
+CREATE TABLE fe_users (
+	tx_hypedirectory_domain_model_addresses int(11) DEFAULT '0' NOT NULL,
 );
