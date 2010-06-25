@@ -4,7 +4,31 @@ plugin.tx_hypedirectory {
 			Tx_HypeDirectory_Domain_Model_Contact {
 				mapping {
 					tableName = tx_hypedirectory_domain_model_contact
+					#recordType = person
 				}
+				
+				subclasses {
+					Person = Tx_HypeDirectory_Domain_Model_Contact_Person
+					Corporation = Tx_HypeDirectory_Domain_Model_Contact_Corporation
+				}
+			}
+			
+			Tx_HypeDirectory_Domain_Model_Contact_Person < .Tx_HypeDirectory_Domain_Model_Contact
+			Tx_HypeDirectory_Domain_Model_Contact_Person {
+				mapping {
+					recordType = person
+				}
+				
+				subclasses >
+			}
+			
+			Tx_HypeDirectory_Domain_Model_Contact_Corporation < .Tx_HypeDirectory_Domain_Model_Contact
+			Tx_HypeDirectory_Domain_Model_Contact_Corporation {
+				mapping {
+					recordType = corporation
+				}
+				
+				subclasses >
 			}
 			
 			Tx_HypeDirectory_Domain_Model_Register {

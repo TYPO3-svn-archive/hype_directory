@@ -61,10 +61,16 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'fe_group' => 'fe_group',
 		),
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/tca.php',
-		'iconfile'		=> t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/contact.icon.png',
+		'iconfile'		=> t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/contact.png',
 		
 		'dividers2tabs' => TRUE,
 		'thumbnail' => 'images',
+		'type'					=> 'type',
+		'typeicon_column'		=> 'type',
+		'typeicons' => array(
+			'person' => '../typo3conf/ext/hype_directory/Configuration/TCA/Icons/Contact/person.png',
+			'corporation' => '../typo3conf/ext/hype_directory/Configuration/TCA/Icons/Contact/corporation.png',
+		),
 	),
 );
 
@@ -92,7 +98,7 @@ $TCA['tx_hypedirectory_domain_model_register'] = array(
 			'fe_group' => 'fe_group',
 		),
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/tca.php',
-		'iconfile'		=> t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/register.icon.png',
+		'iconfile'		=> t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/register.png',
 		
 		'dividers2tabs' => TRUE,
 		'thumbnail' => 'images',
@@ -123,7 +129,7 @@ $TCA['tx_hypedirectory_domain_model_role'] = array(
 			'fe_group' => 'fe_group',
 		),
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/tca.php',
-		'iconfile'		=> t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/role.icon.png',
+		'iconfile'		=> t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/role.png',
 		
 		'dividers2tabs' => TRUE,
 		'hideTable' => TRUE,

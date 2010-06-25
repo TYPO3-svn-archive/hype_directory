@@ -9,7 +9,7 @@ if(!defined('TYPO3_MODE'))
 $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	'ctrl' => $TCA['tx_hypedirectory_domain_model_contact']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, starttime, endtime ,fe_group, form_of_address, academic_title, first_name, middle_name, last_name, nickname, images, gender, date_of_birth, street, postal_code, city, stair, floor, door, state, country, telephone, cellphone, fax, email, website, remark, related_page, related_address, frontend_user, backend_user'
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, starttime, endtime ,fe_group, type, form_of_address, academic_title, first_name, middle_name, last_name, nickname, corporate_name, images, gender, date_of_birth, street, postal_code, city, stair, floor, door, state, country, telephone, cellphone, fax, email, website, remark, related_page, related_address, frontend_user, backend_user'
 	),
 	'feInterface' => $TCA['tx_hypedirectory_domain_model_contact']['feInterface'],
 	'columns' => array(
@@ -94,6 +94,18 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				'foreign_table' => 'fe_groups'
 			),
 		),
+		'type' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.type',
+			'config' => array(
+				'type' => 'select',
+				'default' => 'person',
+				'items' => array(
+					array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.type.person', 'person', 'EXT:hype_directory/Configuration/TCA/Icons/Contact/person.png'),
+					array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.type.corporation', 'corporation', 'EXT:hype_directory/Configuration/TCA/Icons/Contact/corporation.png'),
+				),
+			),
+		),
 		'form_of_address' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.form_of_address',
@@ -151,6 +163,15 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => '10',
+				'eval' => 'trim',
+			),
+		),
+		'corporate_name' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.corporate_name',
+			'config' => array(
+				'type' => 'input',
+				'size' => '20',
 				'eval' => 'trim',
 			),
 		),
@@ -414,14 +435,23 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 		),
 	),
 	'types' => array(
-		'0' => array('showitem' => '
-			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, form_of_address;;;;1-1-1, academic_title, first_name;;2;;1-1-1, last_name, images;;;;1-1-1, gender;;;;1-1-1, date_of_birth;;;;1-1-1, remark;;;;1-1-1,
+		'person' => array('showitem' => '
+			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, type;;;;1-1-1, form_of_address;;;;1-1-1, academic_title, first_name;;2;;1-1-1, last_name, images;;;;1-1-1, gender;;;;1-1-1, date_of_birth;;;;1-1-1, remark;;;;1-1-1,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.contact,
 				street;;3;;, postal_code, city, country;;4;;, telephone;;;;1-1-1, cellphone, fax, email;;;;1-1-1, website,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.relations,
 				related_page, related_address, frontend_user;;;;1-1-1, backend_user
+		'),
+		'corporation' => array('showitem' => '
+			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, type;;;;1-1-1, corporate_name;;;;1-1-1, remark;;;;1-1-1,
+			
+			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.contact,
+				street;;3;;, postal_code, city, country;;4;;, telephone;;;;1-1-1, cellphone, fax, email;;;;1-1-1, website,
+			
+			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.relations,
+				related_page, related_address
 		'),
 	),
 	'palettes' => array(
@@ -536,7 +566,7 @@ $TCA['tx_hypedirectory_domain_model_register'] = array(
 			'config' => array(
 				'type'						=> 'select',
 				'foreign_table'				=> 'tx_hypedirectory_domain_model_contact',
-				'foreign_table_where'		=> 'ORDER BY last_name ASC, first_name ASC',
+				'foreign_table_where'		=> 'AND type = \'person\' ORDER BY last_name ASC, first_name ASC',
 				'MM'						=> 'tx_hypedirectory_relation_register_contact',
 				'MM_opposite_field'			=> 'registers',
 				'size'						=> 10,
@@ -690,7 +720,7 @@ $TCA['tx_hypedirectory_domain_model_role'] = array(
 			'config' => array(
 				'type'						=> 'select',
 				'foreign_table'				=> 'tx_hypedirectory_domain_model_contact',
-				'foreign_table_where'		=> 'ORDER BY last_name ASC, first_name ASC',
+				'foreign_table_where'		=> 'AND type = \'person\' ORDER BY last_name ASC, first_name ASC',
 				'MM'						=> 'tx_hypedirectory_relation_contact_role',
 				'MM_opposite_field'			=> 'roles',
 				'size'						=> 10,

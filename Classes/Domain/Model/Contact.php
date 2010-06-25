@@ -34,58 +34,10 @@
 class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_AbstractEntity {
 	
 	/**
-	 * @var integer
-	 * @validate Integer
-	 */
-	protected $formOfAddress;
-	
-	/**
 	 * @var string
 	 * @validate String
 	 */
-	protected $academicTitle;
-	
-	/**
-	 * @var string
-	 * @validate String
-	 */
-	protected $firstName;
-	
-	/**
-	 * @var string
-	 * @validate String
-	 */
-	protected $middleName;
-	
-	/**
-	 * @var string
-	 * @validate String
-	 */
-	protected $lastName;
-	
-	/**
-	 * @var string
-	 * @validate String
-	 */
-	protected $nickname;
-	
-	/**
-	 * @var string
-	 * @validate String
-	 */
-	protected $images;
-	
-	/**
-	 * @var integer
-	 * @validate Integer
-	 */
-	protected $gender;
-	
-	/**
-	 * @var integer
-	 * @validate DateTime
-	 */
-	protected $dateOfBirth;
+	protected $type;
 	
 	/**
 	 * @var string
@@ -172,18 +124,6 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	protected $remark;
 	
 	/**
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_HypeDirectory_Domain_Model_Role>
-	 * @lazy
-	 */
-	protected $roles;
-	
-	/**
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_HypeDirectory_Domain_Model_Register>
-	 * @lazy
-	 */
-	protected $registers;
-	
-	/**
 	 * @var integer
 	 * @validate Integer
 	 */
@@ -194,187 +134,24 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	 * @validate String
 	 */
 	protected $relatedAddress;
-	/**
-	 * @var Tx_Extbase_Domain_Model_FrontendUser
-	 * @lazy
-	 */
-	protected $frontendUser;
 	
 	/**
-	 * @var Tx_Extbase_Domain_Model_BackendUser
-	 * @lazy
-	 */
-	protected $backendUser;
-	
-	/**
-	 * Getter for formOfAddress
-	 *
-	 * @return integer
-	 */
-	public function getFormOfAddress() {
-		return $this->formOfAddress;
-	}
-	
-	/**
-	 * Setter for formOfAddress
-	 *
-	 * @param integer $formOfAddress
-	 * @return void
-	 */
-	public function setFormOfAddress($formOfAddress) {
-		$this->formOfAddress = $formOfAddress;
-	}
-	
-	/**
-	 * Getter for academicTitle
+	 * Getter for type
 	 *
 	 * @return string
 	 */
-	public function getAcademicTitle() {
-		return $this->academicTitle;
+	public function getType() {
+		return $this->type;
 	}
 	
 	/**
-	 * Setter for academicTitle
+	 * Setter for type
 	 *
-	 * @param string $academicTitle
+	 * @param string $type
 	 * @return void
 	 */
-	public function setAcademicTitle($academicTitle) {
-		$this->academicTitle = $academicTitle;
-	}
-	
-	/**
-	 * Getter for firstName
-	 *
-	 * @return string
-	 */
-	public function getFirstName() {
-		return $this->firstName;
-	}
-	
-	/**
-	 * Setter for firstName
-	 *
-	 * @param string $firstName
-	 * @return void
-	 */
-	public function setFirstName($firstName) {
-		$this->firstName = $firstName;
-	}
-	
-	/**
-	 * Getter for middleName
-	 *
-	 * @return string
-	 */
-	public function getMiddleName() {
-		return $this->middleName;
-	}
-	
-	/**
-	 * Setter for middleName
-	 *
-	 * @param string $middleName
-	 * @return void
-	 */
-	public function setMiddleName($middleName) {
-		$this->middleName = $middleName;
-	}
-	
-	/**
-	 * Getter for lastName
-	 *
-	 * @return string
-	 */
-	public function getLastName() {
-		return $this->lastName;
-	}
-	
-	/**
-	 * Setter for lastName
-	 *
-	 * @param string $lastName
-	 * @return void
-	 */
-	public function setLastName($lastName) {
-		$this->lastName = $lastName;
-	}
-	
-	/**
-	 * Getter for nickname
-	 *
-	 * @return string
-	 */
-	public function getNickname() {
-		return $this->nickname;
-	}
-	
-	/**
-	 * Setter for nickname
-	 *
-	 * @param string $nickname
-	 * @return void
-	 */
-	public function setNickname($nickname) {
-		$this->nickname = $nickname;
-	}
-	
-	/**
-	 * Getter for images
-	 *
-	 * @return array
-	 */
-	public function getImages() {
-		return explode(',', $this->images);
-	}
-	
-	/**
-	 * Setter for images
-	 *
-	 * @param array $images
-	 * @return void
-	 */
-	public function setImages(array $images) {
-		$this->images = implode(',', $images);
-	}
-	
-	/**
-	 * Getter for gender
-	 *
-	 * @return integer
-	 */
-	public function getGender() {
-		return $this->gender;
-	}
-	
-	/**
-	 * Setter for gender
-	 *
-	 * @param integer $gender
-	 * @return void
-	 */
-	public function setGender($gender) {
-		$this->gender = $gender;
-	}
-	
-	/**
-	 * Getter for dateOfBirth
-	 *
-	 * @return DateTime
-	 */
-	public function getDateOfBirth() {
-		return $this->dateOfBirth;
-	}
-	
-	/**
-	 * Setter for dateOfBirth
-	 *
-	 * @param DateTime $dateOfBirth
-	 * @return void
-	 */
-	public function setDateOfBirth(DateTime $dateOfBirth) {
-		$this->dateOfBirth = $dateOfBirth;
+	public function setType($type) {
+		$this->type = $type;
 	}
 	
 	/**
@@ -644,110 +421,6 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	}
 	
 	/**
-	 * Setter for roles
-	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage $roles
-	 * @return void
-	 */
-	public function setRoles(Tx_Extbase_Persistence_ObjectStorage $roles) {
-		$this->roles = clone $roles;
-	}
-	
-	/**
-	 * Adds a role
-	 *
-	 * @param Tx_HypeStore_Domain_Model_Role $role
-	 * @return void
-	 */
-	public function addRole(Tx_HypeStore_Domain_Model_Role $role) {
-		$this->roles->attach($role);
-	}
-	
-	/**
-	 * Removes a role
-	 *
-	 * @param Tx_HypeStore_Domain_Model_Role $role
-	 * @return void
-	 */
-	public function removeRole(Tx_HypeStore_Domain_Model_Role $role) {
-		$this->roles->detach($role);
-	}
-	
-	/**
-	 * Remove all role
-	 *
-	 * @return void
-	 */
-	public function removeRoles() {
-		$this->roles = new Tx_Extbase_Persistence_ObjectStorage();
-	}
-	
-	/**
-	 * Getter for roles
-	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage
-	 */
-	public function getRoles() {
-		if($this->roles instanceof Tx_Extbase_Persistence_LazyLoadingProxy) {
-			$this->roles->_loadRealInstance();
-		}
-		
-		return clone $this->roles;
-	}
-	
-	/**
-	 * Setter for registers
-	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage $registers
-	 * @return void
-	 */
-	public function setRegisters(Tx_Extbase_Persistence_ObjectStorage $registers) {
-		$this->registers = clone $registers;
-	}
-	
-	/**
-	 * Adds a register
-	 *
-	 * @param Tx_HypeStore_Domain_Model_Register $register
-	 * @return void
-	 */
-	public function addRegister(Tx_HypeStore_Domain_Model_Register $register) {
-		$this->registers->attach($register);
-	}
-	
-	/**
-	 * Removes a register
-	 *
-	 * @param Tx_HypeStore_Domain_Model_Register $register
-	 * @return void
-	 */
-	public function removeRegister(Tx_HypeStore_Domain_Model_Register $register) {
-		$this->registers->detach($register);
-	}
-	
-	/**
-	 * Remove all registers
-	 *
-	 * @return void
-	 */
-	public function removeRegisters() {
-		$this->registers = new Tx_Extbase_Persistence_ObjectStorage();
-	}
-	
-	/**
-	 * Getter for registers
-	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage
-	 */
-	public function getRegisters() {
-		if($this->registers instanceof Tx_Extbase_Persistence_LazyLoadingProxy) {
-			$this->registers->_loadRealInstance();
-		}
-		
-		return clone $this->registers;
-	}
-	
-	/**
 	 * Getter for relatedPage
 	 *
 	 * @return integer
@@ -783,79 +456,6 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	 */
 	public function setRelatedAddress($relatedAddress) {
 		$this->relatedAddress = $relatedAddress;
-	}
-	
-	/**
-	 * Getter for frontendUser
-	 *
-	 * @return string
-	 */
-	public function getFrontendUser() {
-		return $this->frontendUser;
-	}
-	
-	/**
-	 * Setter for frontendUser
-	 *
-	 * @param Tx_Extbase_Domain_Model_FrontendUser $frontendUser
-	 * @return void
-	 */
-	public function setFrontendUser(Tx_Extbase_Domain_Model_FrontendUser $frontendUser) {
-		$this->frontendUser = $frontendUser;
-	}
-	
-	/**
-	 * Getter for backendUser
-	 *
-	 * @return Tx_Extbase_Domain_Model_FrontendUser
-	 */
-	public function getBackendUser() {
-		return $this->backendUser;
-	}
-	
-	/**
-	 * Setter for backendUser
-	 *
-	 * @param Tx_Extbase_Domain_Model_BackendUser $backendUser
-	 * @return void
-	 */
-	public function setBackendUser(Tx_Extbase_Domain_Model_BackendUser $backendUser) {
-		$this->backendUser = $backendUser;
-	}
-	
-	
-	
-	/* Custom functions */
-	
-	/**
-	 * Getter for the name
-	 *
-	 * @return string
-	 */
-	public function getName() {
-		return implode(' ', array_filter(array($this->getFirstName(), $this->getMiddleName(), $this->getLastName())));
-	}
-	
-	/**
-	 * Getter for the complete name
-	 *
-	 * @return string
-	 */
-	public function getCompleteName() {
-		return implode(' ', array_filter(array($this->getAcademicTitle(), $this->getName())));
-	}
-	
-	
-	
-	/* Magic methods */
-	
-	/**
-	 * Returns as a formatted string
-	 *
-	 * @return string
-	 */
-	public function __toString() {
-		return $this->getName();
 	}
 }
 ?>

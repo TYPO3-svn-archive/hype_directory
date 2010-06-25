@@ -12,6 +12,9 @@
 			<label index="tx_hypedirectory.tabs.roles">Roles</label>
 			
 			<label index="tx_hypedirectory_domain_model_contact">Contact</label>
+			<label index="tx_hypedirectory_domain_model_contact.type">Type</label>
+				<label index="tx_hypedirectory_domain_model_contact.type.person">Person</label>
+				<label index="tx_hypedirectory_domain_model_contact.type.corporation">Corporation</label>
 			<label index="tx_hypedirectory_domain_model_contact.form_of_address">Form of address</label>
 				<label index="tx_hypedirectory_domain_model_contact.form_of_address.mister">Mister</label>
 				<label index="tx_hypedirectory_domain_model_contact.form_of_address.misses">Misses</label>
@@ -22,6 +25,7 @@
 			<label index="tx_hypedirectory_domain_model_contact.middle_name">Middle name</label>
 			<label index="tx_hypedirectory_domain_model_contact.last_name">Last name</label>
 			<label index="tx_hypedirectory_domain_model_contact.nickname">Nickname</label>
+			<label index="tx_hypedirectory_domain_model_contact.corporate_name">Name</label>
 			<label index="tx_hypedirectory_domain_model_contact.images">Images</label>
 			<label index="tx_hypedirectory_domain_model_contact.gender">Gender</label>
 				<label index="tx_hypedirectory_domain_model_contact.gender.female">female</label>
@@ -65,6 +69,9 @@
 			<label index="tx_hypedirectory.tabs.roles">Funktionen</label>
 			
 			<label index="tx_hypedirectory_domain_model_contact">Kontakt</label>
+			<label index="tx_hypedirectory_domain_model_contact.type">Typ</label>
+				<label index="tx_hypedirectory_domain_model_contact.type.person">Person</label>
+				<label index="tx_hypedirectory_domain_model_contact.type.corporation">Körperschaft</label>
 			<label index="tx_hypedirectory_domain_model_contact.form_of_address">Anrede</label>
 				<label index="tx_hypedirectory_domain_model_contact.form_of_address.mister">Herr</label>
 				<label index="tx_hypedirectory_domain_model_contact.form_of_address.misses">Frau</label>
@@ -75,6 +82,7 @@
 			<label index="tx_hypedirectory_domain_model_contact.middle_name">Zweiter Vorname</label>
 			<label index="tx_hypedirectory_domain_model_contact.last_name">Nachname</label>
 			<label index="tx_hypedirectory_domain_model_contact.nickname">Spitzname</label>
+			<label index="tx_hypedirectory_domain_model_contact.corporate_name">Name</label>
 			<label index="tx_hypedirectory_domain_model_contact.images">Bilder</label>
 			<label index="tx_hypedirectory_domain_model_contact.gender">Geschlecht</label>
 				<label index="tx_hypedirectory_domain_model_contact.gender.female">weiblich</label>
