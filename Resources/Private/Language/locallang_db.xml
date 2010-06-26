@@ -15,6 +15,7 @@
 			<label index="tx_hypedirectory_domain_model_contact.type">Type</label>
 				<label index="tx_hypedirectory_domain_model_contact.type.person">Person</label>
 				<label index="tx_hypedirectory_domain_model_contact.type.corporation">Corporation</label>
+			<label index="tx_hypedirectory_domain_model_contact.label">Label</label>
 			<label index="tx_hypedirectory_domain_model_contact.form_of_address">Form of address</label>
 				<label index="tx_hypedirectory_domain_model_contact.form_of_address.mister">Mister</label>
 				<label index="tx_hypedirectory_domain_model_contact.form_of_address.misses">Misses</label>
@@ -72,6 +73,7 @@
 			<label index="tx_hypedirectory_domain_model_contact.type">Typ</label>
 				<label index="tx_hypedirectory_domain_model_contact.type.person">Person</label>
 				<label index="tx_hypedirectory_domain_model_contact.type.corporation">Körperschaft</label>
+			<label index="tx_hypedirectory_domain_model_contact.label">Angezeigter Name</label>
 			<label index="tx_hypedirectory_domain_model_contact.form_of_address">Anrede</label>
 				<label index="tx_hypedirectory_domain_model_contact.form_of_address.mister">Herr</label>
 				<label index="tx_hypedirectory_domain_model_contact.form_of_address.misses">Frau</label>

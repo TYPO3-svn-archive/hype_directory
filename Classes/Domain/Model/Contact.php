@@ -43,6 +43,12 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	 * @var string
 	 * @validate String
 	 */
+	protected $label;
+	
+	/**
+	 * @var string
+	 * @validate String
+	 */
 	protected $street;
 	
 	/**
@@ -152,6 +158,25 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	 */
 	public function setType($type) {
 		$this->type = $type;
+	}
+	
+	/**
+	 * Getter for label
+	 *
+	 * @return string
+	 */
+	public function getLabel() {
+		return $this->label;
+	}
+	
+	/**
+	 * Setter for label
+	 *
+	 * @param string $label
+	 * @return void
+	 */
+	public function setLabel($label) {
+		$this->label = $label;
 	}
 	
 	/**

@@ -18,6 +18,7 @@ CREATE TABLE tx_hypedirectory_domain_model_contact (
 	fe_group int(11) DEFAULT '0' NOT NULL,
 	
 	type varchar(64) DEFAULT '' NOT NULL,
+	label varchar(255) DEFAULT '' NOT NULL,
 	form_of_address tinyint(1) DEFAULT '0' NOT NULL,
 	academic_title varchar(255) DEFAULT '' NOT NULL,
 	first_name varchar(255) DEFAULT '' NOT NULL,

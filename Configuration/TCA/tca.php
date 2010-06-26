@@ -9,7 +9,7 @@ if(!defined('TYPO3_MODE'))
 $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	'ctrl' => $TCA['tx_hypedirectory_domain_model_contact']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, starttime, endtime ,fe_group, type, form_of_address, academic_title, first_name, middle_name, last_name, nickname, corporate_name, images, gender, date_of_birth, street, postal_code, city, stair, floor, door, state, country, telephone, cellphone, fax, email, website, remark, related_page, related_address, frontend_user, backend_user'
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, starttime, endtime ,fe_group, type, label, form_of_address, academic_title, first_name, middle_name, last_name, nickname, corporate_name, images, gender, date_of_birth, street, postal_code, city, stair, floor, door, state, country, telephone, cellphone, fax, email, website, remark, related_page, related_address, frontend_user, backend_user'
 	),
 	'feInterface' => $TCA['tx_hypedirectory_domain_model_contact']['feInterface'],
 	'columns' => array(
@@ -106,6 +106,15 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				),
 			),
 		),
+		'label' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.label',
+			'config' => array(
+				'type' => 'none',
+				'size' => '20',
+			),
+			'displayCond' => 'FIELD:label:REQ:true',
+		),
 		'form_of_address' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.form_of_address',
@@ -154,7 +163,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => '20',
-				'eval' => 'trim',
+				'eval' => 'required,trim',
 			),
 		),
 		'nickname' => array(
@@ -172,7 +181,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => '20',
-				'eval' => 'trim',
+				'eval' => 'required,trim',
 			),
 		),
 		'images' => array(
@@ -273,6 +282,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				'size' => '10',
 				'eval' => 'trim',
 			),
+			'displayCond' => 'EXT:static_info_tables:LOADED:true',
 		),
 		'country' => array(
 			'exclude' => 1,
@@ -282,6 +292,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				'size' => '20',
 				'eval' => 'trim',
 			),
+			'displayCond' => 'EXT:static_info_tables:LOADED:true',
 		),
 		'telephone' => array(
 			'exclude' => 1,
@@ -436,7 +447,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	),
 	'types' => array(
 		'person' => array('showitem' => '
-			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, type;;;;1-1-1, form_of_address;;;;1-1-1, academic_title, first_name;;2;;1-1-1, last_name, images;;;;1-1-1, gender;;;;1-1-1, date_of_birth;;;;1-1-1, remark;;;;1-1-1,
+			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, type;;;;1-1-1, label;;;;1-1-1, form_of_address;;;;1-1-1, academic_title, first_name;;2;;1-1-1, last_name, images;;;;1-1-1, gender;;;;1-1-1, date_of_birth;;;;1-1-1, remark;;;;1-1-1,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.contact,
 				street;;3;;, postal_code, city, country;;4;;, telephone;;;;1-1-1, cellphone, fax, email;;;;1-1-1, website,
@@ -445,7 +456,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				related_page, related_address, frontend_user;;;;1-1-1, backend_user
 		'),
 		'corporation' => array('showitem' => '
-			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, type;;;;1-1-1, corporate_name;;;;1-1-1, remark;;;;1-1-1,
+			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, type;;;;1-1-1, label;;;;1-1-1, corporate_name;;;;1-1-1, remark;;;;1-1-1,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.contact,
 				street;;3;;, postal_code, city, country;;4;;, telephone;;;;1-1-1, cellphone, fax, email;;;;1-1-1, website,
