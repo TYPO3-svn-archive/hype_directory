@@ -136,12 +136,6 @@ $TCA['tx_hypedirectory_domain_model_role'] = array(
 	),
 );
 
-
-
-
-
-# EXTENDING TABLES
-
 # Frontend User
 $columns = array(
 	'tx_hypedirectory_domain_model_addresses' => array(
@@ -166,31 +160,5 @@ $columns = array(
 t3lib_div::loadTCA('fe_users');
 t3lib_extMgm::addTCAcolumns('fe_users', $columns, 1);
 t3lib_extMgm::addToAllTCAtypes('fe_users', '--div--;Addresses,tx_hypedirectory_domain_model_addresses', '', 'after:image');
-
-
-
-
-# WEB MODULE
-
-if(TYPO3_MODE == 'BE') {
-	
-	# Contact
-	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables']['tx_hypedirectory_domain_model_contact'][0] = array(
-		'fList' => 'last_name,first_name;middle_name,telephone;cellphone,email',
-		'icon' => TRUE,
-	);
-	
-	# Register
-	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables']['tx_hypedirectory_domain_model_register'][0] = array(
-		'fList' => 'name',
-		'icon' => TRUE,
-	);
-	
-	# Role
-	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables']['tx_hypedirectory_domain_model_role'][0] = array(
-		'fList' => 'title,contact',
-		'icon' => TRUE,
-	);
-}
 
 ?>
