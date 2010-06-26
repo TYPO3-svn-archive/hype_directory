@@ -161,4 +161,17 @@ t3lib_div::loadTCA('fe_users');
 t3lib_extMgm::addTCAcolumns('fe_users', $columns, 1);
 t3lib_extMgm::addToAllTCAtypes('fe_users', '--div--;Addresses,tx_hypedirectory_domain_model_addresses', '', 'after:image');
 
+
+
+# HELP
+
+# Contact
+t3lib_extMgm::addLLrefForTCAdescr('tx_hypedirectory_domain_model_contact', 'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh.contact.xml');
+
+# Register
+t3lib_extMgm::addLLrefForTCAdescr('tx_hypedirectory_domain_model_register', 'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh.register.xml');
+
+# Role
+t3lib_extMgm::addLLrefForTCAdescr('tx_hypedirectory_domain_model_role', 'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh.role.xml');
+
 ?>

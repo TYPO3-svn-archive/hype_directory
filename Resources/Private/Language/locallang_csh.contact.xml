@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Context Sensitive Help for the table &quot;tx_hypedirectory_domain_model_contact&quot;</description>
+		<type>CSH</type>
+		<csh_table>tx_hypedirectory_domain_model_contact</csh_table>
+		<labelContext type="array"></labelContext>
+	</meta>
+	
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="type.description">Depending on this setting, different fields will be shown.</label>
+			<label index="label.description">Used for sorting the contact and also for displaying it in lists.</label>
+			<label index="form_of_address.description">Form of address of the contact.</label>
+			<label index="academic_title.description">Academic title of the contact.</label>
+			<label index="first_name.description">Forename of the contact.</label>
+			<label index="middle_name.description">Middle name(s) of the contact.</label>
+			<label index="last_name.description">Surname of the contact.</label>
+			<label index="nickname.description">Nickname of the contact.</label>
+			<label index="corporate_name.description">Name of the corporation.</label>
+			<label index="images.description">Visual representation of the contact.</label>
+			<label index="gender.description">Gender of the contact.</label>
+			<label index="date_of_birth.description">Day on which the contact was born.</label>
+			<label index="street.description">Street name of the contact's address.</label>
+			<label index="postal_code.description">Postal code of the contact's address.</label>
+			<label index="city.description">City name of the contact's address.</label>
+			<label index="stair.description">Stair number of the contact's address.</label>
+			<label index="floor.description">Floor number of the contact's address.</label>
+			<label index="door.description">Flat/door number of the contact's address.</label>
+			<label index="state.description">State name of the contact's address.</label>
+			<label index="country.description">Country name of the contact's address.</label>
+			<label index="telephone.description">Telephone number.</label>
+			<label index="cellphone.description">Mobile phone number.</label>
+			<label index="fax.description">Fax number.</label>
+			<label index="email.description">Email address.</label>
+			<label index="website.description">Personal website address.</label>
+			<label index="remark.description">Notes related to this contact. Any useful or related information can be stored.</label>
+			<label index="roles.description">Roles which this contact is assigned to.</label>
+			<label index="registers.description">Registers to which this contact is related.</label>
+			<label index="related_page.description">Page holding further related data of the contact.</label>
+			<label index="related_address.description">External address holding additional contact information.</label>
+			<label index="frontend_user.description">Frontend user associated with this contact.</label>
+			<label index="backend_user.description">Backend user associated with this contact.</label>
+		</languageKey>
+		
+		<languageKey index="de" type="array">
+			<label index="type.description">Legt den Typ des Kontakts fest.</label>
+			<label index="label.description">Verwendet zur Sortierung und Anzeige des Kontakts.</label>
+			<label index="form_of_address.description">Anrede des Kontakts.</label>
+			<label index="academic_title.description">Akademischer Titel des Kontakts.</label>
+			<label index="first_name.description">Vorname des Kontakts.</label>
+			<label index="middle_name.description">Mittlere/r Name(n) des Kontakts.</label>
+			<label index="last_name.description">Nachname des Kontakts.</label>
+			<label index="nickname.description">Spitzname des Kontakts.</label>
+			<label index="corporate_name.description">Name der Körperschaft.</label>
+			<label index="images.description">Bilder/Fotos des Kontakts.</label>
+			<label index="gender.description">Geschlecht des Kontakts.</label>
+			<label index="date_of_birth.description">Geburtsdatum des Kontakts.</label>
+			<label index="street.description">Name der Straße.</label>
+			<label index="postal_code.description">PLZ (Postleitzahl) der Adresse.</label>
+			<label index="city.description">Name der Stadt.</label>
+			<label index="stair.description">Stiegennummer der Adresse.</label>
+			<label index="floor.description">Stockwerk der Adresse.</label>
+			<label index="door.description">Türnummer der Adresse.</label>
+			<label index="state.description">Bundesland der Adresse.</label>
+			<label index="country.description">Land der Adresse.</label>
+			<label index="telephone.description">Telefonnummer.</label>
+			<label index="cellphone.description">Mobiltelefonnummer.</label>
+			<label index="fax.description">Faxnummer.</label>
+			<label index="email.description">E-Mail Adresse.</label>
+			<label index="website.description">Website Adresse.</label>
+			<label index="remark.description">Anmerkung zum Kontakt.</label>
+			<label index="roles.description">Dem Kontakt zugewiesene Rollen.</label>
+			<label index="registers.description">Dem Kontakt zugewiesene Liste.</label>
+			<label index="related_page.description">Interne Seite mit mehr Informationen über den Kontakt.</label>
+			<label index="related_address.description">Externe Website mit weiteren Informationen über den Kontakt.</label>
+			<label index="frontend_user.description">Zugehöriger Website-Benutzer.</label>
+			<label index="backend_user.description">Zugehöriger TYPO3-Benutzer.</label>
+		</languageKey>
+	</data>
+</T3locallang>
