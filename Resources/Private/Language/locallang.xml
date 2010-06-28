@@ -6,11 +6,31 @@
 	</meta>
 	<data type="array">
 		<languageKey index="default" type="array">
-			<label index=""></label>
+			<label index="responsibilities">Responsibilities</label>
+			<label index="members">Members</label>
+			<label index="no_contacts_found">No contacts found.</label>
+			<label index="phone_number">Phone number</label>
+			<label index="cellphone_number">Cellphone number</label>
+			<label index="fax_number">Fax number</label>
+			<label index="email">E-mail</label>
+			<label index="website">Website</label>
+			<label index="more_information_about">More information about %s.</label>
+			<label index="further_information_about">Further information about %s.</label>
+			<label index="contact_not_found">Contact not found.</label>
 		</languageKey>
 		
 		<languageKey index="de" type="array">
-			<label index=""></label>
+			<label index="responsibilities">Zuständigkeiten</label>
+			<label index="members">Mitglieder</label>
+			<label index="no_contacts_found">Keine Kontakte gefunden.</label>
+			<label index="phone_number">Telefonnummer</label>
+			<label index="cellphone_number">Handynummer</label>
+			<label index="fax_number">Faxnumme:</label>
+			<label index="email">E-Mail</label>
+			<label index="website">Website</label>
+			<label index="more_information_about">Mehr Informationen über %s.</label>
+			<label index="further_information_about">Weitere Informationen über %s.</label>
+			<label index="contact_not_found">Kontakt nicht gefunden.</label>
 		</languageKey>
 	</data>
 </T3locallang>

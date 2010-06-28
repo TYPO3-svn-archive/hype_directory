@@ -5,44 +5,70 @@
 <f:section name="content">
 	<f:if condition="{contact}">
 		<f:then>
-			<h1>
-				{contact.name}
-				<f:if condition="{contact.nickname}">&ndash; &quot;{contact.nickname}&quot;</f:if>
-			</h1>
-			
-			<f:if condition="{role}">
-				<h2>
-					{role.title}
-					<f:if condition="{role.additionalTitle}"><br />{role.additionalTitle}</f:if>
-				</h2>
-			</f:if>
-			
-			<f:if condition="{contact.images.0}">
-				<p><f:image src="{settings.object.contact.field.images.path}{contact.images.0}" maxWidth="{settings.view.contact.action.index.field.images.maxWidth}" alt="{contact.name}" /></p>
-			</f:if>
-			
-			<p class="address">
-				<f:if condition="{contact.street}">{contact.street}<br /></f:if>
-				<f:if condition="{contact.postalCode}">{contact.postalCode}</f:if>
-				<f:if condition="{contact.city}">{contact.city}<br /></f:if>
-			</p>
-			
-			<p class="contact">
-				<f:if condition="{contact.telephone}">Telefonnummer: {contact.telephone}<br /></f:if>
-				<f:if condition="{contact.cellphone}">Mobilnummer: {contact.cellphone}<br /></f:if>
-				<f:if condition="{contact.fax}">Faxnummer: {contact.fax}<br /></f:if>
-				<f:if condition="{contact.email}">E-Mail: <f:link.email email="{contact.email}">{contact.email}</f:link.email><br /></f:if>
-				<f:if condition="{contact.website}">Website: <f:link.external uri="{contact.website}">{contact.website}</f:link.external><br /></f:if>
-			</p>
-			
-			<p class="relations">
-				<f:if condition="{contact.relatedPage}"><f:link.page pageUid="{contact.relatedPage}">Mehr Informationen über <strong>{contact.name}</strong>.</f:link.page><br /></f:if>
-				<f:if condition="{contact.relatedAddress}"><f:link.external uri="{contact.relatedAddress}">Weitere Informationen über <strong>{contact.name}</strong>.</f:link.external><br /></f:if>
-			</p>
+			<div class="contact vcard">
+				<h1 class="n">
+					<f:if condition="{contact.academicTitle}"><span class="honorific-prefix">{contact.academicTitle}</span></f:if>
+					<f:if condition="{contact.firstName}"><span class="given-name">{contact.firstName}</span></f:if>
+					<f:if condition="{contact.middleName}"><span class="additional-name">{contact.middleName}</span></f:if>
+					<f:if condition="{contact.lastName}"><span class="family-name">{contact.lastName}</span></f:if>
+					<f:if condition="{contact.nickname}">&ndash; &quot;<span class="nickname">{contact.nickname}</span>&quot;</f:if>
+				</h1>
+				
+				<f:if condition="{role}">
+					<h2 class="title">
+						{role.title}
+						<f:if condition="{role.additionalTitle}"><br />{role.additionalTitle}</f:if>
+					</h2>
+				</f:if>
+				
+				<f:if condition="{contact.images.0}">
+					<p class="images"><f:image src="{settings.object.contact.field.images.path}{contact.images.0}" class="photo" maxWidth="{settings.view.contact.action.index.field.images.maxWidth}" alt="{contact.name}" /></p>
+				</f:if>
+				
+				<p class="adr">
+					<f:if condition="{contact.street}"><span class="street-address">{contact.street}</span><br /></f:if>
+					<f:if condition="{contact.postalCode}"><span class="postal-code">{contact.postalCode}</span></f:if>
+					<f:if condition="{contact.city}">
+						<span class="locality">{contact.city}</span><f:if condition="{contact.country}">, <span class="country-name">{contact.country.shortEnglishName}</span></f:if>
+					</f:if>
+				</p>
+				
+				<dl class="data">
+					<f:if condition="{contact.telephone}">
+						<dt>{f:translate(key: 'phone_number')}</dt>
+						<dd class="tel">{contact.telephone}</dd>
+					</f:if>
+					
+					<f:if condition="{contact.cellphone}">
+						<dt>{f:translate(key: 'cellphone_number')}</dt>
+						<dd>{contact.cellphone}</dd>
+					</f:if>
+					
+					<f:if condition="{contact.fax}">
+						<dt>{f:translate(key: 'fax_number')}</dt>
+						<dd>{contact.fax}</dd>
+					</f:if>
+					
+					<f:if condition="{contact.email}">
+						<dt>{f:translate(key: 'email')}</dt>
+						<dd><f:link.email email="{contact.email}" class="email" title="{contact.email}">{contact.email}</f:link.email></dd>
+					</f:if>
+					
+					<f:if condition="{contact.website}">
+						<dt>{f:translate(key: 'website')}</dt>
+						<dd class="url"><f:link.external uri="{contact.website}">{contact.website}</f:link.external></dd>
+					</f:if>
+				</dl>
+				
+				<p class="relations">
+					<f:if condition="{contact.relatedPage}"><f:link.page pageUid="{contact.relatedPage}">{f:translate(key: 'more_information_about', arguments: {0: contact.completeName})}</f:link.page><br /></f:if>
+					<f:if condition="{contact.relatedAddress}"><f:link.external uri="{contact.relatedAddress}">{f:translate(key: 'further_information_about', arguments: {0: contact.completeName})}</f:link.external><br /></f:if>
+				</p>
+			</div>
 		</f:then>
 		
 		<f:else>
-			<p>Kontakt nicht gefunden.</p>
+			<p>{f:translate(key: 'contact_not_found')}</p>
 		</f:else>
 	</f:if>
 </f:section>

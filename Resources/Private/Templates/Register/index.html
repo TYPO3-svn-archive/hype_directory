@@ -15,7 +15,7 @@
 					
 					<f:if condition="{register.roles}">
 						<f:if condition="{register.contacts}">
-							<h3>Zuständigkeiten</h3>
+							<h3>{f:translate(key: 'responsibilities')}</h3>
 						</f:if>
 						
 						<div class="roles">
@@ -33,7 +33,7 @@
 					
 					<f:if condition="{register.contacts}">
 						<div class="contacts">
-							<h3>Mitglieder</h3>
+							<h3>{f:translate(key: 'members')}</h3>
 							
 							<ul>
 								<f:for each="{register.contacts}" as="contact">
@@ -47,7 +47,7 @@
 		</f:then>
 		
 		<f:else>
-			<p>Keine Kontakte gefunden.</p>
+			<p>{f:translate(key: 'no_contacts_found')}</p>
 		</f:else>
 	</f:if>
 </f:section>

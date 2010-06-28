@@ -4,12 +4,15 @@ plugin.tx_hypedirectory {
 			Tx_HypeDirectory_Domain_Model_Contact {
 				mapping {
 					tableName = tx_hypedirectory_domain_model_contact
-					#recordType = person
 				}
 				
 				subclasses {
 					Person = Tx_HypeDirectory_Domain_Model_Contact_Person
 					Corporation = Tx_HypeDirectory_Domain_Model_Contact_Corporation
+				}
+				
+				columns {
+					country.foreignClass = Tx_Hype_Domain_Model_StaticCountry
 				}
 			}
 			
