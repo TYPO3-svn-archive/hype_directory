@@ -9,7 +9,7 @@ if(!defined('TYPO3_MODE'))
 $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	'ctrl' => $TCA['tx_hypedirectory_domain_model_contact']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, starttime, endtime ,fe_group, type, label, form_of_address, academic_title, first_name, middle_name, last_name, nickname, corporate_name, images, gender, date_of_birth, street, postal_code, city, stair, floor, door, state, country, telephone, cellphone, fax, email, website, remark, related_page, related_address, frontend_user, backend_user'
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, starttime, endtime, fe_group, type, label, form_of_address, academic_title, first_name, middle_name, last_name, nickname, corporate_name, images, gender, date_of_birth, street, postal_code, city, stair, floor, door, state, country, telephone, cellphone, fax, email, website, remark, related_page, related_address, frontend_user, backend_user'
 	),
 	'feInterface' => $TCA['tx_hypedirectory_domain_model_contact']['feInterface'],
 	'columns' => array(
@@ -107,7 +107,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			),
 		),
 		'label' => array(
-			'exclude' => 1,
+			'exclude' => 0,
 			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.label',
 			'config' => array(
 				'type' => 'none',
@@ -235,7 +235,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => '5',
-				'eval' => 'trim',
+				'eval' => 'trim,num',
 			),
 		),
 		'city' => array(
@@ -325,7 +325,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => '20',
-				'eval' => 'trim',
+				'eval' => 'trim,num,nospace',
 			),
 		),
 		'cellphone' => array(
@@ -334,7 +334,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => '20',
-				'eval' => 'trim',
+				'eval' => 'trim,num,nospace',
 			),
 		),
 		'fax' => array(
@@ -343,7 +343,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => '20',
-				'eval' => 'trim',
+				'eval' => 'trim,num,nospace',
 			),
 		),
 		'email' => array(
