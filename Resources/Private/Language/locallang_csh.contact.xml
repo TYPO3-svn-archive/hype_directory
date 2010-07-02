@@ -21,6 +21,9 @@
 			<label index="images.description">Visual representation of the contact.</label>
 			<label index="gender.description">Gender of the contact.</label>
 			<label index="date_of_birth.description">Day on which the contact was born.</label>
+			<label index="marital_status.description">Marital status of the contact.</label>
+			<label index="nationality.description">Membership of a nation or sovereign state.</label>
+			<label index="mother_tongue.description">First language the contact has learned from birth.</label>
 			<label index="street.description">Street name of the contact's address.</label>
 			<label index="postal_code.description">Postal code of the contact's address.</label>
 			<label index="city.description">City name of the contact's address.</label>
@@ -56,6 +59,9 @@
 			<label index="images.description">Bilder/Fotos des Kontakts.</label>
 			<label index="gender.description">Geschlecht des Kontakts.</label>
 			<label index="date_of_birth.description">Geburtsdatum des Kontakts.</label>
+			<label index="marital_status.description">Familienstand des Kontakts.</label>
+			<label index="nationality.description">Zugehörigkeit des Kontakts zu einer Nation.</label>
+			<label index="mother_tongue.description">In früher Kindheit ohne formalen Unterricht erlernte Sprache.</label>
 			<label index="street.description">Name der Straße.</label>
 			<label index="postal_code.description">PLZ (Postleitzahl) der Adresse.</label>
 			<label index="city.description">Name der Stadt.</label>

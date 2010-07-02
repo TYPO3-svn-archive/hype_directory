@@ -7,6 +7,7 @@
 	
 	<data type="array">
 		<languageKey index="default" type="array">
+			<label index="tx_hypedirectory.tabs.details">Details</label>
 			<label index="tx_hypedirectory.tabs.contact">Contact</label>
 			<label index="tx_hypedirectory.tabs.relations">Relations</label>
 			<label index="tx_hypedirectory.tabs.roles">Roles</label>
@@ -32,6 +33,15 @@
 				<label index="tx_hypedirectory_domain_model_contact.gender.female">female</label>
 				<label index="tx_hypedirectory_domain_model_contact.gender.male">male</label>
 			<label index="tx_hypedirectory_domain_model_contact.date_of_birth">Date of birth</label>
+			<label index="tx_hypedirectory_domain_model_contact.marital_status">Marital status</label>
+				<label index="tx_hypedirectory_domain_model_contact.marital_status.single">single</label>
+				<label index="tx_hypedirectory_domain_model_contact.marital_status.married">married</label>
+				<label index="tx_hypedirectory_domain_model_contact.marital_status.divorced">divorced</label>
+				<label index="tx_hypedirectory_domain_model_contact.marital_status.widowed">widowed</label>
+				<label index="tx_hypedirectory_domain_model_contact.marital_status.separated">separated</label>
+				<label index="tx_hypedirectory_domain_model_contact.marital_status.unknown">unknown</label>
+			<label index="tx_hypedirectory_domain_model_contact.nationality">Nationality</label>
+			<label index="tx_hypedirectory_domain_model_contact.mother_tongue">Mother tongue</label>
 			<label index="tx_hypedirectory_domain_model_contact.street">Street</label>
 			<label index="tx_hypedirectory_domain_model_contact.postal_code">Postal code</label>
 			<label index="tx_hypedirectory_domain_model_contact.city">City</label>
@@ -66,6 +76,7 @@
 		
 		<languageKey index="de" type="array">
 			<label index="tx_hypedirectory.tabs.contact">Kontakt</label>
+			<label index="tx_hypedirectory.tabs.details">Details</label>
 			<label index="tx_hypedirectory.tabs.relations">Verknüpfungen</label>
 			<label index="tx_hypedirectory.tabs.roles">Funktionen</label>
 			
@@ -90,6 +101,15 @@
 				<label index="tx_hypedirectory_domain_model_contact.gender.female">weiblich</label>
 				<label index="tx_hypedirectory_domain_model_contact.gender.male">männlich</label>
 			<label index="tx_hypedirectory_domain_model_contact.date_of_birth">Geburtsdatum</label>
+			<label index="tx_hypedirectory_domain_model_contact.marital_status">Familienstand</label>
+				<label index="tx_hypedirectory_domain_model_contact.marital_status.single">ledig</label>
+				<label index="tx_hypedirectory_domain_model_contact.marital_status.married">verheiratet</label>
+				<label index="tx_hypedirectory_domain_model_contact.marital_status.divorced">geschieden</label>
+				<label index="tx_hypedirectory_domain_model_contact.marital_status.widowed">verwitwet</label>
+				<label index="tx_hypedirectory_domain_model_contact.marital_status.separated">getrennt lebend</label>
+				<label index="tx_hypedirectory_domain_model_contact.marital_status.unknown">unbekannt</label>
+			<label index="tx_hypedirectory_domain_model_contact.nationality">Nationalität</label>
+			<label index="tx_hypedirectory_domain_model_contact.mother_tongue">Muttersprache</label>
 			<label index="tx_hypedirectory_domain_model_contact.street">Straße</label>
 			<label index="tx_hypedirectory_domain_model_contact.postal_code">PLZ</label>
 			<label index="tx_hypedirectory_domain_model_contact.city">Ort</label>

@@ -67,14 +67,19 @@ class Tx_HypeDirectory_Controller_ContactController extends Tx_Extbase_MVC_Contr
 	 */
 	public function indexAction(Tx_HypeDirectory_Domain_Model_Contact $contact = NULL, Tx_HypeDirectory_Domain_Model_Role $role = NULL) {
 		
-		# set role and contact
-		if($role) {
-			$this->view->assign('role', $role);
+		# set a default/fallback contact
+		if(!$contact && $this->settings['view']['contact']['uid']) {
+			$contact = $this->contactRepository->findByUid((int)$this->settings['view']['contact']['uid']);
 		}
 		
 		# set contact
 		if($contact) {
 			$this->view->assign('contact', $contact);
+		}
+		
+		# set role and contact
+		if($role) {
+			$this->view->assign('role', $role);
 		}
 	}
 }

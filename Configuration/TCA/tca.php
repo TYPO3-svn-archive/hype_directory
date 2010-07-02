@@ -9,7 +9,7 @@ if(!defined('TYPO3_MODE'))
 $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	'ctrl' => $TCA['tx_hypedirectory_domain_model_contact']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, starttime, endtime, fe_group, type, label, form_of_address, academic_title, first_name, middle_name, last_name, nickname, corporate_name, images, gender, date_of_birth, street, postal_code, city, stair, floor, door, state, country, telephone, cellphone, fax, email, website, remark, related_page, related_address, frontend_user, backend_user'
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, starttime, endtime, fe_group, type, label, form_of_address, academic_title, first_name, middle_name, last_name, nickname, corporate_name, images, gender, date_of_birth, marital_status, nationality, mother_tongue, street, postal_code, city, stair, floor, door, state, country, telephone, cellphone, fax, email, website, remark, related_page, related_address, frontend_user, backend_user'
 	),
 	'feInterface' => $TCA['tx_hypedirectory_domain_model_contact']['feInterface'],
 	'columns' => array(
@@ -219,6 +219,67 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				'size' => '5',
 				'eval' => 'trim,date',
 			),
+		),
+		'marital_status' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.marital_status',
+			'config' => array(
+				'type' => 'select',
+				'size' => 1,
+				'items' => array(
+					array('', 0),			 
+					array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.marital_status.single', 1),
+					array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.marital_status.married', 2),
+					array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.marital_status.divorced', 3),
+					array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.marital_status.widowed', 4),
+					array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.marital_status.separated', 5),
+					array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.marital_status.unknown', 99),
+				),
+			),
+		),
+		'nationality' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.nationality',
+			'config' => array(
+				'type' => 'select',
+				'items' => array(
+					array('', NULL),
+				),
+				'itemsProcFunc' => 'tx_staticinfotables_div->selectItemsTCA',
+				'itemsProcFunc_config' => array (
+					'table' => 'static_countries',
+					'indexField' => 'uid',
+					'prependHotlist' => 1,
+					'hotlistLimit' => 5,
+					'hotlistApp' => TYPO3_MODE,
+				),
+				'size' => 1,
+				'minitems' => 0,
+				'maxitems' => 1,
+			),
+			'displayCond' => 'EXT:static_info_tables:LOADED:true',
+		),
+		'mother_tongue' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.mother_tongue',
+			'config' => array(
+				'type' => 'select',
+				'items' => array(
+					array('', NULL),
+				),
+				'itemsProcFunc' => 'tx_staticinfotables_div->selectItemsTCA',
+				'itemsProcFunc_config' => array (
+					'table' => 'static_languages',
+					'indexField' => 'uid',
+					'prependHotlist' => 1,
+					'hotlistLimit' => 5,
+					'hotlistApp' => TYPO3_MODE,
+				),
+				'size' => 1,
+				'minitems' => 0,
+				'maxitems' => 1,
+			),
+			'displayCond' => 'EXT:static_info_tables:LOADED:true',
 		),
 		'street' => array(
 			'exclude' => 0,
@@ -472,8 +533,11 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	),
 	'types' => array(
 		'person' => array('showitem' => '
-			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, type;;;;1-1-1, label;;;;1-1-1, form_of_address;;;;1-1-1, academic_title, first_name;;2;;1-1-1, last_name, images;;;;1-1-1, gender;;;;1-1-1, date_of_birth;;;;1-1-1, remark;;;;1-1-1,
+			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, type;;;;1-1-1, label;;;;1-1-1, form_of_address;;;;1-1-1, academic_title, first_name;;2;;1-1-1, last_name, images;;;;1-1-1, remark;;;;1-1-1,
 			
+			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.details,
+				 gender, date_of_birth, marital_status, nationality, mother_tongue,
+				 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.contact,
 				street;;3;;, postal_code, city, country;;4;;, telephone;;;;1-1-1, cellphone, fax, email;;;;1-1-1, website,
 			

@@ -14,6 +14,9 @@
 			<label index="fax_number">Fax number</label>
 			<label index="email">E-mail</label>
 			<label index="website">Website</label>
+			<label index="marital_status">Marital status</label>
+			<label index="nationality">Nationality</label>
+			<label index="mother_tongue">Mother tongue</label>
 			<label index="more_information_about">More information about %s.</label>
 			<label index="further_information_about">Further information about %s.</label>
 			<label index="contact_not_found">Contact not found.</label>
@@ -28,6 +31,9 @@
 			<label index="fax_number">Faxnumme:</label>
 			<label index="email">E-Mail</label>
 			<label index="website">Website</label>
+			<label index="marital_status">Familienstand</label>
+			<label index="nationality">Nationalität</label>
+			<label index="mother_tongue">Muttersprache</label>
 			<label index="more_information_about">Mehr Informationen über %s.</label>
 			<label index="further_information_about">Weitere Informationen über %s.</label>
 			<label index="contact_not_found">Kontakt nicht gefunden.</label>

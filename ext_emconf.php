@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Hype Directory',
-	'description' => 'Provides a basic system for storing contact data.',
+	'description' => 'Provides a basic system for storing contact data. Use registers to group specific contacts and even apply dedicated roles to them.',
 	'category' => 'fe',
 	'shy' => 0,
 	'version' => '0.1.2',

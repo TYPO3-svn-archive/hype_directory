@@ -90,6 +90,21 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	protected $dateOfBirth;
 	
 	/**
+	 * @var integer
+	 */
+	protected $maritalStatus;
+	
+	/**
+	 * @var Tx_Hype_Domain_Model_StaticCountry
+	 */
+	protected $nationality;
+	
+	/**
+	 * @var Tx_Hype_Domain_Model_StaticLanguage
+	 */
+	protected $motherTongue;
+	
+	/**
 	 * @var Tx_Extbase_Domain_Model_FrontendUser
 	 * @lazy
 	 */
@@ -282,6 +297,63 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	 */
 	public function setDateOfBirth(DateTime $dateOfBirth) {
 		$this->dateOfBirth = $dateOfBirth;
+	}
+	
+	/**
+	 * Getter for formOfAddress
+	 *
+	 * @return integer
+	 */
+	public function getMaritalStatus() {
+		return $this->maritalStatus;
+	}
+	
+	/**
+	 * Setter for maritalStatus
+	 *
+	 * @param integer $formOfAddress
+	 * @return void
+	 */
+	public function setMaritalStatus($maritalStatus) {
+		$this->maritalStatus = $maritalStatus;
+	}
+	
+	/**
+	 * Getter for nationality
+	 *
+	 * @return Tx_Hype_Domain_Model_StaticCountry
+	 */
+	public function getNationality() {
+		return $this->nationality;
+	}
+	
+	/**
+	 * Setter for nationality
+	 *
+	 * @param Tx_Hype_Domain_Model_StaticCountry $nationality
+	 * @return void
+	 */
+	public function setNationality(Tx_Hype_Domain_Model_StaticCountry $nationality) {
+		$this->nationality = $nationality;
+	}
+	
+	/**
+	 * Getter for motherTongue
+	 *
+	 * @return Tx_Hype_Domain_Model_StaticLanguage
+	 */
+	public function getMotherTongue() {
+		return $this->motherTongue;
+	}
+	
+	/**
+	 * Setter for motherTongue
+	 *
+	 * @param Tx_Hype_Domain_Model_StaticLanguage $motherTongue
+	 * @return void
+	 */
+	public function setMotherTongue(Tx_Hype_Domain_Model_StaticLanguage $motherTongue) {
+		$this->motherTongue = $motherTongue;
 	}
 	
 	/**

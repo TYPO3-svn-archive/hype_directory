@@ -60,6 +60,23 @@
 					</f:if>
 				</dl>
 				
+				<dl class="details">
+					<f:if condition="{contact.maritalStatus}">
+						<dt>{f:translate(key: 'marital_status')}</dt>
+						<dd class="tel">{contact.maritalStatus}</dd>
+					</f:if>
+					
+					<f:if condition="{contact.nationality}">
+						<dt>{f:translate(key: 'nationality')}</dt>
+						<dd class="tel">{contact.nationality.shortEnglishName}</dd>
+					</f:if>
+					
+					<f:if condition="{contact.motherTongue}">
+						<dt>{f:translate(key: 'mother_tongue')}</dt>
+						<dd class="tel">{contact.motherTongue.englishName}</dd>
+					</f:if>
+				</dl>
+				
 				<p class="relations">
 					<f:if condition="{contact.relatedPage}"><f:link.page pageUid="{contact.relatedPage}">{f:translate(key: 'more_information_about', arguments: {0: contact.completeName})}</f:link.page><br /></f:if>
 					<f:if condition="{contact.relatedAddress}"><f:link.external uri="{contact.relatedAddress}">{f:translate(key: 'further_information_about', arguments: {0: contact.completeName})}</f:link.external><br /></f:if>
