@@ -4,6 +4,7 @@
 		<type>module</type>
 		<description>Language labels for the blog_example extension</description>
 	</meta>
+	
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="responsibilities">Responsibilities</label>
@@ -28,7 +29,7 @@
 			<label index="no_contacts_found">Keine Kontakte gefunden.</label>
 			<label index="phone_number">Telefonnummer</label>
 			<label index="cellphone_number">Handynummer</label>
-			<label index="fax_number">Faxnumme:</label>
+			<label index="fax_number">Faxnummer</label>
 			<label index="email">E-Mail</label>
 			<label index="website">Website</label>
 			<label index="marital_status">Familienstand</label>

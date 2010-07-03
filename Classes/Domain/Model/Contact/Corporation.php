@@ -39,25 +39,25 @@ class Tx_HypeDirectory_Domain_Model_Contact_Corporation extends Tx_HypeDirectory
 	 * @var string
 	 * @validate String
 	 */
-	protected $corporationName;
+	protected $corporateName;
 	
 	/**
-	 * Getter for corporationName
+	 * Getter for corporateName
 	 *
 	 * @return string
 	 */
-	public function getCorporationName() {
-		return $this->corporationName;
+	public function getCorporateName() {
+		return $this->corporateName;
 	}
 	
 	/**
-	 * Setter for corporationName
+	 * Setter for corporateName
 	 *
-	 * @param string $corporationName
+	 * @param string $corporateName
 	 * @return void
 	 */
-	public function setCorporationName($corporationName) {
-		$this->corporationName = $corporationName;
+	public function setCorporateName($corporateName) {
+		$this->corporateName = $corporateName;
 	}
 	
 	
