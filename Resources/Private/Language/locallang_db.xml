@@ -7,6 +7,14 @@
 	
 	<data type="array">
 		<languageKey index="default" type="array">
+			<label index="tx_hypedirectory.plugin.register">Register (Hype Directory)</label>
+			<label index="tx_hypedirectory.plugin.contact">Contact (Hype Directory)</label>
+			
+			<label index="tx_hypedirectory.flexform.contact">Contact</label>
+			<label index="tx_hypedirectory.flexform.register_page">Register page</label>
+			<label index="tx_hypedirectory.flexform.registers">Registers</label>
+			<label index="tx_hypedirectory.flexform.contact_page">Contact page</label>
+			
 			<label index="tx_hypedirectory.tabs.details">Details</label>
 			<label index="tx_hypedirectory.tabs.contact">Contact</label>
 			<label index="tx_hypedirectory.tabs.relations">Relations</label>
@@ -75,6 +83,15 @@
 		</languageKey>
 		
 		<languageKey index="de" type="array">
+			<label index="tx_hypedirectory.plugin.register">Liste (Hype Directory)</label>
+			<label index="tx_hypedirectory.plugin.contact">Kontakt (Hype Directory)</label>
+			
+			<label index="tx_hypedirectory.flexform.general_settings">Allgemeine Einstellungen</label>
+			<label index="tx_hypedirectory.flexform.contact">Kontakt</label>
+			<label index="tx_hypedirectory.flexform.register_page">Listen-Seite</label>
+			<label index="tx_hypedirectory.flexform.registers">Listen</label>
+			<label index="tx_hypedirectory.flexform.contact_page">Kontakt-Seite</label>
+			
 			<label index="tx_hypedirectory.tabs.contact">Kontakt</label>
 			<label index="tx_hypedirectory.tabs.details">Details</label>
 			<label index="tx_hypedirectory.tabs.relations">Verknüpfungen</label>

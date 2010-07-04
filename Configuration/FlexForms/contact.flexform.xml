@@ -3,7 +3,7 @@
 		<sDEF>
 			<ROOT>
 				<TCEforms>
-					<sheetTitle>General</sheetTitle>
+					<sheetTitle>LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.flexform.general_settings</sheetTitle>
 				</TCEforms>
 				
 				<type>array</type>
@@ -11,7 +11,7 @@
 				<el>
 					<settings.view.register.pid>
 						<TCEforms>
-							<label>Register page</label>
+							<label>LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.flexform.register_page</label>
 							
 							<config>
 								<type>group</type>
@@ -27,7 +27,7 @@
 					
 					<settings.view.contact.uid>
 						<TCEforms>
-							<label>Fallback contact</label>
+							<label>LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.flexform.contact</label>
 							
 							<config>
 								<type>group</type>

@@ -13,10 +13,10 @@ t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/', 'Hype Directo
 # PLUGINS
 
 # Register
-Tx_Extbase_Utility_Extension::registerPlugin($_EXTKEY, 'Register', 'Hype Directory, Register');
+Tx_Extbase_Utility_Extension::registerPlugin($_EXTKEY, 'Register', 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.plugin.register');
 
 # Contact
-Tx_Extbase_Utility_Extension::registerPlugin($_EXTKEY, 'Contact', 'Hype Directory, Contact');
+Tx_Extbase_Utility_Extension::registerPlugin($_EXTKEY, 'Contact', 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.plugin.contact');
 
 
 
