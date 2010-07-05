@@ -28,8 +28,6 @@
 			<label index="tx_hypedirectory_domain_model_contact.form_of_address">Form of address</label>
 				<label index="tx_hypedirectory_domain_model_contact.form_of_address.mister">Mister</label>
 				<label index="tx_hypedirectory_domain_model_contact.form_of_address.misses">Misses</label>
-				<label index="tx_hypedirectory_domain_model_contact.form_of_address.family">Family</label>
-				<label index="tx_hypedirectory_domain_model_contact.form_of_address.company">Company</label>
 			<label index="tx_hypedirectory_domain_model_contact.academic_title">Academic title</label>
 			<label index="tx_hypedirectory_domain_model_contact.first_name">First name</label>
 			<label index="tx_hypedirectory_domain_model_contact.middle_name">Middle name</label>
@@ -105,8 +103,6 @@
 			<label index="tx_hypedirectory_domain_model_contact.form_of_address">Anrede</label>
 				<label index="tx_hypedirectory_domain_model_contact.form_of_address.mister">Herr</label>
 				<label index="tx_hypedirectory_domain_model_contact.form_of_address.misses">Frau</label>
-				<label index="tx_hypedirectory_domain_model_contact.form_of_address.family">Familie</label>
-				<label index="tx_hypedirectory_domain_model_contact.form_of_address.company">Unternehmen</label>
 			<label index="tx_hypedirectory_domain_model_contact.academic_title">Titel</label>
 			<label index="tx_hypedirectory_domain_model_contact.first_name">Vorname</label>
 			<label index="tx_hypedirectory_domain_model_contact.middle_name">Zweiter Vorname</label>

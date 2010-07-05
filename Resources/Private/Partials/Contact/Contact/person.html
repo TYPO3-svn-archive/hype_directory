@@ -1,5 +1,6 @@
 <div class="contact contact_person vcard">
 	<h1 class="n">
+		<f:if condition="{contact.formOfAddress}">{f:translate(key: 'form_of_address.{contact.formOfAddress}')}</f:if>
 		<f:if condition="{contact.academicTitle}"><span class="honorific-prefix">{contact.academicTitle}</span></f:if>
 		<f:if condition="{contact.firstName}"><span class="given-name">{contact.firstName}</span></f:if>
 		<f:if condition="{contact.middleName}"><span class="additional-name">{contact.middleName}</span></f:if>
@@ -19,10 +20,10 @@
 	</f:if>
 	
 	<p class="adr">
-		<f:if condition="{contact.street}"><span class="street-address">{contact.street}</span><br /></f:if>
+		<f:if condition="{contact.street}"><span class="street-address">{contact.street}</span><f:if condition="{contact.door}"> / {contact.door}</f:if><br /></f:if>
 		<f:if condition="{contact.postalCode}"><span class="postal-code">{contact.postalCode}</span></f:if>
 		<f:if condition="{contact.city}">
-			<span class="locality">{contact.city}</span><f:if condition="{contact.country}">, <span class="country-name">{contact.country.shortEnglishName}</span></f:if>
+			<span class="locality">{contact.city}</span><f:if condition="{contact.country}">, <span class="country-name">{contact.country.shortEnglishName}</span></f:if><f:if condition="{contact.state}"> ({contact.state.localName})</f:if>
 		</f:if>
 	</p>
 	
@@ -54,9 +55,14 @@
 	</dl>
 	
 	<dl class="details">
+		<f:if condition="{contact.dateOfBirth}">
+			<dt>{f:translate(key: 'date_of_birth')}</dt>
+			<dd>{f:format.date(date: '{contact.dateOfBirth}', format: '{settings.view.contact.action.index.field.date_of_birth.format}')}</dd>
+		</f:if>
+		
 		<f:if condition="{contact.maritalStatus}">
 			<dt>{f:translate(key: 'marital_status')}</dt>
-			<dd class="tel">{contact.maritalStatus}</dd>
+			<dd class="tel">{f:translate(key: 'marital_status.{contact.maritalStatus}')}</dd>
 		</f:if>
 		
 		<f:if condition="{contact.nationality}">
@@ -74,4 +80,10 @@
 		<f:if condition="{contact.relatedPage}"><f:link.page pageUid="{contact.relatedPage}">{f:translate(key: 'more_information_about', arguments: {0: contact.completeName})}</f:link.page><br /></f:if>
 		<f:if condition="{contact.relatedAddress}"><f:link.external uri="{contact.relatedAddress}">{f:translate(key: 'further_information_about', arguments: {0: contact.completeName})}</f:link.external><br /></f:if>
 	</p>
+	
+	<f:if condition="{contact.remark}">
+		<p class="remark">
+			{contact.remark->f:format.nl2br()}
+		</p>
+	</f:if>
 </div>

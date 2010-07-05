@@ -84,8 +84,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	protected $gender;
 	
 	/**
-	 * @var integer
-	 * @validate DateTime
+	 * @var DateTime
 	 */
 	protected $dateOfBirth;
 	

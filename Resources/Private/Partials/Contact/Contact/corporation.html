@@ -9,7 +9,7 @@
 		<f:if condition="{contact.street}"><span class="street-address">{contact.street}</span><br /></f:if>
 		<f:if condition="{contact.postalCode}"><span class="postal-code">{contact.postalCode}</span></f:if>
 		<f:if condition="{contact.city}">
-			<span class="locality">{contact.city}</span><f:if condition="{contact.country}">, <span class="country-name">{contact.country.shortEnglishName}</span></f:if>
+			<span class="locality">{contact.city}</span><f:if condition="{contact.country}">, <span class="country-name">{contact.country.shortEnglishName}</span></f:if><f:if condition="{contact.state}"> ({contact.state.localName})</f:if>
 		</f:if>
 	</p>
 	

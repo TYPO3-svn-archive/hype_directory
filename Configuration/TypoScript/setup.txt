@@ -117,6 +117,10 @@ plugin.tx_hypedirectory {
 								maxWidth = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.images.maxWidth}
 								maxHeight = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.images.maxHeight}
 							}
+							
+							date_of_birth {
+								format = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.date_of_birth.format}
+							}
 						}
 					}
 				}

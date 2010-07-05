@@ -125,8 +125,6 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 					array('', 0),
 					array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.form_of_address.mister', 1),
 					array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.form_of_address.misses', 2),
-					array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.form_of_address.family', 3),
-					array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.form_of_address.company', 4),
 				),
 			),
 		),
@@ -243,7 +241,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'config' => array(
 				'type' => 'select',
 				'items' => array(
-					array('', NULL),
+					array('', 0),
 				),
 				'itemsProcFunc' => 'tx_staticinfotables_div->selectItemsTCA',
 				'itemsProcFunc_config' => array (
@@ -265,7 +263,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'config' => array(
 				'type' => 'select',
 				'items' => array(
-					array('', NULL),
+					array('', 0),
 				),
 				'itemsProcFunc' => 'tx_staticinfotables_div->selectItemsTCA',
 				'itemsProcFunc_config' => array (
@@ -341,7 +339,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'config' => array(
 				'type' => 'select',
 				'items' => array(
-					array('', NULL),
+					array('', 0),
 				),
 				'itemsProcFunc' => 'tx_staticinfotables_div->selectItemsTCA',
 				'itemsProcFunc_config' => array (
@@ -363,7 +361,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'config' => array(
 				'type' => 'select',
 				'items' => array(
-					array('', NULL),
+					array('', 0),
 				),
 				'itemsProcFunc' => 'tx_staticinfotables_div->selectItemsTCA',
 				'itemsProcFunc_config' => array (

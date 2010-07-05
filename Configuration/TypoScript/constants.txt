@@ -66,6 +66,10 @@ plugin.tx_hypedirectory {
 								maxWidth = 160
 								maxHeight =
 							}
+							
+							date_of_birth {
+								format = d.m.Y
+							}
 						}
 					}
 				}

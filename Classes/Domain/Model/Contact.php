@@ -82,8 +82,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	protected $door;
 	
 	/**
-	 * @var integer
-	 * @validate Integer
+	 * @var Tx_Hype_Domain_Model_StaticCountryZone
 	 */
 	protected $state;
 	
@@ -295,7 +294,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	/**
 	 * Getter for state
 	 *
-	 * @return string
+	 * @return Tx_Hype_Domain_Model_StaticCountryZone
 	 */
 	public function getState() {
 		return $this->state;
@@ -304,10 +303,10 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	/**
 	 * Setter for state
 	 *
-	 * @param string $state
+	 * @param Tx_Hype_Domain_Model_StaticCountryZone $state
 	 * @return void
 	 */
-	public function setState($state) {
+	public function setState(Tx_Hype_Domain_Model_StaticCountryZone $state) {
 		$this->state = $state;
 	}
 	
