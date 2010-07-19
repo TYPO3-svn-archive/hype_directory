@@ -8,7 +8,10 @@
 	</f:if>
 	
 	<p class="adr">
-		<f:if condition="{contact.street}"><span class="street-address">{contact.street}</span><br /></f:if>
+		<f:if condition="{contact.street}">
+			<span class="street-address">{contact.street}</span><f:if condition="{contact.door}">/{contact.door}</f:if><f:if condition="{contact.stair}">, {f:translate(key: 'stair')} {contact.stair}</f:if><f:if condition="{contact.floor}">, {f:translate(key: 'floor')} {contact.floor}</f:if><br />
+		</f:if>
+		
 		<f:if condition="{contact.postalCode}"><span class="postal-code">{contact.postalCode}</span></f:if>
 		<f:if condition="{contact.city}">
 			<span class="locality">{contact.city}</span><f:if condition="{contact.country}">, <span class="country-name">{contact.country.shortEnglishName}</span></f:if><f:if condition="{contact.state}"> ({contact.state.localName})</f:if>
@@ -17,28 +20,28 @@
 	
 	<dl class="data">
 		<f:if condition="{contact.telephoneNumber}">
-			<dt>{f:translate(key: 'phone_number')}</dt>
-			<dd class="tel">{h:format.telephoneNumber(telephoneNumber: '{contact.telephoneNumber}', countryCode: '{contact.telephoneCountry.countryCode}', areaCode: '{contact.telephoneAreaCode}', directDialNumber: '{contact.telephoneExtension}', segmentLength: 2)}</dd>
+			<dt class="telephone">{f:translate(key: 'phone_number')}</dt>
+			<dd class="telephone tel">{h:format.telephoneNumber(telephoneNumber: '{contact.telephoneNumber}', countryCode: '{contact.telephoneCountry.countryCode}', areaCode: '{contact.telephoneAreaCode}', directDialNumber: '{contact.telephoneExtension}', segmentLength: 2)}</dd>
 		</f:if>
 		
 		<f:if condition="{contact.faxNumber}">
-			<dt>{f:translate(key: 'fax_number')}</dt>
-			<dd>{h:format.telephoneNumber(telephoneNumber: '{contact.faxNumber}', countryCode: '{contact.faxCountry.countryCode}', areaCode: '{contact.faxAreaCode}', directDialNumber: '{contact.faxExtension}', segmentLength: 2)}</dd>
+			<dt class="fax_number">{f:translate(key: 'fax_number')}</dt>
+			<dd class="fax_number">{h:format.telephoneNumber(telephoneNumber: '{contact.faxNumber}', countryCode: '{contact.faxCountry.countryCode}', areaCode: '{contact.faxAreaCode}', directDialNumber: '{contact.faxExtension}', segmentLength: 2)}</dd>
 		</f:if>
 		
 		<f:if condition="{contact.cellphoneNumber}">
-			<dt>{f:translate(key: 'cellphone_number')}</dt>
-			<dd>{h:format.telephoneNumber(telephoneNumber: '{contact.cellphoneNumber}', countryCode: '{contact.cellphoneCountry.countryCode}', areaCode: '{contact.cellphoneAreaCode}', segmentLength: 4)}</dd>
+			<dt class="cellphone_number">{f:translate(key: 'cellphone_number')}</dt>
+			<dd class="cellphone_number">{h:format.telephoneNumber(telephoneNumber: '{contact.cellphoneNumber}', countryCode: '{contact.cellphoneCountry.countryCode}', areaCode: '{contact.cellphoneAreaCode}', segmentLength: 4)}</dd>
 		</f:if>
 		
 		<f:if condition="{contact.email}">
-			<dt>{f:translate(key: 'email')}</dt>
-			<dd><f:link.email email="{contact.email}" class="email" title="{contact.email}">{contact.email}</f:link.email></dd>
+			<dt class="email">{f:translate(key: 'email')}</dt>
+			<dd class="email"><f:link.email email="{contact.email}" class="email" title="{contact.email}">{contact.email}</f:link.email></dd>
 		</f:if>
 		
 		<f:if condition="{contact.website}">
-			<dt>{f:translate(key: 'website')}</dt>
-			<dd class="url"><f:link.external uri="{contact.website}">{contact.website}</f:link.external></dd>
+			<dt class="website">{f:translate(key: 'website')}</dt>
+			<dd class="website url"><f:link.external uri="{contact.website}">{contact.website}</f:link.external></dd>
 		</f:if>
 	</dl>
 	

@@ -12,8 +12,11 @@
 			<label index="no_contacts_found">No contacts found.</label>
 			<label index="form_of_address.1">Mr.</label>
 			<label index="form_of_address.2">Ms.</label>
+			<label index="gender">Gender</label>
 			<label index="gender.1">female</label>
 			<label index="gender.2">male</label>
+			<label index="stair">Stair</label>
+			<label index="floor">Floor</label>
 			<label index="phone_number">Phone number</label>
 			<label index="cellphone_number">Cellphone number</label>
 			<label index="fax_number">Fax number</label>
@@ -40,8 +43,11 @@
 			<label index="no_contacts_found">Keine Kontakte gefunden.</label>
 			<label index="form_of_address.1">Herr</label>
 			<label index="form_of_address.2">Frau</label>
+			<label index="gender">Geschlecht</label>
 			<label index="gender.1">weiblich</label>
 			<label index="gender.2">männlich</label>
+			<label index="stair">Stiege</label>
+			<label index="floor">Stockwerk</label>
 			<label index="phone_number">Telefonnummer</label>
 			<label index="cellphone_number">Handynummer</label>
 			<label index="fax_number">Faxnummer</label>
