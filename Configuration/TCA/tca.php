@@ -9,7 +9,7 @@ if(!defined('TYPO3_MODE'))
 $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	'ctrl' => $TCA['tx_hypedirectory_domain_model_contact']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, starttime, endtime, fe_group, type, label, form_of_address, academic_title, first_name, middle_name, last_name, nickname, corporate_name, images, gender, date_of_birth, marital_status, nationality, mother_tongue, street, postal_code, city, stair, floor, door, state, country, telephone, cellphone, fax, email, website, remark, related_page, related_address, frontend_user, backend_user'
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, starttime, endtime, fe_group, type, label, form_of_address, academic_title, first_name, middle_name, last_name, nickname, corporate_name, images, gender, date_of_birth, marital_status, nationality, mother_tongue, street, postal_code, city, stair, floor, door, state, country, telephone_number, telephone_country, telephone_area_code, telephone_extension, cellphone_number, cellphone_country, cellphone_area_code, fax_number, fax_country, fax_area_code, fax_extension, email, website, remark, related_page, related_address, frontend_user, backend_user'
 	),
 	'feInterface' => $TCA['tx_hypedirectory_domain_model_contact']['feInterface'],
 	'columns' => array(
@@ -378,30 +378,141 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			),
 			'displayCond' => 'EXT:static_info_tables:LOADED:true',
 		),
-		'telephone' => array(
+		'telephone_number' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.telephone',
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.telephone_number',
 			'config' => array(
 				'type' => 'input',
 				'size' => '20',
 				'eval' => 'trim,num,nospace',
 			),
 		),
-		'cellphone' => array(
+		'telephone_country' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.cellphone',
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.telephone_country',
+			'config' => array(
+				'type' => 'select',
+				'items' => array(
+					array('', 0),
+				),
+				'itemsProcFunc' => 'tx_staticinfotables_div->selectItemsTCA',
+				'itemsProcFunc_config' => array (
+					'table' => 'static_countries',
+					'indexField' => 'uid',
+					'prependHotlist' => 1,
+					'hotlistLimit' => 5,
+					'hotlistApp' => TYPO3_MODE,
+				),
+				'size' => 1,
+				'minitems' => 0,
+				'maxitems' => 1,
+			),
+			'displayCond' => 'EXT:static_info_tables:LOADED:true',
+		),
+		'telephone_area_code' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.telephone_area_code',
+			'config' => array(
+				'type' => 'input',
+				'size' => '5',
+				'eval' => 'trim,num,nospace',
+			),
+		),
+		'telephone_extension' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.telephone_extension',
+			'config' => array(
+				'type' => 'input',
+				'size' => '5',
+				'eval' => 'trim,num,nospace',
+			),
+		),
+		'cellphone_number' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.cellphone_number',
 			'config' => array(
 				'type' => 'input',
 				'size' => '20',
 				'eval' => 'trim,num,nospace',
 			),
 		),
-		'fax' => array(
+		'cellphone_country' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.fax',
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.cellphone_country',
+			'config' => array(
+				'type' => 'select',
+				'items' => array(
+					array('', 0),
+				),
+				'itemsProcFunc' => 'tx_staticinfotables_div->selectItemsTCA',
+				'itemsProcFunc_config' => array (
+					'table' => 'static_countries',
+					'indexField' => 'uid',
+					'prependHotlist' => 1,
+					'hotlistLimit' => 5,
+					'hotlistApp' => TYPO3_MODE,
+				),
+				'size' => 1,
+				'minitems' => 0,
+				'maxitems' => 1,
+			),
+			'displayCond' => 'EXT:static_info_tables:LOADED:true',
+		),
+		'cellphone_area_code' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.cellphone_area_code',
+			'config' => array(
+				'type' => 'input',
+				'size' => '5',
+				'eval' => 'trim,num,nospace',
+			),
+		),
+		'fax_number' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.fax_number',
 			'config' => array(
 				'type' => 'input',
 				'size' => '20',
+				'eval' => 'trim,num,nospace',
+			),
+		),
+		'fax_country' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.fax_country',
+			'config' => array(
+				'type' => 'select',
+				'items' => array(
+					array('', 0),
+				),
+				'itemsProcFunc' => 'tx_staticinfotables_div->selectItemsTCA',
+				'itemsProcFunc_config' => array (
+					'table' => 'static_countries',
+					'indexField' => 'uid',
+					'prependHotlist' => 1,
+					'hotlistLimit' => 5,
+					'hotlistApp' => TYPO3_MODE,
+				),
+				'size' => 1,
+				'minitems' => 0,
+				'maxitems' => 1,
+			),
+			'displayCond' => 'EXT:static_info_tables:LOADED:true',
+		),
+		'fax_area_code' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.fax_area_code',
+			'config' => array(
+				'type' => 'input',
+				'size' => '5',
+				'eval' => 'trim,num,nospace',
+			),
+		),
+		'fax_extension' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.fax_extension',
+			'config' => array(
+				'type' => 'input',
+				'size' => '5',
 				'eval' => 'trim,num,nospace',
 			),
 		),
@@ -537,7 +648,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				 gender, date_of_birth, marital_status, nationality, mother_tongue,
 				 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.contact,
-				street;;3;;, postal_code, city, country;;4;;, telephone;;;;1-1-1, cellphone, fax, email;;;;1-1-1, website,
+				street;;3;;, postal_code, city, country;;4;;, telephone_number;;5;;1-1-1, fax_number;;6;;1-1-1, cellphone_number;;7;;1-1-1, email;;;;1-1-1, website,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.relations,
 				related_page, related_address, frontend_user;;;;1-1-1, backend_user
@@ -546,17 +657,20 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, type;;;;1-1-1, label;;;;1-1-1, corporate_name;;;;1-1-1, remark;;;;1-1-1,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.contact,
-				street;;3;;, postal_code, city, country;;4;;, telephone;;;;1-1-1, cellphone, fax, email;;;;1-1-1, website,
+				street;;3;;, postal_code, city, country;;4;;, telephone_number;;5;;1-1-1, fax_number;;6;;1-1-1, cellphone_number;;7;;1-1-1, email;;;;1-1-1, website,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tabs.relations,
 				related_page, related_address
 		'),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => 'starttime, endtime, fe_group'),
-		'2' => array('showitem' => 'middle_name, nickname'),
-		'3' => array('showitem' => 'stair, floor, door'),
-		'4' => array('showitem' => 'state'),
+		1 => array('showitem' => 'starttime, endtime, fe_group'),
+		2 => array('showitem' => 'middle_name, nickname'),
+		3 => array('showitem' => 'stair, floor, door'),
+		4 => array('showitem' => 'state'),
+		5 => array('showitem' => 'telephone_country, telephone_area_code, telephone_extension'),
+		6 => array('showitem' => 'fax_country, fax_area_code, fax_extension'),
+		7 => array('showitem' => 'cellphone_country, cellphone_area_code'),
 	),
 );
 
@@ -701,7 +815,7 @@ $TCA['tx_hypedirectory_domain_model_register'] = array(
 		'),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => 'starttime, endtime, fe_group'),
+		1 => array('showitem' => 'starttime, endtime, fe_group'),
 	),
 );
 
@@ -845,7 +959,7 @@ $TCA['tx_hypedirectory_domain_model_role'] = array(
 		'),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => 'starttime, endtime, fe_group'),
+		1 => array('showitem' => 'starttime, endtime, fe_group'),
 	),
 );
 ?>

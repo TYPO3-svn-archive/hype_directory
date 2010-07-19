@@ -1,3 +1,5 @@
+{namespace h=Tx_Hype_ViewHelpers}
+
 <div class="contact contact_person vcard">
 	<h1 class="n">
 		<f:if condition="{contact.formOfAddress}">{f:translate(key: 'form_of_address.{contact.formOfAddress}')}</f:if>
@@ -28,19 +30,19 @@
 	</p>
 	
 	<dl class="data">
-		<f:if condition="{contact.telephone}">
+		<f:if condition="{contact.telephoneNumber}">
 			<dt>{f:translate(key: 'phone_number')}</dt>
-			<dd class="tel">{contact.telephone}</dd>
+			<dd class="tel">{h:format.telephoneNumber(telephoneNumber: '{contact.telephoneNumber}', countryCode: '{contact.telephoneCountry.countryCode}', areaCode: '{contact.telephoneAreaCode}', directDialNumber: '{contact.telephoneExtension}', segmentLength: 2)}</dd>
 		</f:if>
 		
-		<f:if condition="{contact.cellphone}">
-			<dt>{f:translate(key: 'cellphone_number')}</dt>
-			<dd>{contact.cellphone}</dd>
-		</f:if>
-		
-		<f:if condition="{contact.fax}">
+		<f:if condition="{contact.faxNumber}">
 			<dt>{f:translate(key: 'fax_number')}</dt>
-			<dd>{contact.fax}</dd>
+			<dd>{h:format.telephoneNumber(telephoneNumber: '{contact.faxNumber}', countryCode: '{contact.faxCountry.countryCode}', areaCode: '{contact.faxAreaCode}', directDialNumber: '{contact.faxExtension}', segmentLength: 2)}</dd>
+		</f:if>
+		
+		<f:if condition="{contact.cellphoneNumber}">
+			<dt>{f:translate(key: 'cellphone_number')}</dt>
+			<dd>{h:format.telephoneNumber(telephoneNumber: '{contact.cellphoneNumber}', countryCode: '{contact.cellphoneCountry.countryCode}', areaCode: '{contact.cellphoneAreaCode}', segmentLength: 4)}</dd>
 		</f:if>
 		
 		<f:if condition="{contact.email}">

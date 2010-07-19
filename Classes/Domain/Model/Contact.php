@@ -95,19 +95,64 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	 * @var string
 	 * @validate String
 	 */
-	protected $telephone;
+	protected $telephoneNumber;
+	
+	/**
+	 * @var Tx_Hype_Domain_Model_StaticCountry
+	 */
+	protected $telephoneCountry;
 	
 	/**
 	 * @var string
 	 * @validate String
 	 */
-	protected $cellphone;
+	protected $telephoneAreaCode;
 	
 	/**
 	 * @var string
 	 * @validate String
 	 */
-	protected $fax;
+	protected $telephoneExtension;
+	
+	/**
+	 * @var string
+	 * @validate String
+	 */
+	protected $faxNumber;
+	
+	/**
+	 * @var Tx_Hype_Domain_Model_StaticCountry
+	 */
+	protected $faxCountry;
+	
+	/**
+	 * @var string
+	 * @validate String
+	 */
+	protected $faxAreaCode;
+	
+	/**
+	 * @var string
+	 * @validate String
+	 */
+	protected $faxExtension;
+	
+	/**
+	 * @var string
+	 * @validate String
+	 */
+	protected $cellphoneNumber;
+	
+	/**
+	 * @var Tx_Hype_Domain_Model_StaticCountry
+	 */
+	protected $cellphoneCountry;
+	
+	/**
+	 * @var string
+	 * @validate String
+	 */
+	protected $cellphoneAreaCode;
 	
 	/**
 	 * @var string
@@ -330,60 +375,212 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	}
 	
 	/**
-	 * Getter for telephone
+	 * Getter for telephoneNumber
 	 *
 	 * @return string
 	 */
-	public function getTelephone() {
-		return $this->telephone;
+	public function getTelephoneNumber() {
+		return $this->telephoneNumber;
 	}
 	
 	/**
-	 * Setter for telephone
+	 * Setter for telephoneNumber
 	 *
-	 * @param string $telephone
+	 * @param string $telephoneNumber
 	 * @return void
 	 */
-	public function setTelephone($telephone) {
-		$this->telephone = $telephone;
+	public function setTelephoneNumber($telephoneNumber) {
+		$this->telephoneNumber = $telephoneNumber;
 	}
 	
 	/**
-	 * Getter for cellphone
+	 * Getter for telephoneCountry
+	 *
+	 * @return Tx_Hype_Domain_Model_StaticCountry
+	 */
+	public function getTelephoneCountry() {
+		return $this->telephoneCountry;
+	}
+	
+	/**
+	 * Setter for telephoneCountry
+	 *
+	 * @param Tx_Hype_Domain_Model_StaticCountry $telephoneCountry
+	 * @return void
+	 */
+	public function setTelephoneCountry(Tx_Hype_Domain_Model_StaticCountry $telephoneCountry) {
+		$this->telephoneCountry = $telephoneCountry;
+	}
+	
+	/**
+	 * Getter for telephoneAreaCode
 	 *
 	 * @return string
 	 */
-	public function getCellphone() {
-		return $this->cellphone;
+	public function getTelephoneAreaCode() {
+		return $this->telephoneAreaCode;
 	}
 	
 	/**
-	 * Setter for cellphone
+	 * Setter for telephoneAreaCode
 	 *
-	 * @param string $cellphone
+	 * @param string $telephoneAreaCode
 	 * @return void
 	 */
-	public function setCellphone($cellphone) {
-		$this->cellphone = $cellphone;
+	public function setTelephoneAreaCode($telephoneAreaCode) {
+		$this->telephoneAreaCode = $telephoneAreaCode;
 	}
 	
 	/**
-	 * Getter for fax
+	 * Getter for telephoneExtension
 	 *
 	 * @return string
 	 */
-	public function getFax() {
-		return $this->fax;
+	public function getTelephoneExtension() {
+		return $this->telephoneExtension;
 	}
 	
 	/**
-	 * Setter for fax
+	 * Setter for telephoneExtension
 	 *
-	 * @param string $fax
+	 * @param string $telephoneExtension
 	 * @return void
 	 */
-	public function setFax($fax) {
-		$this->fax = $fax;
+	public function setTelephoneExtension($telephoneExtension) {
+		$this->telephoneExtension = $telephoneExtension;
+	}
+	
+	/**
+	 * Getter for faxNumber
+	 *
+	 * @return string
+	 */
+	public function getFaxNumber() {
+		return $this->faxNumber;
+	}
+	
+	/**
+	 * Setter for faxNumber
+	 *
+	 * @param string $faxNumber
+	 * @return void
+	 */
+	public function setFaxNumber($faxNumber) {
+		$this->faxNumber = $faxNumber;
+	}
+	
+	/**
+	 * Getter for faxCountry
+	 *
+	 * @return Tx_Hype_Domain_Model_StaticCountry
+	 */
+	public function getFaxCountry() {
+		return $this->faxCountry;
+	}
+	
+	/**
+	 * Setter for faxCountry
+	 *
+	 * @param Tx_Hype_Domain_Model_StaticCountry $faxCountry
+	 * @return void
+	 */
+	public function setFaxCountry(Tx_Hype_Domain_Model_StaticCountry $faxCountry) {
+		$this->faxCountry = $faxCountry;
+	}
+	
+	/**
+	 * Getter for faxAreaCode
+	 *
+	 * @return string
+	 */
+	public function getFaxAreaCode() {
+		return $this->faxAreaCode;
+	}
+	
+	/**
+	 * Setter for faxAreaCode
+	 *
+	 * @param string $faxAreaCode
+	 * @return void
+	 */
+	public function setFaxAreaCode($faxAreaCode) {
+		$this->faxAreaCode = $faxAreaCode;
+	}
+	
+	/**
+	 * Getter for faxExtension
+	 *
+	 * @return string
+	 */
+	public function getFaxExtension() {
+		return $this->faxExtension;
+	}
+	
+	/**
+	 * Setter for faxExtension
+	 *
+	 * @param string $faxExtension
+	 * @return void
+	 */
+	public function setFaxExtension($faxExtension) {
+		$this->faxExtension = $faxExtension;
+	}
+	
+	/**
+	 * Getter for cellphoneNumber
+	 *
+	 * @return string
+	 */
+	public function getCellphoneNumber() {
+		return $this->cellphoneNumber;
+	}
+	
+	/**
+	 * Setter for cellphoneNumber
+	 *
+	 * @param string $cellphoneNumber
+	 * @return void
+	 */
+	public function setCellphoneNumber($cellphoneNumber) {
+		$this->cellphoneNumber = $cellphoneNumber;
+	}
+	
+	/**
+	 * Getter for cellphoneCountry
+	 *
+	 * @return Tx_Hype_Domain_Model_StaticCountry
+	 */
+	public function getCellphoneCountry() {
+		return $this->cellphoneCountry;
+	}
+	
+	/**
+	 * Setter for cellphoneCountry
+	 *
+	 * @param Tx_Hype_Domain_Model_StaticCountry $cellphoneCountry
+	 * @return void
+	 */
+	public function setCellphoneCountry(Tx_Hype_Domain_Model_StaticCountry $cellphoneCountry) {
+		$this->cellphoneCountry = $cellphoneCountry;
+	}
+	
+	/**
+	 * Getter for cellphoneAreaCode
+	 *
+	 * @return string
+	 */
+	public function getCellphoneAreaCode() {
+		return $this->cellphoneAreaCode;
+	}
+	
+	/**
+	 * Setter for cellphoneAreaCode
+	 *
+	 * @param string $cellphoneAreaCode
+	 * @return void
+	 */
+	public function setCellphoneAreaCode($cellphoneAreaCode) {
+		$this->cellphoneAreaCode = $cellphoneAreaCode;
 	}
 	
 	/**

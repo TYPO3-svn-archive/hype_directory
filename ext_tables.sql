@@ -43,9 +43,20 @@ CREATE TABLE tx_hypedirectory_domain_model_contact (
 	country mediumint(3) DEFAULT '0' NOT NULL,
 	state mediumint(3) DEFAULT '0' NOT NULL,
 	
-	telephone varchar(255) DEFAULT '' NOT NULL,
-	cellphone varchar(255) DEFAULT '' NOT NULL,
-	fax varchar(255) DEFAULT '' NOT NULL,
+	telephone_number varchar(10) DEFAULT '' NOT NULL,
+	telephone_country int(11) DEFAULT '0' NOT NULL,
+	telephone_area_code varchar(10) DEFAULT '' NOT NULL,
+	telephone_extension varchar(3) DEFAULT '' NOT NULL,
+	
+	cellphone_number varchar(10) DEFAULT '' NOT NULL,
+	cellphone_country int(11) DEFAULT '0' NOT NULL,
+	cellphone_area_code varchar(10) DEFAULT '' NOT NULL,
+	
+	fax_number varchar(10) DEFAULT '' NOT NULL,
+	fax_country int(11) DEFAULT '0' NOT NULL,
+	fax_area_code varchar(10) DEFAULT '' NOT NULL,
+	fax_extension varchar(3) DEFAULT '' NOT NULL,
+	
 	email varchar(255) DEFAULT '' NOT NULL,
 	website varchar(255) DEFAULT '' NOT NULL,
 	
