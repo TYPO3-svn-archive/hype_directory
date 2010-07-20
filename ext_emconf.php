@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'description' => 'Provides a basic system for storing contact data. Use registers to group specific contacts and even apply dedicated roles to them.',
 	'category' => 'fe',
 	'shy' => 0,
-	'version' => '0.1.2',
+	'version' => '0.1.3',
 	'dependencies' => 'extbase,fluid,hype',
 	'conflicts' => '',
 	'priority' => '',
@@ -38,7 +38,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'typo3' => '4.4.0-4.4.99',
 			'extbase' => '1.2.0-0.0.0',
 			'fluid' => '1.2.0-0.0.0',
-			'hype' => '0.3.2-0.0.0',
+			'hype' => '0.3.3-0.0.0',
 		),
 		'conflicts' => array(
 		),
