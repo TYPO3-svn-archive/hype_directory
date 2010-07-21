@@ -4,6 +4,7 @@
 			<ROOT>
 				<TCEforms>
 					<sheetTitle>LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.flexform.general_settings</sheetTitle>
+					<cshFile>LLL:EXT:hype_directory/Resources/Private/Language/locallang_csh-flexform_register.xml</cshFile>
 				</TCEforms>
 				
 				<type>array</type>

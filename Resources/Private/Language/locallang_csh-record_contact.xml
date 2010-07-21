@@ -9,6 +9,7 @@
 	
 	<data type="array">
 		<languageKey index="default" type="array">
+			<label index=".description">Holds contact details.</label>
 			<label index="type.description">Depending on this setting, different fields will be shown.</label>
 			<label index="label.description">Used for sorting the contact and also for displaying it in lists.</label>
 			<label index="form_of_address.description">Form of address of the contact.</label>
@@ -32,9 +33,17 @@
 			<label index="door.description">Flat/door number of the contact's address.</label>
 			<label index="state.description">State name of the contact's address.</label>
 			<label index="country.description">Country name of the contact's address.</label>
-			<label index="telephone.description">Telephone number.</label>
-			<label index="cellphone.description">Mobile phone number.</label>
-			<label index="fax.description">Fax number.</label>
+			<label index="telephone_area_code.description">Area code of the telephone number.</label>
+			<label index="telephone_number.description">Telephone number.</label>
+			<label index="telephone_extension.description">Extension of the telephone number.</label>
+			<label index="telephone_country.description">Country of the telephone number.</label>
+			<label index="fax_area_code.description">Area code of the fax number.</label>
+			<label index="fax_number.description">Fax number.</label>
+			<label index="fax_extension.description">Extension of the fax number.</label>
+			<label index="fax_country.description">Country of the fax number.</label>
+			<label index="cellphone_area_code.description">Area code of the cellphone number.</label>
+			<label index="cellphone_number.description">Cellphone number.</label>
+			<label index="cellphone_country.description">Country of the cellphone number.</label>
 			<label index="email.description">Email address.</label>
 			<label index="website.description">Personal website address.</label>
 			<label index="remark.description">Notes related to this contact. Any useful or related information can be stored.</label>
@@ -47,6 +56,7 @@
 		</languageKey>
 		
 		<languageKey index="de" type="array">
+			<label index=".description">Enthält Kontaktinformationen.</label>
 			<label index="type.description">Legt den Typ des Kontakts fest.</label>
 			<label index="label.description">Verwendet zur Sortierung und Anzeige des Kontakts.</label>
 			<label index="form_of_address.description">Anrede des Kontakts.</label>
@@ -70,9 +80,17 @@
 			<label index="door.description">Türnummer der Adresse.</label>
 			<label index="state.description">Bundesland der Adresse.</label>
 			<label index="country.description">Land der Adresse.</label>
-			<label index="telephone.description">Telefonnummer.</label>
-			<label index="cellphone.description">Mobiltelefonnummer.</label>
-			<label index="fax.description">Faxnummer.</label>
+			<label index="telephone_area_code.description">Ortskennzahl (Vorwahl) der Telefonnummer.</label>
+			<label index="telephone_number.description">Teilnehmerrufnummer der Telefonnummer.</label>
+			<label index="telephone_extension.description">Durchwahl der Telefonnummer.</label>
+			<label index="telephone_country.description">Land des Telefonanschlusses.</label>
+			<label index="fax_area_code.description">Ortskennzahl (Vorwahl) der Faxnummer.</label>
+			<label index="fax_number.description">Teilnehmerrufnummer der Faxnummer.</label>
+			<label index="fax_extension.description">Durchwahl der Faxnummer.</label>
+			<label index="fax_country.description">Land des Faxanschlusses.</label>
+			<label index="cellphone_area_code.description">Vorwahl der Mobilnummer.</label>
+			<label index="cellphone_number.description">Teilnehmerrufnummer der Mobilnummer.</label>
+			<label index="cellphone_country.description">Land des Mobilanschlusses.</label>
 			<label index="email.description">E-Mail Adresse.</label>
 			<label index="website.description">Website Adresse.</label>
 			<label index="remark.description">Anmerkung zum Kontakt.</label>

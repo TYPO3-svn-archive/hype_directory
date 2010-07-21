@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Context Sensitive Help for the plugin &quot;Register&quot;.</description>
+		<type>CSH</type>
+		<csh_table></csh_table>
+		<labelContext type="array"></labelContext>
+	</meta>
+	
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="settings.view.register.uid.description">Registers to show.</label>
+			<label index="settings.view.contact.pid.description">Page on which the contact plugin is displayed.</label>
+		</languageKey>
+		
+		<languageKey index="de" type="array">
+			<label index="settings.view.register.uid.description">Listen die angezeigt wird.</label>
+			<label index="settings.view.contact.pid.description">Seite auf der die Kontaktansicht eingebunden ist.</label>
+		</languageKey>
+	</data>
+</T3locallang>

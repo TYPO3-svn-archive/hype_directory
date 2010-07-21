@@ -35,7 +35,7 @@
 	<dl class="data">
 		<f:if condition="{contact.telephoneNumber}">
 			<dt class="telephone">{f:translate(key: 'phone_number')}</dt>
-			<dd class="telephone tel">{h:format.telephoneNumber(telephoneNumber: '{contact.telephoneNumber}', countryCode: '{contact.telephoneCountry.countryCode}', areaCode: '{contact.telephoneAreaCode}', directDialNumber: '{contact.telephoneExtension}', segmentLength: 2)}</dd>
+			<dd class="telephone tel">{h:format.telephoneNumber(telephoneNumber: 'TYPO3', countryCode: '{contact.telephoneCountry.countryCode}', areaCode: '{contact.telephoneAreaCode}', directDialNumber: '{contact.telephoneExtension}', segmentLength: 2, convertPhonewords: 1)}</dd>
 		</f:if>
 		
 		<f:if condition="{contact.faxNumber}">

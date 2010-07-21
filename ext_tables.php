@@ -166,12 +166,12 @@ t3lib_extMgm::addToAllTCAtypes('fe_users', '--div--;Addresses,tx_hypedirectory_d
 # HELP
 
 # Contact
-t3lib_extMgm::addLLrefForTCAdescr('tx_hypedirectory_domain_model_contact', 'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh.contact.xml');
+t3lib_extMgm::addLLrefForTCAdescr('tx_hypedirectory_domain_model_contact', 'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh-record_contact.xml');
 
 # Register
-t3lib_extMgm::addLLrefForTCAdescr('tx_hypedirectory_domain_model_register', 'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh.register.xml');
+t3lib_extMgm::addLLrefForTCAdescr('tx_hypedirectory_domain_model_register', 'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh-record_register.xml');
 
 # Role
-t3lib_extMgm::addLLrefForTCAdescr('tx_hypedirectory_domain_model_role', 'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh.role.xml');
+t3lib_extMgm::addLLrefForTCAdescr('tx_hypedirectory_domain_model_role', 'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh-record_role.xml');
 
 ?>

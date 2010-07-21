@@ -9,6 +9,7 @@
 	
 	<data type="array">
 		<languageKey index="default" type="array">
+			<label index=".description">Assigns a function to a contact.</label>
 			<label index="title.description">Title of the role.</label>
 			<label index="additional_title.description">Additional title of the role.</label>
 			<label index="contacts.description">Contacts of the role.</label>
@@ -16,6 +17,7 @@
 		</languageKey>
 		
 		<languageKey index="de" type="array">
+			<label index=".description">Weist einem Kontakt eine Funktion zu.</label>
 			<label index="title.description">Titel der Funktion.</label>
 			<label index="additional_title.description">Zusatztitel der Funktion.</label>
 			<label index="contacts.description">Zugewiesene Kontakte.</label>

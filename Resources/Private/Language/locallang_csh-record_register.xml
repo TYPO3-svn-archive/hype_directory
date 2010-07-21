@@ -9,12 +9,14 @@
 	
 	<data type="array">
 		<languageKey index="default" type="array">
+			<label index=".description">Groups contacts.</label>
 			<label index="name.description">Name of the register.</label>
 			<label index="roles.description">Roles of the register.</label>
 			<label index="contacts.description">Members of the register.</label>
 		</languageKey>
 		
 		<languageKey index="de" type="array">
+			<label index=".description">Gruppiert Kontakte.</label>
 			<label index="name.description">Name der Liste.</label>
 			<label index="roles.description">Funktionen der Liste.</label>
 			<label index="contacts.description">Mitglieder der Liste.</label>
