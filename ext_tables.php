@@ -60,6 +60,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'endtime' => 'endtime',
 			'fe_group' => 'fe_group',
 		),
+		'editlock' => 'editlock',
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/tca.php',
 		'iconfile'		=> t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/contact.png',
 		
@@ -97,6 +98,7 @@ $TCA['tx_hypedirectory_domain_model_register'] = array(
 			'endtime' => 'endtime',
 			'fe_group' => 'fe_group',
 		),
+		'editlock' => 'editlock',
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/tca.php',
 		'iconfile'		=> t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/register.png',
 		
@@ -128,6 +130,7 @@ $TCA['tx_hypedirectory_domain_model_role'] = array(
 			'endtime' => 'endtime',
 			'fe_group' => 'fe_group',
 		),
+		'editlock' => 'editlock',
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/tca.php',
 		'iconfile'		=> t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/role.png',
 		
@@ -160,6 +163,19 @@ $columns = array(
 t3lib_div::loadTCA('fe_users');
 t3lib_extMgm::addTCAcolumns('fe_users', $columns, 1);
 t3lib_extMgm::addToAllTCAtypes('fe_users', '--div--;Addresses,tx_hypedirectory_domain_model_addresses', '', 'after:image');
+
+
+
+# PAGE ICONS
+
+# Extension
+$TCA['pages']['columns']['module']['config']['items'][] = array('Directory', 'hype_dir_0', 'EXT:hype_directory/ext_icon.gif');
+
+# Contact
+$TCA['pages']['columns']['module']['config']['items'][] = array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact', 'hype_dir_1', 'EXT:hype_directory/Configuration/TCA/Icons/contact.png');
+
+# Register
+$TCA['pages']['columns']['module']['config']['items'][] = array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_register', 'hype_dir_2', 'EXT:hype_directory/Configuration/TCA/Icons/register.png');
 
 
 

@@ -20,6 +20,7 @@
 			<label index="tx_hypedirectory.tab.contact">Contact</label>
 			<label index="tx_hypedirectory.tab.relations">Relations</label>
 			<label index="tx_hypedirectory.tab.roles">Roles</label>
+			<label index="tx_hypedirectory.tab.access">Access</label>
 			
 			<label index="tx_hypedirectory.palette.telephone_number">Telephone number</label>
 			<label index="tx_hypedirectory.palette.fax_number">Fax number</label>
@@ -107,6 +108,7 @@
 			<label index="tx_hypedirectory.tab.details">Details</label>
 			<label index="tx_hypedirectory.tab.relations">Verknüpfungen</label>
 			<label index="tx_hypedirectory.tab.roles">Funktionen</label>
+			<label index="tx_hypedirectory.tab.access">Zugriff</label>
 			
 			<label index="tx_hypedirectory.palette.telephone_number">Telefonnummer</label>
 			<label index="tx_hypedirectory.palette.fax_number">Faxnummer</label>

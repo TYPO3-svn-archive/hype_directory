@@ -16,6 +16,7 @@ CREATE TABLE tx_hypedirectory_domain_model_contact (
 	starttime int(11) DEFAULT '0' NOT NULL,
 	endtime int(11) DEFAULT '0' NOT NULL,
 	fe_group int(11) DEFAULT '0' NOT NULL,
+	editlock tinyint(1) DEFAULT '0' NOT NULL,
 	
 	type varchar(64) DEFAULT '' NOT NULL,
 	label varchar(255) DEFAULT '' NOT NULL,
@@ -94,6 +95,7 @@ CREATE TABLE tx_hypedirectory_domain_model_register (
 	starttime int(11) DEFAULT '0' NOT NULL,
 	endtime int(11) DEFAULT '0' NOT NULL,
 	fe_group int(11) DEFAULT '0' NOT NULL,
+	editlock tinyint(1) DEFAULT '0' NOT NULL,
 	
 	name varchar(255) DEFAULT '' NOT NULL,
 	roles int(11) DEFAULT '0' NOT NULL,
@@ -122,6 +124,7 @@ CREATE TABLE tx_hypedirectory_domain_model_role (
 	starttime int(11) DEFAULT '0' NOT NULL,
 	endtime int(11) DEFAULT '0' NOT NULL,
 	fe_group int(11) DEFAULT '0' NOT NULL,
+	editlock tinyint(1) DEFAULT '0' NOT NULL,
 	
 	title varchar(255) DEFAULT '' NOT NULL,
 	additional_title varchar(255) DEFAULT '' NOT NULL,

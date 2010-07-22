@@ -20,13 +20,15 @@
 						
 						<div class="roles">
 							<f:for each="{register.roles}" as="role">
-								<dl class="role">
-									<dt>{role.title}</dt>
-									
-									<f:for each="{role.contacts}" as="contact">
-										<dd><f:link.action pageUid="{settings.view.contact.pid}" extensionName="HypeDirectory" pluginName="Contact" controller="Contact" arguments="{contact: contact, role: role}">{contact.completeName}</f:link.action></dd>
-									</f:for>
-								</dl>
+								<f:if condition="{f:count(subject: role.contacts)} > 0">
+									<dl class="role">
+										<dt>{role.title}</dt>
+										
+										<f:for each="{role.contacts}" as="contact">
+											<dd><f:link.action pageUid="{settings.view.contact.pid}" extensionName="HypeDirectory" pluginName="Contact" controller="Contact" arguments="{contact: contact, role: role}">{contact.completeName}</f:link.action></dd>
+										</f:for>
+									</dl>
+								</f:if>
 							</f:for>
 						</div>
 					</f:if>

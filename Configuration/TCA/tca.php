@@ -9,7 +9,7 @@ if(!defined('TYPO3_MODE'))
 $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	'ctrl' => $TCA['tx_hypedirectory_domain_model_contact']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, starttime, endtime, fe_group, type, label, form_of_address, academic_title, first_name, middle_name, last_name, nickname, corporate_name, images, gender, date_of_birth, marital_status, nationality, mother_tongue, street, postal_code, city, stair, floor, door, state, country, telephone_number, telephone_country, telephone_area_code, telephone_extension, fax_number, fax_country, fax_area_code, fax_extension, cellphone_number, cellphone_country, cellphone_area_code, email, website, remark, related_page, related_address, frontend_user, backend_user'
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, type, label, form_of_address, academic_title, first_name, middle_name, last_name, nickname, corporate_name, images, gender, date_of_birth, marital_status, nationality, mother_tongue, street, postal_code, city, stair, floor, door, state, country, telephone_number, telephone_country, telephone_area_code, telephone_extension, fax_number, fax_country, fax_area_code, fax_extension, cellphone_number, cellphone_country, cellphone_area_code, email, website, remark, related_page, related_address, frontend_user, backend_user, hidden, starttime, endtime, fe_group, editlock'
 	),
 	'feInterface' => $TCA['tx_hypedirectory_domain_model_contact']['feInterface'],
 	'columns' => array(
@@ -42,56 +42,6 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 		'l10n_diffsource' => array(
 			'config' => array(
 				'type' => 'passthrough',
-			),
-		),
-		'hidden' => array(
-			'exclude' => 1,
-			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
-			'config'	=> array(
-				'type'	=> 'check',
-				'default' => '0'
-			),
-		),
-		'starttime' => array(
-			'exclude' => 1,
-			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.starttime',
-			'config'	=> array(
-				'type'	=> 'input',
-				'size'	=> 8,
-				'max'	=> 20,
-				'eval'	=> 'date',
-				'default'	=> '0',
-				'checkbox' => '0'
-			),
-		),
-		'endtime' => array(
-			'exclude' => 1,
-			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.endtime',
-			'config'	=> array(
-				'type'	=> 'input',
-				'size'	=> 8,
-				'max'	=> 20,
-				'eval'	=> 'date',
-				'checkbox' => '0',
-				'default'	=> '0',
-				'range'	=> array(
-					'upper' => mktime(3, 14, 7, 1, 19, 2038),
-					'lower' => mktime(0, 0, 0, date('m')-1, date('d'), date('Y')),
-				),
-			),
-		),
-		'fe_group' => array(
-			'exclude' => 1,
-			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.fe_group',
-			'config'	=> array(
-				'type'	=> 'select',
-				'items' => array(
-					array('', 0),
-					array('LLL:EXT:lang/locallang_general.xml:LGL.hide_at_login', -1),
-					array('LLL:EXT:lang/locallang_general.xml:LGL.any_login', -2),
-					array('LLL:EXT:lang/locallang_general.xml:LGL.usergroups', '--div--'),
-				),
-				'foreign_table' => 'fe_groups'
 			),
 		),
 		'type' => array(
@@ -639,10 +589,70 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				'maxitems' => 1,
 			),
 		),
+		'hidden' => array(
+			'exclude' => 1,
+			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+			'config'	=> array(
+				'type'	=> 'check',
+				'default' => '0'
+			),
+		),
+		'starttime' => array(
+			'exclude' => 1,
+			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.starttime',
+			'config'	=> array(
+				'type'	=> 'input',
+				'size'	=> 8,
+				'max'	=> 20,
+				'eval'	=> 'date',
+				'default'	=> '0',
+				'checkbox' => '0'
+			),
+		),
+		'endtime' => array(
+			'exclude' => 1,
+			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.endtime',
+			'config'	=> array(
+				'type'	=> 'input',
+				'size'	=> 8,
+				'max'	=> 20,
+				'eval'	=> 'date',
+				'checkbox' => '0',
+				'default'	=> '0',
+				'range'	=> array(
+					'upper' => mktime(3, 14, 7, 1, 19, 2038),
+					'lower' => mktime(0, 0, 0, date('m')-1, date('d'), date('Y')),
+				),
+			),
+		),
+		'fe_group' => array(
+			'exclude' => 1,
+			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.fe_group',
+			'config'	=> array(
+				'type'	=> 'select',
+				'size' => 5,
+				'maxitems' => 99,
+				'items' => array(
+					array('LLL:EXT:lang/locallang_general.xml:LGL.hide_at_login', -1),
+					array('LLL:EXT:lang/locallang_general.xml:LGL.any_login', -2),
+					array('LLL:EXT:lang/locallang_general.xml:LGL.usergroups', '--div--'),
+				),
+				'exclusiveKeys' => '-1,-2',
+				'foreign_table' => 'fe_groups'
+			),
+		),
+		'editlock' => array(
+			'exclude' => 1,
+			'l10n_mode' => 'mergeIfNotBlank',
+			'label' => 'LLL:EXT:lang/locallang_tca.xml:editlock',
+			'config' => array(
+				'type' => 'check'
+			),
+		),
 	),
 	'types' => array(
 		'person' => array('showitem' => '
-			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, type;;;;1-1-1, label;;;;1-1-1, form_of_address;;;;1-1-1, academic_title, first_name;;2;;1-1-1, last_name, images;;;;1-1-1, remark;;;;1-1-1,
+			sys_language_uid, l10n_parent, l10n_diffsource, type;;;;1-1-1, label;;;;1-1-1, form_of_address;;;;1-1-1, academic_title, first_name;;2;;1-1-1, last_name, images;;;;1-1-1, remark;;;;1-1-1,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.details,
 				 gender, date_of_birth, marital_status, nationality, mother_tongue,
@@ -651,20 +661,26 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				street;;3;;, postal_code, city, country;;4;;,--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.telephone_number;5, --palette--;;6;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.fax_number;7;;, --palette--;;8, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.cellphone_number;9, --palette--;;10;;, email;;;;1-1-1, website,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.relations,
-				related_page, related_address, frontend_user;;;;1-1-1, backend_user
+				related_page, related_address, frontend_user;;;;1-1-1, backend_user,
+			
+			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.access,
+				hidden, starttime;;;;1-1-1, endtime, fe_group;;;;1-1-1, editlock;;;;1-1-1
 		'),
 		'corporation' => array('showitem' => '
-			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, type;;;;1-1-1, label;;;;1-1-1, corporate_name;;;;1-1-1, remark;;;;1-1-1,
+			sys_language_uid, l10n_parent, l10n_diffsource, hidden;;1, type;;;;1-1-1, label;;;;1-1-1, corporate_name;;;;1-1-1, remark;;;;1-1-1,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.contact,
 				street;;3;;, postal_code, city, country;;4;;,--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.telephone_number;5, --palette--;;6;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.fax_number;7;;, --palette--;;8, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.cellphone_number;9, --palette--;;10;;, email;;;;1-1-1, website,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.relations,
-				related_page, related_address
+				related_page, related_address,
+			
+			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.access,
+				hidden, starttime;;;;1-1-1, endtime, fe_group;;;;1-1-1, editlock;;;;1-1-1
 		'),
 	),
 	'palettes' => array(
-		1 => array('showitem' => 'starttime, endtime, fe_group'),
+		//1 => array('showitem' => 'starttime, endtime, fe_group'),
 		2 => array('showitem' => 'middle_name, nickname'),
 		3 => array('showitem' => 'stair, floor, door'),
 		4 => array('showitem' => 'state'),
@@ -684,7 +700,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 $TCA['tx_hypedirectory_domain_model_register'] = array(
 	'ctrl' => $TCA['tx_hypedirectory_domain_model_register']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,starttime,endtime,fe_group,name,contacts,roles'
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, name, contacts, roles, hidden, starttime, endtime, fe_group, editlock'
 	),
 	'feInterface' => $TCA['tx_hypedirectory_domain_model_register']['feInterface'],
 	'columns' => array(
@@ -717,56 +733,6 @@ $TCA['tx_hypedirectory_domain_model_register'] = array(
 		'l10n_diffsource' => array(
 			'config' => array(
 				'type' => 'passthrough',
-			),
-		),
-		'hidden' => array(
-			'exclude' => 1,
-			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
-			'config'	=> array(
-				'type'	=> 'check',
-				'default' => '0'
-			),
-		),
-		'starttime' => array(
-			'exclude' => 1,
-			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.starttime',
-			'config'	=> array(
-				'type'	=> 'input',
-				'size'	=> 8,
-				'max'		=> 20,
-				'eval'	=> 'date',
-				'default'	=> '0',
-				'checkbox' => '0'
-			),
-		),
-		'endtime' => array(
-			'exclude' => 1,
-			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.endtime',
-			'config'	=> array(
-				'type'	=> 'input',
-				'size'	=> 8,
-				'max'		=> 20,
-				'eval'	=> 'date',
-				'checkbox' => '0',
-				'default'	=> '0',
-				'range'	=> array(
-					'upper' => mktime(3, 14, 7, 1, 19, 2038),
-					'lower' => mktime(0, 0, 0, date('m')-1, date('d'), date('Y')),
-				),
-			),
-		),
-		'fe_group' => array(
-			'exclude' => 1,
-			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.fe_group',
-			'config'	=> array(
-				'type'	=> 'select',
-				'items' => array(
-					array('', 0),
-					array('LLL:EXT:lang/locallang_general.xml:LGL.hide_at_login', -1),
-					array('LLL:EXT:lang/locallang_general.xml:LGL.any_login', -2),
-					array('LLL:EXT:lang/locallang_general.xml:LGL.usergroups', '--div--'),
-				),
-				'foreign_table' => 'fe_groups'
 			),
 		),
 		'name' => array(
@@ -811,59 +777,6 @@ $TCA['tx_hypedirectory_domain_model_register'] = array(
 				),
 			),
 		),
-	),
-	'types' => array(
-		0 => array('showitem' => '
-			sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name;;;;1-1-1, contacts;;;;1-1-1,
-			
-			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.roles,
-				roles;;;;1-1-1
-		'),
-	),
-	'palettes' => array(
-		1 => array('showitem' => 'starttime, endtime, fe_group'),
-	),
-);
-
-# Role
-$TCA['tx_hypedirectory_domain_model_role'] = array(
-	'ctrl' => $TCA['tx_hypedirectory_domain_model_role']['ctrl'],
-	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,starttime,endtime,fe_group,title,additional_title,contacts,register'
-	),
-	'feInterface' => $TCA['tx_hypedirectory_domain_model_role']['feInterface'],
-	'columns' => array(
-		'sys_language_uid' => array(
-			'exclude' => 1,
-			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.language',
-			'config' => array(
-				'type'				=> 'select',
-				'foreign_table'		=> 'sys_language',
-				'foreign_table_where' => 'ORDER BY sys_language.title',
-				'items' => array(
-					array('LLL:EXT:lang/locallang_general.xml:LGL.allLanguages', -1),
-					array('LLL:EXT:lang/locallang_general.xml:LGL.default_value', 0),
-				),
-			),
-		),
-		'l10n_parent' => array(
-			'displayCond' => 'FIELD:sys_language_uid:>:0',
-			'exclude'	=> 1,
-			'label'		=> 'LLL:EXT:lang/locallang_general.xml:LGL.l18n_parent',
-			'config'		=> array(
-				'type'	=> 'select',
-				'items' => array(
-					array('', 0),
-				),
-				'foreign_table'		=> 'tx_hypedirectory_domain_model_role',
-				'foreign_table_where' => 'AND tx_hypedirectory_domain_model_role.pid=###CURRENT_PID### AND tx_hypedirectory_domain_model_role.sys_language_uid IN (-1,0)',
-			),
-		),
-		'l10n_diffsource' => array(
-			'config' => array(
-				'type' => 'passthrough',
-			),
-		),
 		'hidden' => array(
 			'exclude' => 1,
 			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
@@ -905,13 +818,76 @@ $TCA['tx_hypedirectory_domain_model_role'] = array(
 			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.fe_group',
 			'config'	=> array(
 				'type'	=> 'select',
+				'size' => 5,
+				'maxitems' => 99,
 				'items' => array(
-					array('', 0),
 					array('LLL:EXT:lang/locallang_general.xml:LGL.hide_at_login', -1),
 					array('LLL:EXT:lang/locallang_general.xml:LGL.any_login', -2),
 					array('LLL:EXT:lang/locallang_general.xml:LGL.usergroups', '--div--'),
 				),
+				'exclusiveKeys' => '-1,-2',
 				'foreign_table' => 'fe_groups'
+			),
+		),
+		'editlock' => array(
+			'exclude' => 1,
+			'l10n_mode' => 'mergeIfNotBlank',
+			'label' => 'LLL:EXT:lang/locallang_tca.xml:editlock',
+			'config' => array(
+				'type' => 'check'
+			),
+		),
+	),
+	'types' => array(
+		0 => array('showitem' => '
+			sys_language_uid, l10n_parent, l10n_diffsource, name;;;;1-1-1, contacts;;;;1-1-1,
+			
+			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.roles,
+				roles;;;;1-1-1,
+			
+			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.access,
+				hidden, starttime;;;;1-1-1, endtime, fe_group;;;;1-1-1, editlock;;;;1-1-1
+		'),
+	),
+);
+
+# Role
+$TCA['tx_hypedirectory_domain_model_role'] = array(
+	'ctrl' => $TCA['tx_hypedirectory_domain_model_role']['ctrl'],
+	'interface' => array(
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, title, additional_title, contacts ,register, hidden, starttime, endtime, fe_group, editlock'
+	),
+	'feInterface' => $TCA['tx_hypedirectory_domain_model_role']['feInterface'],
+	'columns' => array(
+		'sys_language_uid' => array(
+			'exclude' => 1,
+			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.language',
+			'config' => array(
+				'type'				=> 'select',
+				'foreign_table'		=> 'sys_language',
+				'foreign_table_where' => 'ORDER BY sys_language.title',
+				'items' => array(
+					array('LLL:EXT:lang/locallang_general.xml:LGL.allLanguages', -1),
+					array('LLL:EXT:lang/locallang_general.xml:LGL.default_value', 0),
+				),
+			),
+		),
+		'l10n_parent' => array(
+			'displayCond' => 'FIELD:sys_language_uid:>:0',
+			'exclude'	=> 1,
+			'label'		=> 'LLL:EXT:lang/locallang_general.xml:LGL.l18n_parent',
+			'config'		=> array(
+				'type'	=> 'select',
+				'items' => array(
+					array('', 0),
+				),
+				'foreign_table'		=> 'tx_hypedirectory_domain_model_role',
+				'foreign_table_where' => 'AND tx_hypedirectory_domain_model_role.pid=###CURRENT_PID### AND tx_hypedirectory_domain_model_role.sys_language_uid IN (-1,0)',
+			),
+		),
+		'l10n_diffsource' => array(
+			'config' => array(
+				'type' => 'passthrough',
 			),
 		),
 		'title' => array(
@@ -958,14 +934,74 @@ $TCA['tx_hypedirectory_domain_model_role'] = array(
 				'maxItems' => 1,
 			),
 		),
+		'hidden' => array(
+			'exclude' => 1,
+			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+			'config'	=> array(
+				'type'	=> 'check',
+				'default' => '0'
+			),
+		),
+		'starttime' => array(
+			'exclude' => 1,
+			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.starttime',
+			'config'	=> array(
+				'type'	=> 'input',
+				'size'	=> 8,
+				'max'		=> 20,
+				'eval'	=> 'date',
+				'default'	=> '0',
+				'checkbox' => '0'
+			),
+		),
+		'endtime' => array(
+			'exclude' => 1,
+			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.endtime',
+			'config'	=> array(
+				'type'	=> 'input',
+				'size'	=> 8,
+				'max'		=> 20,
+				'eval'	=> 'date',
+				'checkbox' => '0',
+				'default'	=> '0',
+				'range'	=> array(
+					'upper' => mktime(3, 14, 7, 1, 19, 2038),
+					'lower' => mktime(0, 0, 0, date('m')-1, date('d'), date('Y')),
+				),
+			),
+		),
+		'fe_group' => array(
+			'exclude' => 1,
+			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.fe_group',
+			'config'	=> array(
+				'type'	=> 'select',
+				'size' => 5,
+				'maxitems' => 99,
+				'items' => array(
+					array('LLL:EXT:lang/locallang_general.xml:LGL.hide_at_login', -1),
+					array('LLL:EXT:lang/locallang_general.xml:LGL.any_login', -2),
+					array('LLL:EXT:lang/locallang_general.xml:LGL.usergroups', '--div--'),
+				),
+				'exclusiveKeys' => '-1,-2',
+				'foreign_table' => 'fe_groups'
+			),
+		),
+		'editlock' => array(
+			'exclude' => 1,
+			'l10n_mode' => 'mergeIfNotBlank',
+			'label' => 'LLL:EXT:lang/locallang_tca.xml:editlock',
+			'config' => array(
+				'type' => 'check'
+			),
+		),
 	),
 	'types' => array(
 		'0' => array('showitem' => '
-			hidden, title;;;;1-1-1, additional_title, contacts;;;;1-1-1, register
+			sys_language_uid, l10n_parent, l10n_diffsource, title;;;;1-1-1, additional_title, contacts;;;;1-1-1, register,
+			
+			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.access,
+				hidden, starttime;;;;1-1-1, endtime, fe_group;;;;1-1-1, editlock;;;;1-1-1
 		'),
-	),
-	'palettes' => array(
-		1 => array('showitem' => 'starttime, endtime, fe_group'),
 	),
 );
 ?>
