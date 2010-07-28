@@ -3,6 +3,15 @@
 class tx_hypedirectory_cmslayout {
 	
 	/**
+	* Function called on object instantiation
+	*
+	* @return void
+	*/
+	public function __construct() {
+		$GLOBALS['LANG']->includeLLFile('EXT:hype_directory/Resources/Private/Language/locallang_db.xml');
+	}
+	
+	/**
 	* Function called from page view, used to generate preview of this plugin
 	*
 	* @param array $parameters
@@ -27,29 +36,33 @@ class tx_hypedirectory_cmslayout {
 			case 'hypedirectory_register':
 				
 				# get registers
-				$registers = explode(',', $form['data']['sDEF']['lDEF']['settings.view.register.uid']['vDEF']);
+				$uids = explode(',', $form['data']['sDEF']['lDEF']['settings.view.register.uid']['vDEF']);
 				
 				$names = array();
-				foreach($registers as $register) {
-					$record = t3lib_BEfunc::getRecord('tx_hypedirectory_domain_model_register', $register);
-					if(is_array($record)) {
-						array_push($names, $record['name']);
+				foreach($uids as $uid) {
+					$register = t3lib_BEfunc::getRecord('tx_hypedirectory_domain_model_register', $uid);
+					if(is_array($register)) {
+						array_push($names, $register['name']);
 					}
 				}
 				
 				if(count($names) > 0) {
-					$content .= 'Registers: ' . implode(', ', $names);
+					$content .= $GLOBALS['LANG']->getLL('tx_hypedirectory.flexform.registers') . ': ' . implode(', ', $names);
 				}
 				
 				break;
 			
 			case 'hypedirectory_contact':
 				
+				# get contact
+				$uid = $form['data']['sDEF']['lDEF']['settings.view.contact.uid']['vDEF'];
+				
+				if($uid) {
+					$contact = t3lib_BEfunc::getRecord('tx_hypedirectory_domain_model_contact', $uid);
+					$content .= $GLOBALS['LANG']->getLL('tx_hypedirectory.flexform.contact') . ': ' . $contact['label'];
+				}
+				
 				break;
-		}
-		
-		if(strlen($content) == 0) {
-			$content = ' ';
 		}
 		
 		return $content;

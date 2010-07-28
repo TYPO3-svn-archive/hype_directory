@@ -9,11 +9,11 @@ class tx_hypedirectory_tcemain {
 			# get whole record
 			$record = t3lib_BEfunc::getRecord($table, $id);
 			
-			# determine correct type
-			$type = ($fields['type']) ? $fields['type'] : $record['type'];
+			# merge changes
+			$record = ($record) ? array_merge($record, $fields) : $fields;
 			
 			# build label accordingly
-			switch($type) {
+			switch($record['type']) {
 				case 'person':
 					$label = implode(' ', array_filter(array($record['last_name'], $record['first_name'])));
 					break;
@@ -28,7 +28,9 @@ class tx_hypedirectory_tcemain {
 			}
 			
 			# assign label
-			$fields['label'] = $label;
+			if($label) {
+				$fields['label'] = $label;
+			}
 		}
 	}
 }

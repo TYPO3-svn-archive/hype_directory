@@ -34,6 +34,66 @@
 class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_AbstractEntity {
 	
 	/**
+	 * @var integer
+	 * @validate Integer
+	 */
+	protected $pid;
+	
+	/**
+	 * @var DateTime
+	 */
+	protected $modificationDate;
+	
+	/**
+	 * @var DateTime
+	 */
+	protected $creationDate;
+	
+	/**
+	 * @var Tx_Hype_Domain_Model_Typo3_BackendUser
+	 */
+	protected $creationUser;
+	
+	/**
+	 * @var integer
+	 */
+	protected $language;
+	
+	/**
+	 * @var integer
+	 * @validate Integer
+	 */
+	protected $sorting;
+	
+	/**
+	 * @var boolean
+	 * @validate Boolean
+	 */
+	protected $deleted;
+	
+	/**
+	 * @var boolean
+	 * @validate Boolean
+	 */
+	protected $hidden;
+	
+	/**
+	 * @var DateTime
+	 */
+	protected $startTime;
+	
+	/**
+	 * @var DateTime
+	 */
+	protected $endTime;
+	
+	/**
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Hype_Domain_Model_Typo3_FrontendUsergroup>
+	 * @lazy
+	 */
+	protected $frontendUsergroups;
+	
+	/**
 	 * @var string
 	 * @validate String
 	 */
@@ -58,6 +118,248 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	 */
 	public function getName() {
 		return $this->name;
+	}
+	
+	/**
+	 * Getter for pid
+	 *
+	 * @return integer
+	 */
+	public function getPid() {
+		return $this->pid;
+	}
+	
+	/**
+	 * Setter for pid
+	 *
+	 * @param integer $pid
+	 * @return void
+	 */
+	public function setPid($pid) {
+		$this->pid = $pid;
+	}
+	
+	/**
+	 * Getter for modificationDate
+	 *
+	 * @return DateTime
+	 */
+	public function getModificationDate() {
+		return $this->modificationDate;
+	}
+	
+	/**
+	 * Setter for modificationDate
+	 *
+	 * @param DateTime $modificationDate
+	 * @return void
+	 */
+	public function setModificationDate(DateTime $modificationDate) {
+		$this->modificationDate = $modificationDate;
+	}
+	
+	/**
+	 * Getter for creationDate
+	 *
+	 * @return DateTime
+	 */
+	public function getCreationDate() {
+		return $this->creationDate;
+	}
+	
+	/**
+	 * Setter for creationDate
+	 *
+	 * @param DateTime $creationDate
+	 * @return void
+	 */
+	public function setCreationDate(DateTime $creationDate) {
+		$this->creationDate = $creationDate;
+	}
+	
+	/**
+	 * Getter for creationUser
+	 *
+	 * @return Tx_Hype_Domain_Model_Typo3_BackendUser
+	 */
+	public function getCreationUser() {
+		return $this->creationUser;
+	}
+	
+	/**
+	 * Setter for creationUser
+	 *
+	 * @param Tx_Hype_Domain_Model_Typo3_BackendUser $creationUser
+	 * @return void
+	 */
+	public function setCreationUser(Tx_Hype_Domain_Model_Typo3_BackendUser $creationUser) {
+		$this->creationUser = $creationUser;
+	}
+	
+	/**
+	 * Getter for language
+	 *
+	 * @return integer
+	 */
+	public function getLanguage() {
+		return $this->language;
+	}
+	
+	/**
+	 * Setter for language
+	 *
+	 * @param integer $language
+	 * @return void
+	 */
+	public function setLanguage($language) {
+		$this->language = $language;
+	}
+
+	/**
+	 * Getter for sorting
+	 *
+	 * @return integer
+	 */
+	public function getSorting() {
+		return $this->sorting;
+	}
+	
+	/**
+	 * Setter for sorting
+	 *
+	 * @param integer $sorting
+	 * @return void
+	 */
+	public function setSorting($sorting) {
+		$this->sorting = $sorting;
+	}
+	
+	/**
+	 * Getter for deleted
+	 *
+	 * @return boolean
+	 */
+	public function getDeleted() {
+		return $this->deleted;
+	}
+	
+	/**
+	 * Setter for deleted
+	 *
+	 * @param boolean $deleted
+	 * @return void
+	 */
+	public function setDeleted($deleted) {
+		$this->deleted = $deleted;
+	}
+	
+	/**
+	 * Getter for hidden
+	 *
+	 * @return boolean
+	 */
+	public function getHidden() {
+		return $this->hidden;
+	}
+	
+	/**
+	 * Setter for hidden
+	 *
+	 * @param boolean $hidden
+	 * @return void
+	 */
+	public function setHidden($hidden) {
+		$this->hidden = $hidden;
+	}
+	
+	/**
+	 * Getter for startTime
+	 *
+	 * @return DateTime
+	 */
+	public function getStartTime() {
+		return $this->startTime;
+	}
+	
+	/**
+	 * Setter for startTime
+	 *
+	 * @param DateTime $startTime
+	 * @return void
+	 */
+	public function setStartTime(DateTime $startTime) {
+		$this->startTime = $startTime;
+	}
+	
+	/**
+	 * Getter for endTime
+	 *
+	 * @return DateTime
+	 */
+	public function getEndTime() {
+		return $this->endTime;
+	}
+	
+	/**
+	 * Setter for endTime
+	 *
+	 * @param DateTime $endTime
+	 * @return void
+	 */
+	public function setEndTime(DateTime $endTime) {
+		$this->endTime = $endTime;
+	}
+	
+	/**
+	 * Setter for frontendUsergroups
+	 *
+	 * @param Tx_Extbase_Persistence_ObjectStorage $frontendUsergroups
+	 * @return void
+	 */
+	public function setFrontendUsergroups(Tx_Extbase_Persistence_ObjectStorage $frontendUsergroups) {
+		$this->frontendUsergroups = clone $frontendUsergroups;
+	}
+	
+	/**
+	 * Adds a frontendUsergroup
+	 *
+	 * @param Tx_Hype_Domain_Model_Typo3_FrontendUsergroup $frontendUsergroup
+	 * @return void
+	 */
+	public function addFrontendUsergroup(Tx_Hype_Domain_Model_Typo3_FrontendUsergroup $frontendUsergroup) {
+		$this->contacts->attach($frontendUsergroup);
+	}
+	
+	/**
+	 * Removes a frontendUsergroup
+	 *
+	 * @param Tx_Hype_Domain_Model_Typo3_FrontendUsergroup $frontendUsergroup
+	 * @return void
+	 */
+	public function removeFrontendUsergroup(Tx_Hype_Domain_Model_Typo3_FrontendUsergroup $frontendUsergroup) {
+		$this->contacts->detach($frontendUsergroup);
+	}
+	
+	/**
+	 * Remove all frontendUsergroups
+	 *
+	 * @return void
+	 */
+	public function removeFrontendUsergroups() {
+		$this->contacts = new Tx_Extbase_Persistence_ObjectStorage();
+	}
+	
+	/**
+	 * Getter for frontendUsergroups
+	 *
+	 * @return Tx_Extbase_Persistence_ObjectStorage
+	 */
+	public function getFrontendUsergroups() {
+		if($this->frontendUsergroups instanceof Tx_Extbase_Persistence_LazyLoadingProxy) {
+			$this->frontendUsergroups->_loadRealInstance();
+		}
+		
+		return clone $this->frontendUsergroups;
 	}
 	
 	/**

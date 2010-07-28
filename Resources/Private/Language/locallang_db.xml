@@ -22,6 +22,7 @@
 			<label index="tx_hypedirectory.tab.roles">Roles</label>
 			<label index="tx_hypedirectory.tab.access">Access</label>
 			
+			<label index="tx_hypedirectory.palette.city">City</label>
 			<label index="tx_hypedirectory.palette.telephone_number">Telephone number</label>
 			<label index="tx_hypedirectory.palette.fax_number">Fax number</label>
 			<label index="tx_hypedirectory.palette.cellphone_number">Cellphone number</label>
@@ -36,7 +37,7 @@
 				<label index="tx_hypedirectory_domain_model_contact.form_of_address.misses">Misses</label>
 			<label index="tx_hypedirectory_domain_model_contact.academic_title">Academic title</label>
 			<label index="tx_hypedirectory_domain_model_contact.first_name">First name</label>
-			<label index="tx_hypedirectory_domain_model_contact.middle_name">Middle name</label>
+			<label index="tx_hypedirectory_domain_model_contact.middle_name">Middle names</label>
 			<label index="tx_hypedirectory_domain_model_contact.last_name">Last name</label>
 			<label index="tx_hypedirectory_domain_model_contact.nickname">Nickname</label>
 			<label index="tx_hypedirectory_domain_model_contact.corporate_name">Name</label>
@@ -110,6 +111,7 @@
 			<label index="tx_hypedirectory.tab.roles">Funktionen</label>
 			<label index="tx_hypedirectory.tab.access">Zugriff</label>
 			
+			<label index="tx_hypedirectory.palette.city">Stadt/Ort</label>
 			<label index="tx_hypedirectory.palette.telephone_number">Telefonnummer</label>
 			<label index="tx_hypedirectory.palette.fax_number">Faxnummer</label>
 			<label index="tx_hypedirectory.palette.cellphone_number">Mobilnummer</label>
@@ -124,7 +126,7 @@
 				<label index="tx_hypedirectory_domain_model_contact.form_of_address.misses">Frau</label>
 			<label index="tx_hypedirectory_domain_model_contact.academic_title">Titel</label>
 			<label index="tx_hypedirectory_domain_model_contact.first_name">Vorname</label>
-			<label index="tx_hypedirectory_domain_model_contact.middle_name">Zweiter Vorname</label>
+			<label index="tx_hypedirectory_domain_model_contact.middle_name">Weitere Vornamen</label>
 			<label index="tx_hypedirectory_domain_model_contact.last_name">Nachname</label>
 			<label index="tx_hypedirectory_domain_model_contact.nickname">Spitzname</label>
 			<label index="tx_hypedirectory_domain_model_contact.corporate_name">Name</label>
@@ -144,7 +146,7 @@
 			<label index="tx_hypedirectory_domain_model_contact.mother_tongue">Muttersprache</label>
 			<label index="tx_hypedirectory_domain_model_contact.street">Straße</label>
 			<label index="tx_hypedirectory_domain_model_contact.postal_code">PLZ</label>
-			<label index="tx_hypedirectory_domain_model_contact.city">Ort</label>
+			<label index="tx_hypedirectory_domain_model_contact.city">Stadt/Ort</label>
 			<label index="tx_hypedirectory_domain_model_contact.stair">Stiege</label>
 			<label index="tx_hypedirectory_domain_model_contact.floor">Stockwerk</label>
 			<label index="tx_hypedirectory_domain_model_contact.door">Türnummer</label>

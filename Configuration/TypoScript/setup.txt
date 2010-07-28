@@ -4,6 +4,16 @@ plugin.tx_hypedirectory {
 			Tx_HypeDirectory_Domain_Model_Contact {
 				mapping {
 					tableName = tx_hypedirectory_domain_model_contact
+					
+					columns {
+						starttime.mapOnProperty = startTime
+						endtime.mapOnProperty = endTime
+						cruser_id.mapOnProperty = creationUser
+						crdate.mapOnProperty = creationDate
+						tstamp.mapOnProperty = modificationDate
+						sys_language_uid.mapOnProperty = language
+						fe_group.mapOnProperty = frontendUsergroups
+					}
 				}
 				
 				subclasses {
@@ -37,12 +47,32 @@ plugin.tx_hypedirectory {
 			Tx_HypeDirectory_Domain_Model_Register {
 				mapping {
 					tableName = tx_hypedirectory_domain_model_register
+					
+					columns {
+						starttime.mapOnProperty = startTime
+						endtime.mapOnProperty = endTime
+						cruser_id.mapOnProperty = creationUser
+						crdate.mapOnProperty = creationDate
+						tstamp.mapOnProperty = modificationDate
+						sys_language_uid.mapOnProperty = language
+						fe_group.mapOnProperty = frontendUsergroups
+					}
 				}
 			}
 			
 			Tx_HypeDirectory_Domain_Model_Role {
 				mapping {
 					tableName = tx_hypedirectory_domain_model_role
+					
+					columns {
+						starttime.mapOnProperty = startTime
+						endtime.mapOnProperty = endTime
+						cruser_id.mapOnProperty = creationUser
+						crdate.mapOnProperty = creationDate
+						tstamp.mapOnProperty = modificationDate
+						sys_language_uid.mapOnProperty = language
+						fe_group.mapOnProperty = frontendUsergroups
+					}
 				}
 			}
 		}

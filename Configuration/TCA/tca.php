@@ -13,6 +13,26 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	),
 	'feInterface' => $TCA['tx_hypedirectory_domain_model_contact']['feInterface'],
 	'columns' => array(
+		'pid' => array(
+			'type' => 'passthrough'
+		),
+		'deleted' => array(
+			'type' => 'passthrough'
+		),
+		'sorting' => array(
+			'type' => 'passthrough'
+		),
+		'tstamp' => array(
+			'type' => 'passthrough'
+		),
+		'crdate' => array(
+			'type' => 'passthrough'
+		),
+		'cruser_id' => array(
+			'type' => 'select',
+			'foreign_table' => 'be_users',
+		),
+		
 		'sys_language_uid' => array(
 			'exclude' => 1,
 			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.language',
@@ -594,7 +614,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
 			'config'	=> array(
 				'type'	=> 'check',
-				'default' => '0'
+				'default' => 0,
 			),
 		),
 		'starttime' => array(
@@ -658,7 +678,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				 gender, date_of_birth, marital_status, nationality, mother_tongue,
 				 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.contact,
-				street;;3;;, postal_code, city, country;;4;;,--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.telephone_number;5, --palette--;;6;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.fax_number;7;;, --palette--;;8, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.cellphone_number;9, --palette--;;10;;, email;;;;1-1-1, website,
+				street;;3;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.city;1, country;;4;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.telephone_number;5, --palette--;;6;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.fax_number;7;;, --palette--;;8, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.cellphone_number;9, --palette--;;10;;, email;;;;1-1-1, website,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.relations,
 				related_page, related_address, frontend_user;;;;1-1-1, backend_user,
@@ -670,7 +690,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			sys_language_uid, l10n_parent, l10n_diffsource, hidden;;1, type;;;;1-1-1, label;;;;1-1-1, corporate_name;;;;1-1-1, remark;;;;1-1-1,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.contact,
-				street;;3;;, postal_code, city, country;;4;;,--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.telephone_number;5, --palette--;;6;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.fax_number;7;;, --palette--;;8, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.cellphone_number;9, --palette--;;10;;, email;;;;1-1-1, website,
+				street;;3;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.city;1, country;;4;;,--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.telephone_number;5, --palette--;;6;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.fax_number;7;;, --palette--;;8, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.cellphone_number;9, --palette--;;10;;, email;;;;1-1-1, website,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.relations,
 				related_page, related_address,
@@ -680,7 +700,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 		'),
 	),
 	'palettes' => array(
-		//1 => array('showitem' => 'starttime, endtime, fe_group'),
+		1 => array('showitem' => 'postal_code, city', 'canNotCollapse' => TRUE),
 		2 => array('showitem' => 'middle_name, nickname'),
 		3 => array('showitem' => 'stair, floor, door'),
 		4 => array('showitem' => 'state'),
@@ -704,6 +724,26 @@ $TCA['tx_hypedirectory_domain_model_register'] = array(
 	),
 	'feInterface' => $TCA['tx_hypedirectory_domain_model_register']['feInterface'],
 	'columns' => array(
+		'pid' => array(
+			'type' => 'passthrough'
+		),
+		'deleted' => array(
+			'type' => 'passthrough'
+		),
+		'sorting' => array(
+			'type' => 'passthrough'
+		),
+		'tstamp' => array(
+			'type' => 'passthrough'
+		),
+		'crdate' => array(
+			'type' => 'passthrough'
+		),
+		'cruser_id' => array(
+			'type' => 'select',
+			'foreign_table' => 'be_users',
+		),
+		
 		'sys_language_uid' => array(
 			'exclude' => 1,
 			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.language',
@@ -782,7 +822,7 @@ $TCA['tx_hypedirectory_domain_model_register'] = array(
 			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
 			'config'	=> array(
 				'type'	=> 'check',
-				'default' => '0'
+				'default' => 0,
 			),
 		),
 		'starttime' => array(
@@ -859,6 +899,26 @@ $TCA['tx_hypedirectory_domain_model_role'] = array(
 	),
 	'feInterface' => $TCA['tx_hypedirectory_domain_model_role']['feInterface'],
 	'columns' => array(
+		'pid' => array(
+			'type' => 'passthrough'
+		),
+		'deleted' => array(
+			'type' => 'passthrough'
+		),
+		'sorting' => array(
+			'type' => 'passthrough'
+		),
+		'tstamp' => array(
+			'type' => 'passthrough'
+		),
+		'crdate' => array(
+			'type' => 'passthrough'
+		),
+		'cruser_id' => array(
+			'type' => 'select',
+			'foreign_table' => 'be_users',
+		),
+		
 		'sys_language_uid' => array(
 			'exclude' => 1,
 			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.language',
@@ -881,7 +941,7 @@ $TCA['tx_hypedirectory_domain_model_role'] = array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table'		=> 'tx_hypedirectory_domain_model_role',
+				'foreign_table' => 'tx_hypedirectory_domain_model_role',
 				'foreign_table_where' => 'AND tx_hypedirectory_domain_model_role.pid=###CURRENT_PID### AND tx_hypedirectory_domain_model_role.sys_language_uid IN (-1,0)',
 			),
 		),
@@ -939,7 +999,7 @@ $TCA['tx_hypedirectory_domain_model_role'] = array(
 			'label'	=> 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
 			'config'	=> array(
 				'type'	=> 'check',
-				'default' => '0'
+				'default' => 0,
 			),
 		),
 		'starttime' => array(

@@ -26,6 +26,8 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 
 
 # HOOKS
+
+# Backend
 if(TYPO3_MODE == 'BE') {
 	
 	# TCE Main
@@ -33,8 +35,10 @@ if(TYPO3_MODE == 'BE') {
 	
 	# CMS Layout
 	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['list_type_Info']['hypedirectory_register'][] = 'EXT:hype_directory/Classes/Hook/class.tx_hypedirectory_cmslayout.php:tx_hypedirectory_cmslayout->getPluginPreview';
+	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['list_type_Info']['hypedirectory_contact'][] = 'EXT:hype_directory/Classes/Hook/class.tx_hypedirectory_cmslayout.php:tx_hypedirectory_cmslayout->getPluginPreview';
 }
 
+# Frontend
 if(TYPO3_MODE == 'FE') {
 	
 	# RealUrl

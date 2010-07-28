@@ -169,13 +169,14 @@ t3lib_extMgm::addToAllTCAtypes('fe_users', '--div--;Addresses,tx_hypedirectory_d
 # PAGE ICONS
 
 # Extension
-$TCA['pages']['columns']['module']['config']['items'][] = array('Directory', 'hype_dir_0', 'EXT:hype_directory/ext_icon.gif');
+//$TCA['pages']['columns']['module']['config']['items'][] = array('Directory', 'hype_dir_0', 'EXT:hype_directory/ext_icon.gif');
 
 # Contact
-$TCA['pages']['columns']['module']['config']['items'][] = array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact', 'hype_dir_1', 'EXT:hype_directory/Configuration/TCA/Icons/contact.png');
+//$TCA['pages']['columns']['module']['config']['items'][] = array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact', 'hype_dir_1', 'EXT:hype_directory/Configuration/TCA/Icons/contact.png');
+//t3lib_SpriteManager::addTcaTypeIcon('tx_hypedirectory_domain_model_contact', 'contains-hype_dir_1', t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/contact.png');
 
 # Register
-$TCA['pages']['columns']['module']['config']['items'][] = array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_register', 'hype_dir_2', 'EXT:hype_directory/Configuration/TCA/Icons/register.png');
+//$TCA['pages']['columns']['module']['config']['items'][] = array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_register', 'hype_dir_2', 'EXT:hype_directory/Configuration/TCA/Icons/register.png');
 
 
 
