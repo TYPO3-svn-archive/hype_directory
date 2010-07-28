@@ -10,23 +10,6 @@
 		<f:if condition="{contact.nickname}">&ndash; &quot;<span class="nickname">{contact.nickname}</span>&quot;</f:if>
 	</h1>
 	
-	<p>
-		pid: {contact.pid}<br />
-		modification date: {contact.modificationDate->f:format.date()}<br />
-		creation date: {contact.creationDate->f:format.date()}<br />
-		creation user: {contact.creationUser}<br />
-		language: {contact.language}<br />
-		sorting: {contact.sorting}<br />
-		deleted: {contact.deleted}<br />
-		hidden:{contact.hidden}<br />
-		start time: {contact.startTime->f:format.date()}<br />
-		end time: {contact.endTime->f:format.date()}<br />
-		frontend usergroups:<br />
-		<f:for each="{contact.frontendUsergroups}" as="usergroup">
-			{usergroup}<br />
-		</f:for>
-	</p>
-	
 	<f:if condition="{role}">
 		<h2 class="title">
 			{role.title}
