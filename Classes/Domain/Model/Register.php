@@ -52,7 +52,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	/**
 	 * @var Tx_Hype_Domain_Model_Typo3_BackendUser
 	 */
-	protected $creationUser;
+	//protected $creationUser;
 	
 	/**
 	 * @var integer

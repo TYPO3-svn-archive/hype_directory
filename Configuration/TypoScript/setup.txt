@@ -1,4 +1,4 @@
-plugin.tx_hypedirectory {
+config.tx_extbase {
 	persistence {
 		classes {
 			Tx_HypeDirectory_Domain_Model_Contact {

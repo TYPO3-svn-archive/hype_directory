@@ -52,7 +52,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	/**
 	 * @var Tx_Hype_Domain_Model_Typo3_BackendUser
 	 */
-	protected $creationUser;
+	//protected $creationUser;
 	
 	/**
 	 * @var integer

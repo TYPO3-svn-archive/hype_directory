@@ -687,7 +687,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				hidden, starttime;;;;1-1-1, endtime, fe_group;;;;1-1-1, editlock;;;;1-1-1
 		'),
 		'corporation' => array('showitem' => '
-			sys_language_uid, l10n_parent, l10n_diffsource, hidden;;1, type;;;;1-1-1, label;;;;1-1-1, corporate_name;;;;1-1-1, remark;;;;1-1-1,
+			sys_language_uid, l10n_parent, l10n_diffsource, type;;;;1-1-1, label;;;;1-1-1, corporate_name;;;;1-1-1, remark;;;;1-1-1,
 			
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.contact,
 				street;;3;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.city;1, country;;4;;,--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.telephone_number;5, --palette--;;6;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.fax_number;7;;, --palette--;;8, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.cellphone_number;9, --palette--;;10;;, email;;;;1-1-1, website,
