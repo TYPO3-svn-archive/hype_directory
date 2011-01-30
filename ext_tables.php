@@ -167,15 +167,20 @@ t3lib_extMgm::addToAllTCAtypes('fe_users', '--div--;Addresses,tx_hypedirectory_d
 
 # PAGE ICONS
 
-# Extension
-//$TCA['pages']['columns']['module']['config']['items'][] = array('Directory', 'hype_dir_0', 'EXT:hype_directory/ext_icon.gif');
+if(TYPO3_MODE == 'BE') {
 
-# Contact
-//$TCA['pages']['columns']['module']['config']['items'][] = array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact', 'hype_dir_1', 'EXT:hype_directory/Configuration/TCA/Icons/contact.png');
-//t3lib_SpriteManager::addTcaTypeIcon('tx_hypedirectory_domain_model_contact', 'contains-hype_dir_1', t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/contact.png');
+	# Extension
+	$TCA['pages']['columns']['module']['config']['items'][] = array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory', 'hype_dir_0', 'EXT:hype_directory/ext_icon.gif');
+	t3lib_SpriteManager::addTcaTypeIcon('pages', 'contains-hype_dir_0', t3lib_extMgm::extRelPath($_EXTKEY) . 'ext_icon.gif');
 
-# Register
-//$TCA['pages']['columns']['module']['config']['items'][] = array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_register', 'hype_dir_2', 'EXT:hype_directory/Configuration/TCA/Icons/register.png');
+	# Contact
+	$TCA['pages']['columns']['module']['config']['items'][] = array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact', 'hype_dir_1', 'EXT:hype_directory/Configuration/TCA/Icons/contact.png');
+	t3lib_SpriteManager::addTcaTypeIcon('pages', 'contains-hype_dir_1', t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/contact.png');
+
+	# Register
+	$TCA['pages']['columns']['module']['config']['items'][] = array('LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_register', 'hype_dir_2', 'EXT:hype_directory/Configuration/TCA/Icons/register.png');
+	t3lib_SpriteManager::addTcaTypeIcon('pages', 'contains-hype_dir_2', t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/register.png');
+}
 
 
 
