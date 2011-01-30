@@ -1,39 +1,39 @@
 plugin.tx_hypedirectory {
 	settings {
-		
+
 		common {
-			
+
 		}
-		
+
 		object {
 			contact {
-				
+
 				field {
 					images {
 						path = uploads/hype/directory/contact/images/
 					}
 				}
 			}
-			
+
 			register {
-				
+
 			}
-			
+
 			role {
-				
+
 			}
 		}
-		
+
 		view {
 			register {
 				pid =
-				
+
 				action {
 					index {
 						common {
-							
+
 						}
-						
+
 						object {
 							contact {
 								field {
@@ -49,16 +49,16 @@ plugin.tx_hypedirectory {
 					}
 				}
 			}
-			
+
 			contact {
 				pid =
-				
+
 				action {
 					index {
 						common {
-							
+
 						}
-						
+
 						field {
 							images {
 								width =
@@ -66,7 +66,7 @@ plugin.tx_hypedirectory {
 								maxWidth = 160
 								maxHeight =
 							}
-							
+
 							date_of_birth {
 								format = d.m.Y
 							}
@@ -76,8 +76,8 @@ plugin.tx_hypedirectory {
 			}
 		}
 	}
-	
+
 	persistence {
-		storagePid = 
+		storagePid =
 	}
 }

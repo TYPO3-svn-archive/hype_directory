@@ -32,85 +32,85 @@
  * @entity
  */
 class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_AbstractEntity {
-	
+
 	/**
 	 * @var integer
 	 * @validate Integer
 	 */
 	protected $pid;
-	
+
 	/**
 	 * @var DateTime
 	 */
 	protected $modificationDate;
-	
+
 	/**
 	 * @var DateTime
 	 */
 	protected $creationDate;
-	
+
 	/**
 	 * @var Tx_Hype_Domain_Model_Typo3_BackendUser
 	 */
 	//protected $creationUser;
-	
+
 	/**
 	 * @var integer
 	 */
 	protected $language;
-	
+
 	/**
 	 * @var integer
 	 * @validate Integer
 	 */
 	protected $sorting;
-	
+
 	/**
 	 * @var boolean
 	 * @validate Boolean
 	 */
 	protected $deleted;
-	
+
 	/**
 	 * @var boolean
 	 * @validate Boolean
 	 */
 	protected $hidden;
-	
+
 	/**
 	 * @var DateTime
 	 */
 	protected $startTime;
-	
+
 	/**
 	 * @var DateTime
 	 */
 	protected $endTime;
-	
+
 	/**
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Hype_Domain_Model_Typo3_FrontendUsergroup>
 	 * @lazy
 	 */
 	protected $frontendUsergroups;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $name;
-	
+
 	/**
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_HypeDirectory_Domain_Model_Contact>
 	 * @lazy
 	 */
 	protected $contacts;
-	
+
 	/**
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_HypeDirectory_Domain_Model_Role>
 	 * @lazy
 	 */
 	protected $roles;
-	
+
 	/**
 	 * Getter for name
 	 *
@@ -119,7 +119,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function getName() {
 		return $this->name;
 	}
-	
+
 	/**
 	 * Getter for pid
 	 *
@@ -128,7 +128,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function getPid() {
 		return $this->pid;
 	}
-	
+
 	/**
 	 * Setter for pid
 	 *
@@ -138,7 +138,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function setPid($pid) {
 		$this->pid = $pid;
 	}
-	
+
 	/**
 	 * Getter for modificationDate
 	 *
@@ -147,7 +147,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function getModificationDate() {
 		return $this->modificationDate;
 	}
-	
+
 	/**
 	 * Setter for modificationDate
 	 *
@@ -157,7 +157,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function setModificationDate(DateTime $modificationDate) {
 		$this->modificationDate = $modificationDate;
 	}
-	
+
 	/**
 	 * Getter for creationDate
 	 *
@@ -166,7 +166,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function getCreationDate() {
 		return $this->creationDate;
 	}
-	
+
 	/**
 	 * Setter for creationDate
 	 *
@@ -176,7 +176,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function setCreationDate(DateTime $creationDate) {
 		$this->creationDate = $creationDate;
 	}
-	
+
 	/**
 	 * Getter for creationUser
 	 *
@@ -185,7 +185,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function getCreationUser() {
 		return $this->creationUser;
 	}
-	
+
 	/**
 	 * Setter for creationUser
 	 *
@@ -195,7 +195,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function setCreationUser(Tx_Hype_Domain_Model_Typo3_BackendUser $creationUser) {
 		$this->creationUser = $creationUser;
 	}
-	
+
 	/**
 	 * Getter for language
 	 *
@@ -204,7 +204,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function getLanguage() {
 		return $this->language;
 	}
-	
+
 	/**
 	 * Setter for language
 	 *
@@ -223,7 +223,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function getSorting() {
 		return $this->sorting;
 	}
-	
+
 	/**
 	 * Setter for sorting
 	 *
@@ -233,7 +233,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function setSorting($sorting) {
 		$this->sorting = $sorting;
 	}
-	
+
 	/**
 	 * Getter for deleted
 	 *
@@ -242,7 +242,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function getDeleted() {
 		return $this->deleted;
 	}
-	
+
 	/**
 	 * Setter for deleted
 	 *
@@ -252,7 +252,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function setDeleted($deleted) {
 		$this->deleted = $deleted;
 	}
-	
+
 	/**
 	 * Getter for hidden
 	 *
@@ -261,7 +261,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function getHidden() {
 		return $this->hidden;
 	}
-	
+
 	/**
 	 * Setter for hidden
 	 *
@@ -271,7 +271,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function setHidden($hidden) {
 		$this->hidden = $hidden;
 	}
-	
+
 	/**
 	 * Getter for startTime
 	 *
@@ -280,7 +280,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function getStartTime() {
 		return $this->startTime;
 	}
-	
+
 	/**
 	 * Setter for startTime
 	 *
@@ -290,7 +290,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function setStartTime(DateTime $startTime) {
 		$this->startTime = $startTime;
 	}
-	
+
 	/**
 	 * Getter for endTime
 	 *
@@ -299,7 +299,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function getEndTime() {
 		return $this->endTime;
 	}
-	
+
 	/**
 	 * Setter for endTime
 	 *
@@ -309,7 +309,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function setEndTime(DateTime $endTime) {
 		$this->endTime = $endTime;
 	}
-	
+
 	/**
 	 * Setter for frontendUsergroups
 	 *
@@ -319,7 +319,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function setFrontendUsergroups(Tx_Extbase_Persistence_ObjectStorage $frontendUsergroups) {
 		$this->frontendUsergroups = clone $frontendUsergroups;
 	}
-	
+
 	/**
 	 * Adds a frontendUsergroup
 	 *
@@ -329,7 +329,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function addFrontendUsergroup(Tx_Hype_Domain_Model_Typo3_FrontendUsergroup $frontendUsergroup) {
 		$this->contacts->attach($frontendUsergroup);
 	}
-	
+
 	/**
 	 * Removes a frontendUsergroup
 	 *
@@ -339,7 +339,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function removeFrontendUsergroup(Tx_Hype_Domain_Model_Typo3_FrontendUsergroup $frontendUsergroup) {
 		$this->contacts->detach($frontendUsergroup);
 	}
-	
+
 	/**
 	 * Remove all frontendUsergroups
 	 *
@@ -348,7 +348,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function removeFrontendUsergroups() {
 		$this->contacts = new Tx_Extbase_Persistence_ObjectStorage();
 	}
-	
+
 	/**
 	 * Getter for frontendUsergroups
 	 *
@@ -358,10 +358,10 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 		if($this->frontendUsergroups instanceof Tx_Extbase_Persistence_LazyLoadingProxy) {
 			$this->frontendUsergroups->_loadRealInstance();
 		}
-		
+
 		return clone $this->frontendUsergroups;
 	}
-	
+
 	/**
 	 * Setter for name
 	 *
@@ -371,7 +371,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function setName($name) {
 		$this->name = $name;
 	}
-	
+
 	/**
 	 * Setter for contacts
 	 *
@@ -381,7 +381,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function setContacts(Tx_Extbase_Persistence_ObjectStorage $contacts) {
 		$this->contacts = clone $contacts;
 	}
-	
+
 	/**
 	 * Adds a contact
 	 *
@@ -391,7 +391,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function addContact(Tx_HypeDirectory_Domain_Model_Contact $contact) {
 		$this->contacts->attach($contact);
 	}
-	
+
 	/**
 	 * Removes a contact
 	 *
@@ -401,7 +401,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function removeContact(Tx_HypeDirectory_Domain_Model_Contact $contact) {
 		$this->contacts->detach($contact);
 	}
-	
+
 	/**
 	 * Remove all contacts
 	 *
@@ -410,7 +410,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function removeContacts() {
 		$this->contacts = new Tx_Extbase_Persistence_ObjectStorage();
 	}
-	
+
 	/**
 	 * Getter for contacts
 	 *
@@ -420,10 +420,10 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 		if($this->contacts instanceof Tx_Extbase_Persistence_LazyLoadingProxy) {
 			$this->contacts->_loadRealInstance();
 		}
-		
+
 		return clone $this->contacts;
 	}
-	
+
 	/**
 	 * Setter for roles
 	 *
@@ -433,7 +433,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function setRoles(Tx_Extbase_Persistence_ObjectStorage $roles) {
 		$this->roles = clone $roles;
 	}
-	
+
 	/**
 	 * Adds a role
 	 *
@@ -443,7 +443,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function addRole(Tx_HypeDirectory_Domain_Model_Role $role) {
 		$this->roles->attach($role);
 	}
-	
+
 	/**
 	 * Removes a role
 	 *
@@ -453,7 +453,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function removeRole(Tx_HypeDirectory_Domain_Model_Role $role) {
 		$this->roles->detach($role);
 	}
-	
+
 	/**
 	 * Remove all role
 	 *
@@ -462,7 +462,7 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 	public function removeRoles() {
 		$this->roles = new Tx_Extbase_Persistence_ObjectStorage();
 	}
-	
+
 	/**
 	 * Getter for roles
 	 *
@@ -472,14 +472,14 @@ class Tx_HypeDirectory_Domain_Model_Register extends Tx_Extbase_DomainObject_Abs
 		if($this->roles instanceof Tx_Extbase_Persistence_LazyLoadingProxy) {
 			$this->roles->_loadRealInstance();
 		}
-		
+
 		return clone $this->roles;
 	}
-	
-	
-	
+
+
+
 	/* Magic methods */
-	
+
 	/**
 	 * Returns as a formatted string
 	 *

@@ -34,13 +34,13 @@
  * @entity
  */
 class Tx_HypeDirectory_Domain_Model_Contact_Corporation extends Tx_HypeDirectory_Domain_Model_Contact {
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $corporateName;
-	
+
 	/**
 	 * Getter for corporateName
 	 *
@@ -49,7 +49,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Corporation extends Tx_HypeDirectory
 	public function getCorporateName() {
 		return $this->corporateName;
 	}
-	
+
 	/**
 	 * Setter for corporateName
 	 *
@@ -59,11 +59,11 @@ class Tx_HypeDirectory_Domain_Model_Contact_Corporation extends Tx_HypeDirectory
 	public function setCorporateName($corporateName) {
 		$this->corporateName = $corporateName;
 	}
-	
-	
-	
+
+
+
 	/* Custom functions */
-	
+
 	/**
 	 * Getter for the name
 	 *
@@ -72,11 +72,11 @@ class Tx_HypeDirectory_Domain_Model_Contact_Corporation extends Tx_HypeDirectory
 	public function getName() {
 		return $this->getCorporateName();
 	}
-	
-	
-	
+
+
+
 	/* Magic methods */
-	
+
 	/**
 	 * Returns as a formatted string
 	 *

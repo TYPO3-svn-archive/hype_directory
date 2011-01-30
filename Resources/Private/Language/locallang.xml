@@ -4,7 +4,7 @@
 		<type>module</type>
 		<description>Language labels for the blog_example extension</description>
 	</meta>
-	
+
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="responsibilities">Responsibilities</label>
@@ -36,7 +36,7 @@
 			<label index="further_information_about">Further information about %s.</label>
 			<label index="contact_not_found">Contact not found.</label>
 		</languageKey>
-		
+
 		<languageKey index="de" type="array">
 			<label index="responsibilities">Zuständigkeiten</label>
 			<label index="members">Mitglieder</label>

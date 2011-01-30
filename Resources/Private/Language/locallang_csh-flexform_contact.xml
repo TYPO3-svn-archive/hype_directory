@@ -6,13 +6,13 @@
 		<csh_table></csh_table>
 		<labelContext type="array"></labelContext>
 	</meta>
-	
+
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="settings.view.register.pid.description">Page on which the register plugin is displayed.</label>
 			<label index="settings.view.contact.uid.description">Contact to show if no other specific contact was given.</label>
 		</languageKey>
-		
+
 		<languageKey index="de" type="array">
 			<label index="settings.view.register.pid.description">Seite auf der die Listenansicht eingebunden ist.</label>
 			<label index="settings.view.contact.uid.description">Kontakt der angezeigt wird, falls kein anderer, expliziter Kontakt angegeben wurde.</label>

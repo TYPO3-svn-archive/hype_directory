@@ -7,7 +7,7 @@
 		<f:then>
 			<f:render partial="Contact/Contact/{contact.type}.html" arguments="{contact: contact, role: role, settings: settings}" />
 		</f:then>
-		
+
 		<f:else>
 			<p>{f:translate(key: 'contact_not_found')}</p>
 		</f:else>

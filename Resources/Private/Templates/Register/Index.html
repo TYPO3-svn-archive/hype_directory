@@ -7,23 +7,23 @@
 		<f:then>
 			<f:for each="{registers}" as="register">
 				<div class="register">
-					
+
 					<!-- register.name -->
 					<f:if condition="{f:count(subject: registers)} > 1">
 						<h2>{register.name}</h2>
 					</f:if>
-					
+
 					<f:if condition="{register.roles}">
 						<f:if condition="{register.contacts}">
 							<h3>{f:translate(key: 'responsibilities')}</h3>
 						</f:if>
-						
+
 						<div class="roles">
 							<f:for each="{register.roles}" as="role">
 								<f:if condition="{f:count(subject: role.contacts)} > 0">
 									<dl class="role">
 										<dt>{role.title}</dt>
-										
+
 										<f:for each="{role.contacts}" as="contact">
 											<dd><f:link.action pageUid="{settings.view.contact.pid}" extensionName="HypeDirectory" pluginName="Contact" controller="Contact" arguments="{contact: contact, role: role}">{contact.completeName}</f:link.action></dd>
 										</f:for>
@@ -32,11 +32,11 @@
 							</f:for>
 						</div>
 					</f:if>
-					
+
 					<f:if condition="{register.contacts}">
 						<div class="contacts">
 							<h3>{f:translate(key: 'members')}</h3>
-							
+
 							<ul>
 								<f:for each="{register.contacts}" as="contact">
 									<li><f:link.action pageUid="{settings.view.contact.pid}" extensionName="HypeDirectory" pluginName="Contact" controller="Contact" arguments="{contact: contact}">{contact.completeName}</f:link.action></li>
@@ -47,7 +47,7 @@
 				</div>
 			</f:for>
 		</f:then>
-		
+
 		<f:else>
 			<p>{f:translate(key: 'no_contacts_found')}</p>
 		</f:else>

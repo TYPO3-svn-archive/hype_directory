@@ -32,218 +32,218 @@
  * @entity
  */
 class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_AbstractEntity {
-	
+
 	/**
 	 * @var integer
 	 * @validate Integer
 	 */
 	protected $pid;
-	
+
 	/**
 	 * @var DateTime
 	 */
 	protected $modificationDate;
-	
+
 	/**
 	 * @var DateTime
 	 */
 	protected $creationDate;
-	
+
 	/**
 	 * @var Tx_Hype_Domain_Model_Typo3_BackendUser
 	 */
 	//protected $creationUser;
-	
+
 	/**
 	 * @var integer
 	 */
 	protected $language;
-	
+
 	/**
 	 * @var integer
 	 * @validate Integer
 	 */
 	protected $sorting;
-	
+
 	/**
 	 * @var boolean
 	 * @validate Boolean
 	 */
 	protected $deleted;
-	
+
 	/**
 	 * @var boolean
 	 * @validate Boolean
 	 */
 	protected $hidden;
-	
+
 	/**
 	 * @var DateTime
 	 */
 	protected $startTime;
-	
+
 	/**
 	 * @var DateTime
 	 */
 	protected $endTime;
-	
+
 	/**
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Hype_Domain_Model_Typo3_FrontendUsergroup>
 	 * @lazy
 	 */
 	protected $frontendUsergroups;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $type;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $label;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $street;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $postalCode;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $city;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $stair;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $floor;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $door;
-	
+
 	/**
 	 * @var Tx_Hype_Domain_Model_StaticCountryZone
 	 */
 	protected $state;
-	
+
 	/**
 	 * @var Tx_Hype_Domain_Model_StaticCountry
 	 */
 	protected $country;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $telephoneNumber;
-	
+
 	/**
 	 * @var Tx_Hype_Domain_Model_StaticCountry
 	 */
 	protected $telephoneCountry;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $telephoneAreaCode;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $telephoneExtension;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $faxNumber;
-	
+
 	/**
 	 * @var Tx_Hype_Domain_Model_StaticCountry
 	 */
 	protected $faxCountry;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $faxAreaCode;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $faxExtension;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $cellphoneNumber;
-	
+
 	/**
 	 * @var Tx_Hype_Domain_Model_StaticCountry
 	 */
 	protected $cellphoneCountry;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $cellphoneAreaCode;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $email;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $website;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $remark;
-	
+
 	/**
 	 * @var integer
 	 * @validate Integer
 	 */
 	protected $relatedPage;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $relatedAddress;
-	
+
 	/**
 	 * Getter for pid
 	 *
@@ -252,7 +252,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getPid() {
 		return $this->pid;
 	}
-	
+
 	/**
 	 * Setter for pid
 	 *
@@ -262,7 +262,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setPid($pid) {
 		$this->pid = $pid;
 	}
-	
+
 	/**
 	 * Getter for modificationDate
 	 *
@@ -271,7 +271,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getModificationDate() {
 		return $this->modificationDate;
 	}
-	
+
 	/**
 	 * Setter for modificationDate
 	 *
@@ -281,7 +281,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setModificationDate(DateTime $modificationDate) {
 		$this->modificationDate = $modificationDate;
 	}
-	
+
 	/**
 	 * Getter for creationDate
 	 *
@@ -290,7 +290,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getCreationDate() {
 		return $this->creationDate;
 	}
-	
+
 	/**
 	 * Setter for creationDate
 	 *
@@ -300,7 +300,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setCreationDate(DateTime $creationDate) {
 		$this->creationDate = $creationDate;
 	}
-	
+
 	/**
 	 * Getter for creationUser
 	 *
@@ -309,7 +309,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getCreationUser() {
 		return $this->creationUser;
 	}
-	
+
 	/**
 	 * Setter for creationUser
 	 *
@@ -319,7 +319,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setCreationUser(Tx_Hype_Domain_Model_Typo3_BackendUser $creationUser) {
 		$this->creationUser = $creationUser;
 	}
-	
+
 	/**
 	 * Getter for language
 	 *
@@ -328,7 +328,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getLanguage() {
 		return $this->language;
 	}
-	
+
 	/**
 	 * Setter for language
 	 *
@@ -347,7 +347,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getSorting() {
 		return $this->sorting;
 	}
-	
+
 	/**
 	 * Setter for sorting
 	 *
@@ -357,7 +357,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setSorting($sorting) {
 		$this->sorting = $sorting;
 	}
-	
+
 	/**
 	 * Getter for deleted
 	 *
@@ -366,7 +366,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getDeleted() {
 		return $this->deleted;
 	}
-	
+
 	/**
 	 * Setter for deleted
 	 *
@@ -376,7 +376,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setDeleted($deleted) {
 		$this->deleted = $deleted;
 	}
-	
+
 	/**
 	 * Getter for hidden
 	 *
@@ -385,7 +385,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getHidden() {
 		return $this->hidden;
 	}
-	
+
 	/**
 	 * Setter for hidden
 	 *
@@ -395,7 +395,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setHidden($hidden) {
 		$this->hidden = $hidden;
 	}
-	
+
 	/**
 	 * Getter for startTime
 	 *
@@ -404,7 +404,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getStartTime() {
 		return $this->startTime;
 	}
-	
+
 	/**
 	 * Setter for startTime
 	 *
@@ -414,7 +414,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setStartTime(DateTime $startTime) {
 		$this->startTime = $startTime;
 	}
-	
+
 	/**
 	 * Getter for endTime
 	 *
@@ -423,7 +423,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getEndTime() {
 		return $this->endTime;
 	}
-	
+
 	/**
 	 * Setter for endTime
 	 *
@@ -433,7 +433,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setEndTime(DateTime $endTime) {
 		$this->endTime = $endTime;
 	}
-	
+
 	/**
 	 * Setter for frontendUsergroups
 	 *
@@ -443,7 +443,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setFrontendUsergroups(Tx_Extbase_Persistence_ObjectStorage $frontendUsergroups) {
 		$this->frontendUsergroups = clone $frontendUsergroups;
 	}
-	
+
 	/**
 	 * Adds a frontendUsergroup
 	 *
@@ -453,7 +453,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function addFrontendUsergroup(Tx_Hype_Domain_Model_Typo3_FrontendUsergroup $frontendUsergroup) {
 		$this->contacts->attach($frontendUsergroup);
 	}
-	
+
 	/**
 	 * Removes a frontendUsergroup
 	 *
@@ -463,7 +463,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function removeFrontendUsergroup(Tx_Hype_Domain_Model_Typo3_FrontendUsergroup $frontendUsergroup) {
 		$this->contacts->detach($frontendUsergroup);
 	}
-	
+
 	/**
 	 * Remove all frontendUsergroups
 	 *
@@ -472,7 +472,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function removeFrontendUsergroups() {
 		$this->contacts = new Tx_Extbase_Persistence_ObjectStorage();
 	}
-	
+
 	/**
 	 * Getter for frontendUsergroups
 	 *
@@ -482,10 +482,10 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 		if($this->frontendUsergroups instanceof Tx_Extbase_Persistence_LazyLoadingProxy) {
 			$this->frontendUsergroups->_loadRealInstance();
 		}
-		
+
 		return clone $this->frontendUsergroups;
 	}
-	
+
 	/**
 	 * Getter for type
 	 *
@@ -494,7 +494,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getType() {
 		return $this->type;
 	}
-	
+
 	/**
 	 * Setter for type
 	 *
@@ -504,7 +504,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setType($type) {
 		$this->type = $type;
 	}
-	
+
 	/**
 	 * Getter for label
 	 *
@@ -513,7 +513,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getLabel() {
 		return $this->label;
 	}
-	
+
 	/**
 	 * Setter for label
 	 *
@@ -523,7 +523,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setLabel($label) {
 		$this->label = $label;
 	}
-	
+
 	/**
 	 * Getter for street
 	 *
@@ -532,7 +532,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getStreet() {
 		return $this->street;
 	}
-	
+
 	/**
 	 * Setter for street
 	 *
@@ -542,7 +542,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setStreet($street) {
 		$this->street = $street;
 	}
-	
+
 	/**
 	 * Getter for city
 	 *
@@ -551,7 +551,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getCity() {
 		return $this->city;
 	}
-	
+
 	/**
 	 * Setter for city
 	 *
@@ -561,7 +561,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setCity($city) {
 		$this->city = $city;
 	}
-	
+
 	/**
 	 * Getter for stair
 	 *
@@ -570,7 +570,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getStair() {
 		return $this->stair;
 	}
-	
+
 	/**
 	 * Setter for stair
 	 *
@@ -580,7 +580,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setStair($stair) {
 		$this->stair = $stair;
 	}
-	
+
 	/**
 	 * Getter for floor
 	 *
@@ -589,7 +589,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getFloor() {
 		return $this->floor;
 	}
-	
+
 	/**
 	 * Setter for floor
 	 *
@@ -599,7 +599,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setFloor($floor) {
 		$this->floor = $floor;
 	}
-	
+
 	/**
 	 * Getter for door
 	 *
@@ -608,7 +608,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getDoor() {
 		return $this->door;
 	}
-	
+
 	/**
 	 * Setter for door
 	 *
@@ -618,7 +618,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setDoor($door) {
 		$this->door = $door;
 	}
-	
+
 	/**
 	 * Getter for postalCode
 	 *
@@ -627,7 +627,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getPostalCode() {
 		return $this->postalCode;
 	}
-	
+
 	/**
 	 * Setter for postalCode
 	 *
@@ -637,7 +637,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setPostalCode($postalCode) {
 		$this->postalCode = $postalCode;
 	}
-	
+
 	/**
 	 * Getter for state
 	 *
@@ -646,7 +646,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getState() {
 		return $this->state;
 	}
-	
+
 	/**
 	 * Setter for state
 	 *
@@ -656,7 +656,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setState(Tx_Hype_Domain_Model_StaticCountryZone $state) {
 		$this->state = $state;
 	}
-	
+
 	/**
 	 * Getter for country
 	 *
@@ -665,7 +665,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getCountry() {
 		return $this->country;
 	}
-	
+
 	/**
 	 * Setter for country
 	 *
@@ -675,7 +675,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setCountry(Tx_Hype_Domain_Model_StaticCountry $country) {
 		$this->country = $country;
 	}
-	
+
 	/**
 	 * Getter for telephoneNumber
 	 *
@@ -684,7 +684,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getTelephoneNumber() {
 		return $this->telephoneNumber;
 	}
-	
+
 	/**
 	 * Setter for telephoneNumber
 	 *
@@ -694,7 +694,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setTelephoneNumber($telephoneNumber) {
 		$this->telephoneNumber = $telephoneNumber;
 	}
-	
+
 	/**
 	 * Getter for telephoneCountry
 	 *
@@ -703,7 +703,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getTelephoneCountry() {
 		return $this->telephoneCountry;
 	}
-	
+
 	/**
 	 * Setter for telephoneCountry
 	 *
@@ -713,7 +713,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setTelephoneCountry(Tx_Hype_Domain_Model_StaticCountry $telephoneCountry) {
 		$this->telephoneCountry = $telephoneCountry;
 	}
-	
+
 	/**
 	 * Getter for telephoneAreaCode
 	 *
@@ -722,7 +722,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getTelephoneAreaCode() {
 		return $this->telephoneAreaCode;
 	}
-	
+
 	/**
 	 * Setter for telephoneAreaCode
 	 *
@@ -732,7 +732,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setTelephoneAreaCode($telephoneAreaCode) {
 		$this->telephoneAreaCode = $telephoneAreaCode;
 	}
-	
+
 	/**
 	 * Getter for telephoneExtension
 	 *
@@ -741,7 +741,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getTelephoneExtension() {
 		return $this->telephoneExtension;
 	}
-	
+
 	/**
 	 * Setter for telephoneExtension
 	 *
@@ -751,7 +751,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setTelephoneExtension($telephoneExtension) {
 		$this->telephoneExtension = $telephoneExtension;
 	}
-	
+
 	/**
 	 * Getter for faxNumber
 	 *
@@ -760,7 +760,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getFaxNumber() {
 		return $this->faxNumber;
 	}
-	
+
 	/**
 	 * Setter for faxNumber
 	 *
@@ -770,7 +770,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setFaxNumber($faxNumber) {
 		$this->faxNumber = $faxNumber;
 	}
-	
+
 	/**
 	 * Getter for faxCountry
 	 *
@@ -779,7 +779,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getFaxCountry() {
 		return $this->faxCountry;
 	}
-	
+
 	/**
 	 * Setter for faxCountry
 	 *
@@ -789,7 +789,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setFaxCountry(Tx_Hype_Domain_Model_StaticCountry $faxCountry) {
 		$this->faxCountry = $faxCountry;
 	}
-	
+
 	/**
 	 * Getter for faxAreaCode
 	 *
@@ -798,7 +798,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getFaxAreaCode() {
 		return $this->faxAreaCode;
 	}
-	
+
 	/**
 	 * Setter for faxAreaCode
 	 *
@@ -808,7 +808,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setFaxAreaCode($faxAreaCode) {
 		$this->faxAreaCode = $faxAreaCode;
 	}
-	
+
 	/**
 	 * Getter for faxExtension
 	 *
@@ -817,7 +817,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getFaxExtension() {
 		return $this->faxExtension;
 	}
-	
+
 	/**
 	 * Setter for faxExtension
 	 *
@@ -827,7 +827,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setFaxExtension($faxExtension) {
 		$this->faxExtension = $faxExtension;
 	}
-	
+
 	/**
 	 * Getter for cellphoneNumber
 	 *
@@ -836,7 +836,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getCellphoneNumber() {
 		return $this->cellphoneNumber;
 	}
-	
+
 	/**
 	 * Setter for cellphoneNumber
 	 *
@@ -846,7 +846,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setCellphoneNumber($cellphoneNumber) {
 		$this->cellphoneNumber = $cellphoneNumber;
 	}
-	
+
 	/**
 	 * Getter for cellphoneCountry
 	 *
@@ -855,7 +855,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getCellphoneCountry() {
 		return $this->cellphoneCountry;
 	}
-	
+
 	/**
 	 * Setter for cellphoneCountry
 	 *
@@ -865,7 +865,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setCellphoneCountry(Tx_Hype_Domain_Model_StaticCountry $cellphoneCountry) {
 		$this->cellphoneCountry = $cellphoneCountry;
 	}
-	
+
 	/**
 	 * Getter for cellphoneAreaCode
 	 *
@@ -874,7 +874,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getCellphoneAreaCode() {
 		return $this->cellphoneAreaCode;
 	}
-	
+
 	/**
 	 * Setter for cellphoneAreaCode
 	 *
@@ -884,7 +884,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setCellphoneAreaCode($cellphoneAreaCode) {
 		$this->cellphoneAreaCode = $cellphoneAreaCode;
 	}
-	
+
 	/**
 	 * Getter for email
 	 *
@@ -893,7 +893,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getEmail() {
 		return $this->email;
 	}
-	
+
 	/**
 	 * Setter for email
 	 *
@@ -903,7 +903,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setEmail($email) {
 		$this->email = $email;
 	}
-	
+
 	/**
 	 * Getter for website
 	 *
@@ -912,7 +912,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getWebsite() {
 		return $this->website;
 	}
-	
+
 	/**
 	 * Setter for website
 	 *
@@ -922,7 +922,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setWebsite($website) {
 		$this->website = $website;
 	}
-	
+
 	/**
 	 * Getter for remark
 	 *
@@ -931,7 +931,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getRemark() {
 		return $this->remark;
 	}
-	
+
 	/**
 	 * Setter for remark
 	 *
@@ -941,7 +941,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setRemark($remark) {
 		$this->remark = $remark;
 	}
-	
+
 	/**
 	 * Getter for relatedPage
 	 *
@@ -950,7 +950,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getRelatedPage() {
 		return $this->relatedPage;
 	}
-	
+
 	/**
 	 * Setter for relatedPage
 	 *
@@ -960,7 +960,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function setRelatedPage($relatedPage) {
 		$this->relatedPage = $relatedPage;
 	}
-	
+
 	/**
 	 * Getter for relatedAddress
 	 *
@@ -969,7 +969,7 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	public function getRelatedAddress() {
 		return $this->relatedAddress;
 	}
-	
+
 	/**
 	 * Setter for relatedAddress
 	 *

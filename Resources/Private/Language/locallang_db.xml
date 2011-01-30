@@ -4,29 +4,29 @@
 		<type>database</type>
 		<description>Language labels for database tables/fields belonging to extension 'hype_directory'</description>
 	</meta>
-	
+
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="tx_hypedirectory.plugin.register">Register (Hype Directory)</label>
 			<label index="tx_hypedirectory.plugin.contact">Contact (Hype Directory)</label>
-			
+
 			<label index="tx_hypedirectory.flexform.general_settings">General settings</label>
 			<label index="tx_hypedirectory.flexform.contact">Contact</label>
 			<label index="tx_hypedirectory.flexform.register_page">Register page</label>
 			<label index="tx_hypedirectory.flexform.registers">Registers</label>
 			<label index="tx_hypedirectory.flexform.contact_page">Contact page</label>
-			
+
 			<label index="tx_hypedirectory.tab.details">Details</label>
 			<label index="tx_hypedirectory.tab.contact">Contact</label>
 			<label index="tx_hypedirectory.tab.relations">Relations</label>
 			<label index="tx_hypedirectory.tab.roles">Roles</label>
 			<label index="tx_hypedirectory.tab.access">Access</label>
-			
+
 			<label index="tx_hypedirectory.palette.city">City</label>
 			<label index="tx_hypedirectory.palette.telephone_number">Telephone number</label>
 			<label index="tx_hypedirectory.palette.fax_number">Fax number</label>
 			<label index="tx_hypedirectory.palette.cellphone_number">Cellphone number</label>
-			
+
 			<label index="tx_hypedirectory_domain_model_contact">Contact</label>
 			<label index="tx_hypedirectory_domain_model_contact.type">Type</label>
 				<label index="tx_hypedirectory_domain_model_contact.type.person">Person</label>
@@ -81,41 +81,41 @@
 			<label index="tx_hypedirectory_domain_model_contact.related_address">Related address</label>
 			<label index="tx_hypedirectory_domain_model_contact.frontend_user">Frontend user</label>
 			<label index="tx_hypedirectory_domain_model_contact.backend_user">Backend user</label>
-			
+
 			<label index="tx_hypedirectory_domain_model_role">Role</label>
 			<label index="tx_hypedirectory_domain_model_role.title">Title</label>
 			<label index="tx_hypedirectory_domain_model_role.additional_title">Additional title</label>
 			<label index="tx_hypedirectory_domain_model_role.contact">Contact</label>
-			
+
 			<label index="tx_hypedirectory_domain_model_register">Register</label>
 			<label index="tx_hypedirectory_domain_model_register.name">Name</label>
 			<label index="tx_hypedirectory_domain_model_register.contacts">Contacts</label>
 			<label index="tx_hypedirectory_domain_model_register.roles">Roles</label>
-			
+
 			<label index="fe_users.tx_hypestore_domain_model_addresses">Addresses</label>
 		</languageKey>
-		
+
 		<languageKey index="de" type="array">
 			<label index="tx_hypedirectory.plugin.register">Liste (Hype Directory)</label>
 			<label index="tx_hypedirectory.plugin.contact">Kontakt (Hype Directory)</label>
-			
+
 			<label index="tx_hypedirectory.flexform.general_settings">Allgemeine Einstellungen</label>
 			<label index="tx_hypedirectory.flexform.contact">Kontakt</label>
 			<label index="tx_hypedirectory.flexform.register_page">Listen-Seite</label>
 			<label index="tx_hypedirectory.flexform.registers">Listen</label>
 			<label index="tx_hypedirectory.flexform.contact_page">Kontakt-Seite</label>
-			
+
 			<label index="tx_hypedirectory.tab.contact">Kontakt</label>
 			<label index="tx_hypedirectory.tab.details">Details</label>
 			<label index="tx_hypedirectory.tab.relations">Verknüpfungen</label>
 			<label index="tx_hypedirectory.tab.roles">Funktionen</label>
 			<label index="tx_hypedirectory.tab.access">Zugriff</label>
-			
+
 			<label index="tx_hypedirectory.palette.city">Stadt/Ort</label>
 			<label index="tx_hypedirectory.palette.telephone_number">Telefonnummer</label>
 			<label index="tx_hypedirectory.palette.fax_number">Faxnummer</label>
 			<label index="tx_hypedirectory.palette.cellphone_number">Mobilnummer</label>
-			
+
 			<label index="tx_hypedirectory_domain_model_contact">Kontakt</label>
 			<label index="tx_hypedirectory_domain_model_contact.type">Typ</label>
 				<label index="tx_hypedirectory_domain_model_contact.type.person">Person</label>
@@ -170,17 +170,17 @@
 			<label index="tx_hypedirectory_domain_model_contact.related_address">Zugehörige Adresse</label>
 			<label index="tx_hypedirectory_domain_model_contact.frontend_user">Website Benutzer</label>
 			<label index="tx_hypedirectory_domain_model_contact.backend_user">TYPO3 Benutzer</label>
-			
+
 			<label index="tx_hypedirectory_domain_model_role">Funktion</label>
 			<label index="tx_hypedirectory_domain_model_role.title">Titel</label>
 			<label index="tx_hypedirectory_domain_model_role.additional_title">Zusatztitel</label>
 			<label index="tx_hypedirectory_domain_model_role.contact">Kontakt</label>
-			
+
 			<label index="tx_hypedirectory_domain_model_register">Liste</label>
 			<label index="tx_hypedirectory_domain_model_register.name">Name</label>
 			<label index="tx_hypedirectory_domain_model_register.contacts">Kontakte</label>
 			<label index="tx_hypedirectory_domain_model_register.roles">Positionen</label>
-			
+
 			<label index="fe_users.tx_hypestore_domain_model_addresses">Adressen</label>
 		</languageKey>
 	</data>

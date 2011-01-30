@@ -2,10 +2,10 @@
 
 class tx_hypedirectory_realurl_autoconfgen {
 	public function addRealURLConfig($parameters, $object) {
-		
+
 		# get realurl config
 		$config = $parameters['config'];
-		
+
 		$postVars = array(
 			'hype_directory' => array(
 				array(
@@ -46,13 +46,13 @@ class tx_hypedirectory_realurl_autoconfgen {
 				),
 			),
 		);
-		
+
 		if(!is_array($config['postVarSets']['_DEFAULT'])) {
 			$config['postVarSets']['_DEFAULT'] = $postVars;
 		} else {
 			$config['postVarSets']['_DEFAULT'] = array_merge($config['postVarSets']['_DEFAULT'], $postVars);
 		}
-		
+
 		return $config;
 	}
 }

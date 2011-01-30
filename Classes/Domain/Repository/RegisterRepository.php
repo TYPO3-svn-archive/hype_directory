@@ -26,9 +26,9 @@
  * A repository for Registers
  */
 class Tx_HypeDirectory_Domain_Repository_RegisterRepository extends Tx_Extbase_Persistence_Repository {
-	
+
 	public function findMany(array $uids) {
-		
+
 		# create a new query object
 		$query = $this->createQuery();
 		return $query->matching($query->in('uid', $uids))->execute();

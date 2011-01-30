@@ -29,23 +29,23 @@
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License, version 2
  */
 class Tx_HypeDirectory_Controller_ContactController extends Tx_Extbase_MVC_Controller_ActionController {
-	
+
 	/**
 	 * @var Tx_HypeDirectory_Domain_Repository_ContactRepository
 	 */
 	protected $contactRepository;
-	
+
 	/**
 	 * Initializes the current action
 	 *
 	 * @return void
 	 */
 	public function initializeAction() {
-		
+
 		# instantiate the contact repository
 		$this->contactRepository = t3lib_div::makeInstance('Tx_HypeDirectory_Domain_Repository_ContactRepository');
 	}
-	
+
 	/**
 	 * Initializes the view before invoking an action method.
 	 *
@@ -55,7 +55,7 @@ class Tx_HypeDirectory_Controller_ContactController extends Tx_Extbase_MVC_Contr
 	public function initializeView(Tx_Extbase_MVC_View_ViewInterface $view) {
 		$view->assign('settings', $this->settings);
 	}
-	
+
 	/**
 	 * Index action for this controller.
 	 *
@@ -66,17 +66,17 @@ class Tx_HypeDirectory_Controller_ContactController extends Tx_Extbase_MVC_Contr
 	 * @dontvalidate $role
 	 */
 	public function indexAction(Tx_HypeDirectory_Domain_Model_Contact $contact = NULL, Tx_HypeDirectory_Domain_Model_Role $role = NULL) {
-		
+
 		# set a default/fallback contact
 		if(!$contact && $this->settings['view']['contact']['uid']) {
 			$contact = $this->contactRepository->findByUid((int)$this->settings['view']['contact']['uid']);
 		}
-		
+
 		# set contact
 		if($contact) {
 			$this->view->assign('contact', $contact);
 		}
-		
+
 		# set role and contact
 		if($role) {
 			$this->view->assign('role', $role);

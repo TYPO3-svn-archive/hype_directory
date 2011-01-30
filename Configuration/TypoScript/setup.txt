@@ -4,7 +4,7 @@ config.tx_extbase {
 			Tx_HypeDirectory_Domain_Model_Contact {
 				mapping {
 					tableName = tx_hypedirectory_domain_model_contact
-					
+
 					columns {
 						starttime.mapOnProperty = startTime
 						endtime.mapOnProperty = endTime
@@ -15,39 +15,39 @@ config.tx_extbase {
 						fe_group.mapOnProperty = frontendUsergroups
 					}
 				}
-				
+
 				subclasses {
 					Person = Tx_HypeDirectory_Domain_Model_Contact_Person
 					Corporation = Tx_HypeDirectory_Domain_Model_Contact_Corporation
 				}
-				
+
 				columns {
 					country.foreignClass = Tx_Hype_Domain_Model_StaticCountry
 				}
 			}
-			
+
 			Tx_HypeDirectory_Domain_Model_Contact_Person < .Tx_HypeDirectory_Domain_Model_Contact
 			Tx_HypeDirectory_Domain_Model_Contact_Person {
 				mapping {
 					recordType = person
 				}
-				
+
 				subclasses >
 			}
-			
+
 			Tx_HypeDirectory_Domain_Model_Contact_Corporation < .Tx_HypeDirectory_Domain_Model_Contact
 			Tx_HypeDirectory_Domain_Model_Contact_Corporation {
 				mapping {
 					recordType = corporation
 				}
-				
+
 				subclasses >
 			}
-			
+
 			Tx_HypeDirectory_Domain_Model_Register {
 				mapping {
 					tableName = tx_hypedirectory_domain_model_register
-					
+
 					columns {
 						starttime.mapOnProperty = startTime
 						endtime.mapOnProperty = endTime
@@ -59,11 +59,11 @@ config.tx_extbase {
 					}
 				}
 			}
-			
+
 			Tx_HypeDirectory_Domain_Model_Role {
 				mapping {
 					tableName = tx_hypedirectory_domain_model_role
-					
+
 					columns {
 						starttime.mapOnProperty = startTime
 						endtime.mapOnProperty = endTime
@@ -81,40 +81,40 @@ config.tx_extbase {
 
 plugin.tx_hypedirectory {
 	settings {
-		
+
 		common {
-			
+
 		}
-		
+
 		object {
 			contact {
-				
+
 				field {
 					images {
 						path = {$plugin.tx_hypedirectory.settings.object.contact.field.images.path}
 					}
 				}
 			}
-			
+
 			register {
-				
+
 			}
-			
+
 			role {
-				
+
 			}
 		}
-		
+
 		view {
 			register {
 				pid =
-				
+
 				action {
 					index {
 						common {
-							
+
 						}
-						
+
 						object {
 							contact {
 								field {
@@ -130,16 +130,16 @@ plugin.tx_hypedirectory {
 					}
 				}
 			}
-			
+
 			contact {
 				pid =
-				
+
 				action {
 					index {
 						common {
-							
+
 						}
-						
+
 						field {
 							images {
 								width = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.images.width}
@@ -147,7 +147,7 @@ plugin.tx_hypedirectory {
 								maxWidth = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.images.maxWidth}
 								maxHeight = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.images.maxHeight}
 							}
-							
+
 							date_of_birth {
 								format = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.date_of_birth.format}
 							}
@@ -157,12 +157,12 @@ plugin.tx_hypedirectory {
 			}
 		}
 	}
-	
+
 	persistence {
 		storagePid = {$plugin.tx_hypedirectory.persistence.storagePid}
 	}
-	
+
 	template {
-		
+
 	}
 }

@@ -6,7 +6,7 @@
 		<csh_table>tx_hypedirectory_domain_model_role</csh_table>
 		<labelContext type="array"></labelContext>
 	</meta>
-	
+
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index=".description">Assigns a function to a contact.</label>
@@ -15,7 +15,7 @@
 			<label index="contacts.description">Contacts of the role.</label>
 			<label index="register.description">Assigned register.</label>
 		</languageKey>
-		
+
 		<languageKey index="de" type="array">
 			<label index=".description">Weist einem Kontakt eine Funktion zu.</label>
 			<label index="title.description">Titel der Funktion.</label>

@@ -6,7 +6,7 @@
 		<csh_table>tx_hypedirectory_domain_model_contact</csh_table>
 		<labelContext type="array"></labelContext>
 	</meta>
-	
+
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index=".description">Holds contact details.</label>
@@ -54,7 +54,7 @@
 			<label index="frontend_user.description">Frontend user associated with this contact.</label>
 			<label index="backend_user.description">Backend user associated with this contact.</label>
 		</languageKey>
-		
+
 		<languageKey index="de" type="array">
 			<label index=".description">Enthält Kontaktinformationen.</label>
 			<label index="type.description">Legt den Typ des Kontakts fest.</label>

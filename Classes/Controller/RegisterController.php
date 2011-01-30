@@ -29,31 +29,31 @@
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License, version 2
  */
 class Tx_HypeDirectory_Controller_RegisterController extends Tx_Extbase_MVC_Controller_ActionController {
-	
+
 	/**
 	 * @var Tx_HypeDirectory_Domain_Repository_ContactRepository
 	 */
 	protected $contactRepository;
-	
+
 	/**
 	 * @var Tx_HypeDirectory_Domain_Repository_RegisterRepository
 	 */
 	protected $registerRepository;
-	
+
 	/**
 	 * Initializes the current action
 	 *
 	 * @return void
 	 */
 	public function initializeAction() {
-		
+
 		# instantiate the contact repository
 		$this->contactRepository = t3lib_div::makeInstance('Tx_HypeDirectory_Domain_Repository_ContactRepository');
-		
+
 		# instantiate the register repository
 		$this->registerRepository = t3lib_div::makeInstance('Tx_HypeDirectory_Domain_Repository_RegisterRepository');
 	}
-	
+
 	/**
 	 * Initializes the view before invoking an action method.
 	 *
@@ -63,17 +63,17 @@ class Tx_HypeDirectory_Controller_RegisterController extends Tx_Extbase_MVC_Cont
 	public function initializeView(Tx_Extbase_MVC_View_ViewInterface $view) {
 		$view->assign('settings', $this->settings);
 	}
-	
+
 	/**
 	 * Index action for this controller.
 	 *
 	 * @return string
 	 */
 	public function indexAction() {
-		
+
 		# find registers
 		$registers = $this->registerRepository->findMany(explode(',', $this->settings['view']['register']['uid']));
-		
+
 		# assign registers
 		$this->view->assign('registers', $registers);
 	}

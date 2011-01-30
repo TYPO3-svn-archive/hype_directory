@@ -34,99 +34,99 @@
  * @entity
  */
 class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Domain_Model_Contact {
-	
+
 	/**
 	 * @var integer
 	 * @validate Integer
 	 */
 	protected $formOfAddress;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $academicTitle;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $firstName;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $middleName;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $lastName;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $nickname;
-	
+
 	/**
 	 * @var string
 	 * @validate String
 	 */
 	protected $images;
-	
+
 	/**
 	 * @var integer
 	 * @validate Integer
 	 */
 	protected $gender;
-	
+
 	/**
 	 * @var DateTime
 	 */
 	protected $dateOfBirth;
-	
+
 	/**
 	 * @var integer
 	 */
 	protected $maritalStatus;
-	
+
 	/**
 	 * @var Tx_Hype_Domain_Model_StaticCountry
 	 */
 	protected $nationality;
-	
+
 	/**
 	 * @var Tx_Hype_Domain_Model_StaticLanguage
 	 */
 	protected $motherTongue;
-	
+
 	/**
 	 * @var Tx_Extbase_Domain_Model_FrontendUser
 	 * @lazy
 	 */
 	protected $frontendUser;
-	
+
 	/**
 	 * @var Tx_Extbase_Domain_Model_BackendUser
 	 * @lazy
 	 */
 	protected $backendUser;
-	
+
 	/**
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_HypeDirectory_Domain_Model_Role>
 	 * @lazy
 	 */
 	protected $roles;
-	
+
 	/**
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_HypeDirectory_Domain_Model_Register>
 	 * @lazy
 	 */
 	protected $registers;
-	
+
 	/**
 	 * Getter for formOfAddress
 	 *
@@ -135,7 +135,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getFormOfAddress() {
 		return $this->formOfAddress;
 	}
-	
+
 	/**
 	 * Setter for formOfAddress
 	 *
@@ -145,7 +145,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setFormOfAddress($formOfAddress) {
 		$this->formOfAddress = $formOfAddress;
 	}
-	
+
 	/**
 	 * Getter for academicTitle
 	 *
@@ -154,7 +154,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getAcademicTitle() {
 		return $this->academicTitle;
 	}
-	
+
 	/**
 	 * Setter for academicTitle
 	 *
@@ -164,7 +164,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setAcademicTitle($academicTitle) {
 		$this->academicTitle = $academicTitle;
 	}
-	
+
 	/**
 	 * Getter for firstName
 	 *
@@ -173,7 +173,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getFirstName() {
 		return $this->firstName;
 	}
-	
+
 	/**
 	 * Setter for firstName
 	 *
@@ -183,7 +183,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setFirstName($firstName) {
 		$this->firstName = $firstName;
 	}
-	
+
 	/**
 	 * Getter for middleName
 	 *
@@ -192,7 +192,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getMiddleName() {
 		return $this->middleName;
 	}
-	
+
 	/**
 	 * Setter for middleName
 	 *
@@ -202,7 +202,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setMiddleName($middleName) {
 		$this->middleName = $middleName;
 	}
-	
+
 	/**
 	 * Getter for lastName
 	 *
@@ -211,7 +211,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getLastName() {
 		return $this->lastName;
 	}
-	
+
 	/**
 	 * Setter for lastName
 	 *
@@ -221,7 +221,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setLastName($lastName) {
 		$this->lastName = $lastName;
 	}
-	
+
 	/**
 	 * Getter for nickname
 	 *
@@ -230,7 +230,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getNickname() {
 		return $this->nickname;
 	}
-	
+
 	/**
 	 * Setter for nickname
 	 *
@@ -240,7 +240,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setNickname($nickname) {
 		$this->nickname = $nickname;
 	}
-	
+
 	/**
 	 * Getter for images
 	 *
@@ -249,7 +249,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getImages() {
 		return explode(',', $this->images);
 	}
-	
+
 	/**
 	 * Setter for images
 	 *
@@ -259,7 +259,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setImages(array $images) {
 		$this->images = implode(',', $images);
 	}
-	
+
 	/**
 	 * Getter for gender
 	 *
@@ -268,7 +268,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getGender() {
 		return $this->gender;
 	}
-	
+
 	/**
 	 * Setter for gender
 	 *
@@ -278,7 +278,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setGender($gender) {
 		$this->gender = $gender;
 	}
-	
+
 	/**
 	 * Getter for dateOfBirth
 	 *
@@ -287,7 +287,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getDateOfBirth() {
 		return $this->dateOfBirth;
 	}
-	
+
 	/**
 	 * Setter for dateOfBirth
 	 *
@@ -297,7 +297,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setDateOfBirth(DateTime $dateOfBirth) {
 		$this->dateOfBirth = $dateOfBirth;
 	}
-	
+
 	/**
 	 * Getter for formOfAddress
 	 *
@@ -306,7 +306,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getMaritalStatus() {
 		return $this->maritalStatus;
 	}
-	
+
 	/**
 	 * Setter for maritalStatus
 	 *
@@ -316,7 +316,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setMaritalStatus($maritalStatus) {
 		$this->maritalStatus = $maritalStatus;
 	}
-	
+
 	/**
 	 * Getter for nationality
 	 *
@@ -325,7 +325,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getNationality() {
 		return $this->nationality;
 	}
-	
+
 	/**
 	 * Setter for nationality
 	 *
@@ -335,7 +335,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setNationality(Tx_Hype_Domain_Model_StaticCountry $nationality) {
 		$this->nationality = $nationality;
 	}
-	
+
 	/**
 	 * Getter for motherTongue
 	 *
@@ -344,7 +344,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getMotherTongue() {
 		return $this->motherTongue;
 	}
-	
+
 	/**
 	 * Setter for motherTongue
 	 *
@@ -354,7 +354,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setMotherTongue(Tx_Hype_Domain_Model_StaticLanguage $motherTongue) {
 		$this->motherTongue = $motherTongue;
 	}
-	
+
 	/**
 	 * Getter for frontendUser
 	 *
@@ -363,7 +363,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getFrontendUser() {
 		return $this->frontendUser;
 	}
-	
+
 	/**
 	 * Setter for frontendUser
 	 *
@@ -373,7 +373,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setFrontendUser(Tx_Extbase_Domain_Model_FrontendUser $frontendUser) {
 		$this->frontendUser = $frontendUser;
 	}
-	
+
 	/**
 	 * Getter for backendUser
 	 *
@@ -382,7 +382,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getBackendUser() {
 		return $this->backendUser;
 	}
-	
+
 	/**
 	 * Setter for backendUser
 	 *
@@ -392,7 +392,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setBackendUser(Tx_Extbase_Domain_Model_BackendUser $backendUser) {
 		$this->backendUser = $backendUser;
 	}
-	
+
 	/**
 	 * Setter for roles
 	 *
@@ -402,7 +402,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setRoles(Tx_Extbase_Persistence_ObjectStorage $roles) {
 		$this->roles = clone $roles;
 	}
-	
+
 	/**
 	 * Adds a role
 	 *
@@ -412,7 +412,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function addRole(Tx_HypeStore_Domain_Model_Role $role) {
 		$this->roles->attach($role);
 	}
-	
+
 	/**
 	 * Removes a role
 	 *
@@ -422,7 +422,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function removeRole(Tx_HypeStore_Domain_Model_Role $role) {
 		$this->roles->detach($role);
 	}
-	
+
 	/**
 	 * Remove all role
 	 *
@@ -431,7 +431,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function removeRoles() {
 		$this->roles = new Tx_Extbase_Persistence_ObjectStorage();
 	}
-	
+
 	/**
 	 * Getter for roles
 	 *
@@ -441,10 +441,10 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 		if($this->roles instanceof Tx_Extbase_Persistence_LazyLoadingProxy) {
 			$this->roles->_loadRealInstance();
 		}
-		
+
 		return clone $this->roles;
 	}
-	
+
 	/**
 	 * Setter for registers
 	 *
@@ -454,7 +454,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function setRegisters(Tx_Extbase_Persistence_ObjectStorage $registers) {
 		$this->registers = clone $registers;
 	}
-	
+
 	/**
 	 * Adds a register
 	 *
@@ -464,7 +464,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function addRegister(Tx_HypeStore_Domain_Model_Register $register) {
 		$this->registers->attach($register);
 	}
-	
+
 	/**
 	 * Removes a register
 	 *
@@ -474,7 +474,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function removeRegister(Tx_HypeStore_Domain_Model_Register $register) {
 		$this->registers->detach($register);
 	}
-	
+
 	/**
 	 * Remove all registers
 	 *
@@ -483,7 +483,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function removeRegisters() {
 		$this->registers = new Tx_Extbase_Persistence_ObjectStorage();
 	}
-	
+
 	/**
 	 * Getter for registers
 	 *
@@ -493,14 +493,14 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 		if($this->registers instanceof Tx_Extbase_Persistence_LazyLoadingProxy) {
 			$this->registers->_loadRealInstance();
 		}
-		
+
 		return clone $this->registers;
 	}
-	
-	
-	
+
+
+
 	/* Custom functions */
-	
+
 	/**
 	 * Getter for the name
 	 *
@@ -509,7 +509,7 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getName() {
 		return implode(' ', array_filter(array($this->getFirstName(), $this->getMiddleName(), $this->getLastName())));
 	}
-	
+
 	/**
 	 * Getter for the complete name
 	 *
@@ -518,11 +518,11 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	public function getCompleteName() {
 		return implode(' ', array_filter(array($this->getAcademicTitle(), $this->getName())));
 	}
-	
-	
-	
+
+
+
 	/* Magic methods */
-	
+
 	/**
 	 * Returns as a formatted string
 	 *

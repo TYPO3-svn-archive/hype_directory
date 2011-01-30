@@ -63,7 +63,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 		'editlock' => 'editlock',
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/tca.php',
 		'iconfile'		=> t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/contact.png',
-		
+
 		'dividers2tabs' => TRUE,
 		'thumbnail' => 'images',
 		'type'					=> 'type',
@@ -101,7 +101,7 @@ $TCA['tx_hypedirectory_domain_model_register'] = array(
 		'editlock' => 'editlock',
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/tca.php',
 		'iconfile'		=> t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/register.png',
-		
+
 		'dividers2tabs' => TRUE,
 		'thumbnail' => 'images',
 	),
@@ -133,7 +133,7 @@ $TCA['tx_hypedirectory_domain_model_role'] = array(
 		'editlock' => 'editlock',
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/tca.php',
 		'iconfile'		=> t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/role.png',
-		
+
 		'dividers2tabs' => TRUE,
 		'hideTable' => TRUE,
 	),
