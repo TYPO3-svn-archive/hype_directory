@@ -103,7 +103,6 @@ $TCA['tx_hypedirectory_domain_model_register'] = array(
 		'iconfile'		=> t3lib_extMgm::extRelPath($_EXTKEY) . 'Configuration/TCA/Icons/register.png',
 
 		'dividers2tabs' => TRUE,
-		'thumbnail' => 'images',
 	),
 );
 
