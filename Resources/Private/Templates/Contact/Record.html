@@ -1,0 +1,13 @@
+{namespace h=Tx_Hype_ViewHelpers}
+
+<f:section name="content">
+	<f:if condition="{contact}">
+		<f:then>
+			<f:render partial="Contact/Contact/{contact.type}.html" arguments="{contact: contact, settings: settings}" />
+		</f:then>
+
+		<f:else>
+			<p>{f:translate(key: 'contact_not_found')}</p>
+		</f:else>
+	</f:if>
+</f:section>

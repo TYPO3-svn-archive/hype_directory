@@ -7,20 +7,20 @@ if(!defined('TYPO3_MODE'))
 
 # PLUGINS
 
-# Register plugin
-Tx_Extbase_Utility_Extension::configurePlugin(
-	$_EXTKEY,
-	'Register',
-	array('Register' => 'index'),
-	array('Register' => '')
-);
-
 # Contact plugin
 Tx_Extbase_Utility_Extension::configurePlugin(
 	$_EXTKEY,
 	'Contact',
-	array('Contact' => 'index'),
+	array('Contact' => 'index,record'),
 	array('Contact' => '')
+);
+
+# Register plugin
+Tx_Extbase_Utility_Extension::configurePlugin(
+	$_EXTKEY,
+	'Register',
+	array('Register' => 'index,record'),
+	array('Register' => '')
 );
 
 

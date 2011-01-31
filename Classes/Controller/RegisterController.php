@@ -77,5 +77,16 @@ class Tx_HypeDirectory_Controller_RegisterController extends Tx_Extbase_MVC_Cont
 		# assign registers
 		$this->view->assign('registers', $registers);
 	}
+
+	/**
+	 * Record action for this controller.
+	 *
+	 * @return void
+	 */
+	public function recordAction() {
+		$record = $this->request->getContentObjectData();
+		$register = $this->registerRepository->findByUid((int)$record['uid']);
+		$this->view->assign('register', $register);
+	}
 }
 ?>

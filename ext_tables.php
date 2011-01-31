@@ -38,6 +38,7 @@ t3lib_extMgm::addPiFlexFormValue('hypedirectory_contact', 'FILE:EXT:' . $_EXTKEY
 
 # Contact
 t3lib_extMgm::allowTableOnStandardPages('tx_hypedirectory_domain_model_contact');
+t3lib_extMgm::addToInsertRecords('tx_hypedirectory_domain_model_contact');
 $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	'ctrl' => array(
 		'title'	 => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact',
@@ -77,6 +78,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 
 # Register
 t3lib_extMgm::allowTableOnStandardPages('tx_hypedirectory_domain_model_register');
+t3lib_extMgm::addToInsertRecords('tx_hypedirectory_domain_model_register');
 $TCA['tx_hypedirectory_domain_model_register'] = array(
 	'ctrl' => array(
 		'title'	 => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_register',

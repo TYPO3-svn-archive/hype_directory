@@ -82,5 +82,16 @@ class Tx_HypeDirectory_Controller_ContactController extends Tx_Extbase_MVC_Contr
 			$this->view->assign('role', $role);
 		}
 	}
+
+	/**
+	 * Record action for this controller.
+	 *
+	 * @return void
+	 */
+	public function recordAction() {
+		$record = $this->request->getContentObjectData();
+		$contact = $this->contactRepository->findByUid((int)$record['uid']);
+		$this->view->assign('contact', $contact);
+	}
 }
 ?>
