@@ -89,9 +89,9 @@ plugin.tx_hypedirectory {
 		object {
 			contact {
 
-				field {
+				property {
 					images {
-						path = {$plugin.tx_hypedirectory.settings.object.contact.field.images.path}
+						path = {$plugin.tx_hypedirectory.settings.object.contact.property.images.path}
 					}
 				}
 			}
@@ -117,12 +117,12 @@ plugin.tx_hypedirectory {
 
 						object {
 							contact {
-								field {
+								property {
 									images {
-										width = {$plugin.tx_hypedirectory.settings.view.register.action.index.object.contact.field.images.width}
-										height = {$plugin.tx_hypedirectory.settings.view.register.action.index.object.contact.field.images.height}
-										maxWidth = {$plugin.tx_hypedirectory.settings.view.register.action.index.object.contact.field.images.maxWidth}
-										maxHeight = {$plugin.tx_hypedirectory.settings.view.register.action.index.object.contact.field.images.maxHeight}
+										width = {$plugin.tx_hypedirectory.settings.view.register.action.index.object.contact.property.images.width}
+										height = {$plugin.tx_hypedirectory.settings.view.register.action.index.object.contact.property.images.height}
+										maxWidth = {$plugin.tx_hypedirectory.settings.view.register.action.index.object.contact.property.images.maxWidth}
+										maxHeight = {$plugin.tx_hypedirectory.settings.view.register.action.index.object.contact.property.images.maxHeight}
 									}
 								}
 							}
@@ -140,16 +140,16 @@ plugin.tx_hypedirectory {
 
 						}
 
-						field {
+						property {
 							images {
-								width = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.images.width}
-								height = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.images.height}
-								maxWidth = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.images.maxWidth}
-								maxHeight = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.images.maxHeight}
+								width = {$plugin.tx_hypedirectory.settings.view.contact.action.index.property.images.width}
+								height = {$plugin.tx_hypedirectory.settings.view.contact.action.index.property.images.height}
+								maxWidth = {$plugin.tx_hypedirectory.settings.view.contact.action.index.property.images.maxWidth}
+								maxHeight = {$plugin.tx_hypedirectory.settings.view.contact.action.index.property.images.maxHeight}
 							}
 
 							date_of_birth {
-								format = {$plugin.tx_hypedirectory.settings.view.contact.action.index.field.date_of_birth.format}
+								format = {$plugin.tx_hypedirectory.settings.view.contact.action.index.property.date_of_birth.format}
 							}
 						}
 					}
