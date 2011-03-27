@@ -12,8 +12,8 @@
 				<el>
 					<settings.view.register.pid>
 						<TCEforms>
+							<exclude>1</exclude>
 							<label>LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.flexform.register_page</label>
-
 							<config>
 								<type>group</type>
 								<internal_type>db</internal_type>
@@ -28,8 +28,8 @@
 
 					<settings.view.contact.uid>
 						<TCEforms>
+							<exclude>1</exclude>
 							<label>LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.flexform.contact</label>
-
 							<config>
 								<type>group</type>
 								<internal_type>db</internal_type>
