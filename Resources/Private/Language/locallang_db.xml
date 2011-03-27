@@ -103,7 +103,7 @@
 			<label index="tx_hypedirectory_domain_model_role">Role</label>
 			<label index="tx_hypedirectory_domain_model_role.title">Title</label>
 			<label index="tx_hypedirectory_domain_model_role.additional_title">Additional title</label>
-			<label index="tx_hypedirectory_domain_model_role.contact">Contact</label>
+			<label index="tx_hypedirectory_domain_model_role.contacts">Contacts</label>
 
 			<label index="tx_hypedirectory_domain_model_register">Register</label>
 			<label index="tx_hypedirectory_domain_model_register.name">Name</label>
@@ -210,7 +210,7 @@
 			<label index="tx_hypedirectory_domain_model_role">Funktion</label>
 			<label index="tx_hypedirectory_domain_model_role.title">Titel</label>
 			<label index="tx_hypedirectory_domain_model_role.additional_title">Zusatztitel</label>
-			<label index="tx_hypedirectory_domain_model_role.contact">Kontakt</label>
+			<label index="tx_hypedirectory_domain_model_role.contacts">Kontakte</label>
 
 			<label index="tx_hypedirectory_domain_model_register">Liste</label>
 			<label index="tx_hypedirectory_domain_model_register.name">Name</label>
