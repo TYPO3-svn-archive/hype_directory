@@ -594,6 +594,14 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				'allowed' => 'pages',
 				'size' => 1,
 				'maxitems' => 1,
+				'wizards' => array(
+					'suggest' => array(
+						'type' => 'suggest',
+						'default' => array(
+							'searchWholePhrase' => 1,
+						),
+					),
+				),
 			),
 		),
 		'related_address' => array(
@@ -623,6 +631,14 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				'allowed' => 'fe_users',
 				'size' => 1,
 				'maxitems' => 1,
+				'wizards' => array(
+					'suggest' => array(
+						'type' => 'suggest',
+						'default' => array(
+							'searchWholePhrase' => 1,
+						),
+					),
+				),
 			),
 		),
 		'backend_user' => array(
@@ -634,6 +650,14 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				'allowed' => 'be_users',
 				'size' => 1,
 				'maxitems' => 1,
+				'wizards' => array(
+					'suggest' => array(
+						'type' => 'suggest',
+						'default' => array(
+							'searchWholePhrase' => 1,
+						),
+					),
+				),
 			),
 		),
 		'hidden' => array(
