@@ -8,6 +8,20 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="tx_hypedirectory">Hype Directory</label>
+
+			<label index="tx_hypedirectory.message.geolocation-exact.title">Exact geolocation found.</label>
+			<label index="tx_hypedirectory.message.geolocation-exact.body">For the address %s an exact geolocation was found.</label>
+			<label index="tx_hypedirectory.message.geolocation-approximate.title">Approximated geolocation found.</label>
+			<label index="tx_hypedirectory.message.geolocation-approximate.body">For the address %s an approximated geolocation was found.</label>
+			<label index="tx_hypedirectory.message.geolocation-none.title">No geolocation found.</label>
+			<label index="tx_hypedirectory.message.geolocation-none.body">For the given address no geodata is available.</label>
+			<label index="tx_hypedirectory.message.geolocation-limit.title">Geocoding failed.</label>
+			<label index="tx_hypedirectory.message.geolocation-limit.body">Daily query limit for the geodata server has already been reached.</label>
+			<label index="tx_hypedirectory.message.geolocation-error.title">Geocoding failed.</label>
+			<label index="tx_hypedirectory.message.geolocation-error.body">Unable to retrieve geographic data.</label>
+			<label index="tx_hypedirectory.message.geolocation-reset.title">Geolocation reset.</label>
+			<label index="tx_hypedirectory.message.geolocation-reset.body">Due to missing address data, the geolocation was reset.</label>
+
 			<label index="tx_hypedirectory.plugin.register">Register (Hype Directory)</label>
 			<label index="tx_hypedirectory.plugin.contact">Contact (Hype Directory)</label>
 
@@ -64,6 +78,9 @@
 			<label index="tx_hypedirectory_domain_model_contact.door">Flat</label>
 			<label index="tx_hypedirectory_domain_model_contact.state">State</label>
 			<label index="tx_hypedirectory_domain_model_contact.country">Country</label>
+			<label index="tx_hypedirectory_domain_model_contact.latitude">Latitude</label>
+			<label index="tx_hypedirectory_domain_model_contact.longitude">Longitude</label>
+			<label index="tx_hypedirectory_domain_model_contact.map">Map</label>
 			<label index="tx_hypedirectory_domain_model_contact.telephone_number">Number</label>
 			<label index="tx_hypedirectory_domain_model_contact.telephone_country">Country code</label>
 			<label index="tx_hypedirectory_domain_model_contact.telephone_area_code">Area code</label>
@@ -98,6 +115,20 @@
 
 		<languageKey index="de" type="array">
 			<label index="tx_hypedirectory">Hype Directory</label>
+
+			<label index="tx_hypedirectory.message.geolocation-exact.title">Genaue Geo-Position gefunden.</label>
+			<label index="tx_hypedirectory.message.geolocation-exact.body">Für die Adresse %s wurde eine genaue Geo-Position gefunden.</label>
+			<label index="tx_hypedirectory.message.geolocation-approximate.title">Ungenaue Geo-Position gefunden.</label>
+			<label index="tx_hypedirectory.message.geolocation-approximate.body">Für die Adresse %s wurde eine ungenaue Geo-Position gefunden.</label>
+			<label index="tx_hypedirectory.message.geolocation-none.title">Keine Geo-Position gefunden.</label>
+			<label index="tx_hypedirectory.message.geolocation-none.body">Für die angegebene Adresse sind keine Geo-Daten vorhanden.</label>
+			<label index="tx_hypedirectory.message.geolocation-limit.title">Geokodierung fehlgeschlagen.</label>
+			<label index="tx_hypedirectory.message.geolocation-limit.body">Tägliches Kontingent an Geo-Daten Anfragen wurde erreicht.</label>
+			<label index="tx_hypedirectory.message.geolocation-error.title">Geokodierung fehlgeschlagen.</label>
+			<label index="tx_hypedirectory.message.geolocation-error.body">Es konnten keine Geo-Daten abgefragt werden.</label>
+			<label index="tx_hypedirectory.message.geolocation-reset.title">Geo-Position zurückgesetzt.</label>
+			<label index="tx_hypedirectory.message.geolocation-reset.body">Aufgrund fehlender Angaben zur Adresse, wurde die Geo-Position zurückgesetzt.</label>
+
 			<label index="tx_hypedirectory.plugin.register">Liste (Hype Directory)</label>
 			<label index="tx_hypedirectory.plugin.contact">Kontakt (Hype Directory)</label>
 
@@ -154,6 +185,9 @@
 			<label index="tx_hypedirectory_domain_model_contact.door">Türnummer</label>
 			<label index="tx_hypedirectory_domain_model_contact.state">Bundesland</label>
 			<label index="tx_hypedirectory_domain_model_contact.country">Land</label>
+			<label index="tx_hypedirectory_domain_model_contact.latitude">Breitengrad</label>
+			<label index="tx_hypedirectory_domain_model_contact.longitude">Längengrad</label>
+			<label index="tx_hypedirectory_domain_model_contact.map">Karte</label>
 			<label index="tx_hypedirectory_domain_model_contact.telephone_number">Rufnummer</label>
 			<label index="tx_hypedirectory_domain_model_contact.telephone_country">Länderkennzahl</label>
 			<label index="tx_hypedirectory_domain_model_contact.telephone_area_code">Ortsnetzkennzahl</label>

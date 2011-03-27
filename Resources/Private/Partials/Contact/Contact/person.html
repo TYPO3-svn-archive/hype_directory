@@ -32,6 +32,12 @@
 		</f:if>
 	</p>
 
+	<f:if condition="{contact.latitude}">
+	<f:if condition="{contact.longitude}">
+		<iframe class="map" scrolling="no" frameborder="0" src="http://maps.google.com/maps?q={contact.latitude},{contact.longitude}&amp;output=embed" marginwidth="0" marginheight="0"></iframe>
+	</f:if>
+	</f:if>
+
 	<dl class="data">
 		<f:if condition="{contact.telephoneNumber}">
 			<dt class="telephone">{f:translate(key: 'phone_number')}</dt>

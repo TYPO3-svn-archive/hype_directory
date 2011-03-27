@@ -152,6 +152,18 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	protected $country;
 
 	/**
+	 * @var float
+	 * @validate Float
+	 */
+	protected $latitude;
+
+	/**
+	 * @var float
+	 * @validate Float
+	 */
+	protected $longitude;
+
+	/**
 	 * @var string
 	 * @validate String
 	 */
@@ -674,6 +686,44 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	 */
 	public function setCountry(Tx_Hype_Domain_Model_StaticCountry $country) {
 		$this->country = $country;
+	}
+
+	/**
+	 * Getter for latitude
+	 *
+	 * @return float
+	 */
+	public function getLatitude() {
+		return $this->latitude;
+	}
+
+	/**
+	 * Setter for latitude
+	 *
+	 * @param float $latitude
+	 * @return void
+	 */
+	public function setLatitude($latitude) {
+		$this->latitude = $latitude;
+	}
+
+	/**
+	 * Getter for longitude
+	 *
+	 * @return float
+	 */
+	public function getLongitude() {
+		return $this->longitude;
+	}
+
+	/**
+	 * Setter for longitude
+	 *
+	 * @param float $longitude
+	 * @return void
+	 */
+	public function setLongitude($longitude) {
+		$this->longitude = $longitude;
 	}
 
 	/**

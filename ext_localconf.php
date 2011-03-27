@@ -45,4 +45,16 @@ if(TYPO3_MODE == 'FE') {
 	//$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/realurl/class.tx_realurl_autoconfgen.php']['extensionConfiguration'][$_EXTKEY] = 'EXT:hype_directory/Classes/Hook/class.tx_hypedirectory_realurl_autoconfgen.php:&tx_hypedirectory_realurl_autoconfgen->addRealURLConfig';
 }
 
+
+
+# FUNCTIONS
+
+# TCA Fields
+class user_hype_directory_TCA {
+	public function map($PA, $fobj) {
+		$url = 'http://maps.google.com/maps?q=' . urlencode($PA['row']['latitude']) . ',' . urlencode($PA['row']['longitude']) . '&output=embed';
+		return '<iframe style="display: block; height: 300px !important; width: 95% !important;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="' . $url . '"></iframe>';
+	}
+}
+
 ?>

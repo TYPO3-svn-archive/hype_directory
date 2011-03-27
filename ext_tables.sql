@@ -17,7 +17,7 @@ CREATE TABLE tx_hypedirectory_domain_model_contact (
 	endtime int(11) DEFAULT '0' NOT NULL,
 	fe_group int(11) DEFAULT '0' NOT NULL,
 	editlock tinyint(1) DEFAULT '0' NOT NULL,
-	
+
 	type varchar(64) DEFAULT '' NOT NULL,
 	label varchar(255) DEFAULT '' NOT NULL,
 	form_of_address tinyint(1) DEFAULT '0' NOT NULL,
@@ -27,14 +27,14 @@ CREATE TABLE tx_hypedirectory_domain_model_contact (
 	last_name varchar(255) DEFAULT '' NOT NULL,
 	nickname varchar(64) DEFAULT '' NOT NULL,
 	corporate_name varchar(64) DEFAULT '' NOT NULL,
-	
+
 	images text,
 	gender tinyint(1) DEFAULT '0' NOT NULL,
 	date_of_birth int(11) DEFAULT '0' NOT NULL,
 	marital_status tinyint(1) DEFAULT '0' NOT NULL,
 	nationality mediumint(3) DEFAULT '0' NOT NULL,
 	mother_tongue mediumint(3) DEFAULT '0' NOT NULL,
-	
+
 	street varchar(255) DEFAULT '' NOT NULL,
 	postal_code int(11) DEFAULT '0' NOT NULL,
 	city varchar(255) DEFAULT '' NOT NULL,
@@ -43,35 +43,37 @@ CREATE TABLE tx_hypedirectory_domain_model_contact (
 	door varchar(255) DEFAULT '' NOT NULL,
 	country mediumint(3) DEFAULT '0' NOT NULL,
 	state mediumint(3) DEFAULT '0' NOT NULL,
-	
+	latitude decimal(10,7) DEFAULT '0' NOT NULL,
+	longitude decimal(10,7) DEFAULT '0' NOT NULL,
+
 	telephone_number varchar(10) DEFAULT '' NOT NULL,
 	telephone_country int(11) DEFAULT '0' NOT NULL,
 	telephone_area_code varchar(10) DEFAULT '' NOT NULL,
 	telephone_extension varchar(5) DEFAULT '' NOT NULL,
-	
+
 	cellphone_number varchar(10) DEFAULT '' NOT NULL,
 	cellphone_country int(11) DEFAULT '0' NOT NULL,
 	cellphone_area_code varchar(10) DEFAULT '' NOT NULL,
-	
+
 	fax_number varchar(10) DEFAULT '' NOT NULL,
 	fax_country int(11) DEFAULT '0' NOT NULL,
 	fax_area_code varchar(10) DEFAULT '' NOT NULL,
 	fax_extension varchar(5) DEFAULT '' NOT NULL,
-	
+
 	email varchar(255) DEFAULT '' NOT NULL,
 	website varchar(255) DEFAULT '' NOT NULL,
-	
+
 	remark text,
-	
+
 	roles int(11) DEFAULT '0' NOT NULL,
 	registers int(11) DEFAULT '0' NOT NULL,
-	
+
 	related_page int(11) DEFAULT '0' NOT NULL,
 	related_address varchar(255) DEFAULT '' NOT NULL,
-	
+
 	frontend_user int(11) DEFAULT '0' NOT NULL,
 	backend_user int(11) DEFAULT '0' NOT NULL,
-	
+
 	PRIMARY KEY (uid),
 	KEY parent (pid)
 );
@@ -96,11 +98,11 @@ CREATE TABLE tx_hypedirectory_domain_model_register (
 	endtime int(11) DEFAULT '0' NOT NULL,
 	fe_group int(11) DEFAULT '0' NOT NULL,
 	editlock tinyint(1) DEFAULT '0' NOT NULL,
-	
+
 	name varchar(255) DEFAULT '' NOT NULL,
 	roles int(11) DEFAULT '0' NOT NULL,
 	contacts int(11) DEFAULT '0' NOT NULL,
-	
+
 	PRIMARY KEY (uid),
 	KEY parent (pid)
 );
@@ -125,12 +127,12 @@ CREATE TABLE tx_hypedirectory_domain_model_role (
 	endtime int(11) DEFAULT '0' NOT NULL,
 	fe_group int(11) DEFAULT '0' NOT NULL,
 	editlock tinyint(1) DEFAULT '0' NOT NULL,
-	
+
 	title varchar(255) DEFAULT '' NOT NULL,
 	additional_title varchar(255) DEFAULT '' NOT NULL,
 	contacts int(11) DEFAULT '0' NOT NULL,
 	register int(11) DEFAULT '0' NOT NULL,
-	
+
 	PRIMARY KEY (uid),
 	KEY parent (pid)
 );
@@ -146,7 +148,7 @@ CREATE TABLE tx_hypedirectory_relation_contact_role (
 	uid_foreign int(11) DEFAULT '0' NOT NULL,
 	sorting int(11) DEFAULT '0' NOT NULL,
 	sorting_foreign int(11) DEFAULT '0' NOT NULL,
-	
+
 	PRIMARY KEY (uid),
 	KEY uid_local (uid_local),
 	KEY uid_foreign (uid_foreign)
@@ -163,7 +165,7 @@ CREATE TABLE tx_hypedirectory_relation_register_contact (
 	uid_foreign int(11) DEFAULT '0' NOT NULL,
 	sorting int(11) DEFAULT '0' NOT NULL,
 	sorting_foreign int(11) DEFAULT '0' NOT NULL,
-	
+
 	PRIMARY KEY (uid),
 	KEY uid_local (uid_local),
 	KEY uid_foreign (uid_foreign)
@@ -180,7 +182,7 @@ CREATE TABLE tx_hypedirectory_relation_register_role (
 	uid_foreign int(11) DEFAULT '0' NOT NULL,
 	sorting int(11) DEFAULT '0' NOT NULL,
 	sorting_foreign int(11) DEFAULT '0' NOT NULL,
-	
+
 	PRIMARY KEY (uid),
 	KEY uid_local (uid_local),
 	KEY uid_foreign (uid_foreign)

@@ -33,6 +33,9 @@
 			<label index="door.description">Flat/door number of the contact's address.</label>
 			<label index="state.description">State name of the contact's address.</label>
 			<label index="country.description">Country name of the contact's address.</label>
+			<label index="latitude.description">Angular distance of the address location south or north of the equator.</label>
+			<label index="longitude.description">Angular distance of the address location east or west of the prime meridian.</label>
+			<label index="map.description">Visualizes the geographic location of the address.</label>
 			<label index="telephone_area_code.description">Area code of the telephone number.</label>
 			<label index="telephone_number.description">Telephone number.</label>
 			<label index="telephone_extension.description">Extension of the telephone number.</label>
@@ -80,6 +83,9 @@
 			<label index="door.description">Türnummer der Adresse.</label>
 			<label index="state.description">Bundesland der Adresse.</label>
 			<label index="country.description">Land der Adresse.</label>
+			<label index="latitude.description">Position nördlich oder südlich des Äquators.</label>
+			<label index="longitude.description">Position östlich oder westlich des Nullmeridians.</label>
+			<label index="map.description">Stellt die geografische Lage der Adresse dar.</label>
 			<label index="telephone_area_code.description">Ortskennzahl (Vorwahl) der Telefonnummer.</label>
 			<label index="telephone_number.description">Teilnehmerrufnummer der Telefonnummer.</label>
 			<label index="telephone_extension.description">Durchwahl der Telefonnummer.</label>
