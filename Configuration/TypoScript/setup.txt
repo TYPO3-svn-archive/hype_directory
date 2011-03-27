@@ -20,10 +20,6 @@ config.tx_extbase {
 					Person = Tx_HypeDirectory_Domain_Model_Contact_Person
 					Corporation = Tx_HypeDirectory_Domain_Model_Contact_Corporation
 				}
-
-				columns {
-					country.foreignClass = Tx_Hype_Domain_Model_StaticCountry
-				}
 			}
 
 			Tx_HypeDirectory_Domain_Model_Contact_Person < .Tx_HypeDirectory_Domain_Model_Contact

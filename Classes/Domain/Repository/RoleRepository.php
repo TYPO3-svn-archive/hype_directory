@@ -25,6 +25,7 @@
 /**
  * A repository for Roles
  */
-class Tx_HypeDirectory_Domain_Repository_RoleRepository extends Tx_Extbase_Persistence_Repository {
+class Tx_HypeDirectory_Domain_Repository_RoleRepository extends Tx_Extbase_Persistence_Repository
+	implements Tx_HypeDirectory_Domain_Repository_RoleRepositoryInterface {
 }
 ?>

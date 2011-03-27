@@ -2,7 +2,7 @@
 /***************************************************************
 *  Copyright notice
 *
-*  (c) 2010 Thomas "Thasmo" Deinhamer <thasmo@gmail.com>
+*  (c) 2011 Thomas "Thasmo" Deinhamer <thasmo@gmail.com>
 *  All rights reserved
 *
 *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -23,16 +23,8 @@
 ***************************************************************/
 
 /**
- * A repository for Registers
+ * An interface for contact repositories
  */
-class Tx_HypeDirectory_Domain_Repository_RegisterRepository extends Tx_Extbase_Persistence_Repository
-	implements Tx_HypeDirectory_Domain_Repository_RegisterRepositoryInterface {
-
-	public function findMany(array $uids) {
-
-		# create a new query object
-		$query = $this->createQuery();
-		return $query->matching($query->in('uid', $uids))->execute();
-	}
+interface Tx_HypeDirectory_Domain_Repository_ContactRepositoryInterface {
 }
 ?>

@@ -190,6 +190,8 @@ if(TYPO3_MODE == 'BE') {
 
 if(TYPO3_MODE == 'BE') {
 
+	# TABLES
+
 	# Contact
 	t3lib_extMgm::addLLrefForTCAdescr('tx_hypedirectory_domain_model_contact', 'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh-record_contact.xml');
 
@@ -198,6 +200,16 @@ if(TYPO3_MODE == 'BE') {
 
 	# Role
 	t3lib_extMgm::addLLrefForTCAdescr('tx_hypedirectory_domain_model_role', 'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh-record_role.xml');
+
+
+
+	# FLEXFORM
+
+	# Contact
+	t3lib_extMgm::addLLrefForTCAdescr('tt_content.pi_flexform.hypedirectory_contact.list', 'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh-flexform_contact.xml');
+
+	# Register
+	t3lib_extMgm::addLLrefForTCAdescr('tt_content.pi_flexform.hypedirectory_register.list', 'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh-flexform_register.xml');
 }
 
 ?>

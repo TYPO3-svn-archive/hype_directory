@@ -31,19 +31,18 @@
 class Tx_HypeDirectory_Controller_ContactController extends Tx_Extbase_MVC_Controller_ActionController {
 
 	/**
-	 * @var Tx_HypeDirectory_Domain_Repository_ContactRepository
+	 * @var Tx_HypeDirectory_Domain_Repository_ContactRepositoryInterface
 	 */
 	protected $contactRepository;
 
 	/**
-	 * Initializes the current action
+	 * Injects the contact repository
 	 *
+	 * @param Tx_HypeDirectory_Domain_Repository_ContactRepositoryInterface $contactRepository
 	 * @return void
 	 */
-	public function initializeAction() {
-
-		# instantiate the contact repository
-		$this->contactRepository = t3lib_div::makeInstance('Tx_HypeDirectory_Domain_Repository_ContactRepository');
+	public function injectContactRepository(Tx_HypeDirectory_Domain_Repository_ContactRepositoryInterface $contactRepository) {
+		$this->contactRepository = $contactRepository;
 	}
 
 	/**

@@ -31,27 +31,33 @@
 class Tx_HypeDirectory_Controller_RegisterController extends Tx_Extbase_MVC_Controller_ActionController {
 
 	/**
-	 * @var Tx_HypeDirectory_Domain_Repository_ContactRepository
+	 * @var Tx_HypeDirectory_Domain_Repository_ContactRepositoryInterface
 	 */
 	protected $contactRepository;
 
 	/**
-	 * @var Tx_HypeDirectory_Domain_Repository_RegisterRepository
+	 * @var Tx_HypeDirectory_Domain_Repository_RegisterRepositoryInterface
 	 */
 	protected $registerRepository;
 
 	/**
-	 * Initializes the current action
+	 * Injects the contact repository
 	 *
+	 * @param Tx_HypeDirectory_Domain_Repository_ContactRepositoryInterface $contactRepository
 	 * @return void
 	 */
-	public function initializeAction() {
+	public function injectContactRepository(Tx_HypeDirectory_Domain_Repository_ContactRepositoryInterface $contactRepository) {
+		$this->contactRepository = $contactRepository;
+	}
 
-		# instantiate the contact repository
-		$this->contactRepository = t3lib_div::makeInstance('Tx_HypeDirectory_Domain_Repository_ContactRepository');
-
-		# instantiate the register repository
-		$this->registerRepository = t3lib_div::makeInstance('Tx_HypeDirectory_Domain_Repository_RegisterRepository');
+	/**
+	 * Injects the register repository
+	 *
+	 * @param Tx_HypeDirectory_Domain_Repository_RegisterRepositoryInterface $contactRepository
+	 * @return void
+	 */
+	public function injectRegisterRepository(Tx_HypeDirectory_Domain_Repository_RegisterRepositoryInterface $registerRepository) {
+		$this->registerRepository = $registerRepository;
 	}
 
 	/**
