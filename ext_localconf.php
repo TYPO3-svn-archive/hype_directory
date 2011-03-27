@@ -42,7 +42,7 @@ if(TYPO3_MODE == 'BE') {
 if(TYPO3_MODE == 'FE') {
 
 	# RealUrl
-	//$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/realurl/class.tx_realurl_autoconfgen.php']['extensionConfiguration'][$_EXTKEY] = 'EXT:hype_directory/Classes/Hook/class.tx_hypedirectory_realurl_autoconfgen.php:&tx_hypedirectory_realurl_autoconfgen->addRealURLConfig';
+	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/realurl/class.tx_realurl_autoconfgen.php']['extensionConfiguration'][$_EXTKEY] = 'EXT:hype_directory/Classes/Hook/class.tx_hypedirectory_realurl_autoconfgen.php:&tx_hypedirectory_realurl_autoconfgen->addRealURLConfig';
 }
 
 
