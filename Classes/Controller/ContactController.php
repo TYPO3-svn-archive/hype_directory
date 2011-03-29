@@ -73,7 +73,14 @@ class Tx_HypeDirectory_Controller_ContactController extends Tx_Extbase_MVC_Contr
 
 		# set contact
 		if($contact) {
+
+			# assign contact
 			$this->view->assign('contact', $contact);
+
+			# overload document title
+			if($this->settings['view']['contact']['common']['overrideDocumentTitle']) {
+				Tx_Hype_Utility_Document::setTitle($contact->getLabel());
+			}
 		}
 
 		# set role and contact

@@ -53,6 +53,10 @@ plugin.tx_hypedirectory {
 			contact {
 				pid =
 
+				common {
+					overrideDocumentTitle = 1
+				}
+
 				action {
 					index {
 						common {

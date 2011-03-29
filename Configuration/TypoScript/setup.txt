@@ -130,6 +130,10 @@ plugin.tx_hypedirectory {
 			contact {
 				pid =
 
+				common {
+					overrideDocumentTitle = {$plugin.tx_hypedirectory.settings.view.contact.common.overrideDocumentTitle}
+				}
+
 				action {
 					index {
 						common {
