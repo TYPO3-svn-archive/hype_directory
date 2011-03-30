@@ -37,10 +37,21 @@
 			<label index="tx_hypedirectory.tab.roles">Roles</label>
 			<label index="tx_hypedirectory.tab.access">Access</label>
 
-			<label index="tx_hypedirectory.palette.city">City</label>
+			<label index="tx_hypedirectory.palette.general">Contact</label>
+			<label index="tx_hypedirectory.palette.display">Display options</label>
+			<label index="tx_hypedirectory.palette.name">Name details</label>
+			<label index="tx_hypedirectory.palette.images">Images</label>
+			<label index="tx_hypedirectory.palette.remark">Remark</label>
+			<label index="tx_hypedirectory.palette.details">Additional details</label>
+			<label index="tx_hypedirectory.palette.address">Address details</label>
+			<label index="tx_hypedirectory.palette.pages">Related pages</label>
+			<label index="tx_hypedirectory.palette.users">Related users</label>
 			<label index="tx_hypedirectory.palette.telephone_number">Telephone number</label>
 			<label index="tx_hypedirectory.palette.fax_number">Fax number</label>
 			<label index="tx_hypedirectory.palette.cellphone_number">Cellphone number</label>
+			<label index="tx_hypedirectory.palette.email">E-Mail</label>
+			<label index="tx_hypedirectory.palette.website">Website</label>
+			<label index="tx_hypedirectory.palette.access">Access options</label>
 
 			<label index="tx_hypedirectory_domain_model_contact">Contact</label>
 			<label index="tx_hypedirectory_domain_model_contact.type">Type</label>
@@ -92,7 +103,7 @@
 			<label index="tx_hypedirectory_domain_model_contact.fax_country">Country code</label>
 			<label index="tx_hypedirectory_domain_model_contact.fax_area_code">Area code</label>
 			<label index="tx_hypedirectory_domain_model_contact.fax_extension">Extension</label>
-			<label index="tx_hypedirectory_domain_model_contact.email">Email address</label>
+			<label index="tx_hypedirectory_domain_model_contact.email">E-Mail address</label>
 			<label index="tx_hypedirectory_domain_model_contact.website">Website address</label>
 			<label index="tx_hypedirectory_domain_model_contact.remark">Remark</label>
 			<label index="tx_hypedirectory_domain_model_contact.related_page">Related page</label>
@@ -144,10 +155,21 @@
 			<label index="tx_hypedirectory.tab.roles">Funktionen</label>
 			<label index="tx_hypedirectory.tab.access">Zugriff</label>
 
-			<label index="tx_hypedirectory.palette.city">Stadt/Ort</label>
+			<label index="tx_hypedirectory.palette.general">Kontakt</label>
+			<label index="tx_hypedirectory.palette.display">Anzeigeoptionen</label>
+			<label index="tx_hypedirectory.palette.name">Angaben zum Namen</label>
+			<label index="tx_hypedirectory.palette.images">Bilder</label>
+			<label index="tx_hypedirectory.palette.remark">Anmerkung</label>
+			<label index="tx_hypedirectory.palette.details">Zusätzliche Angaben</label>
+			<label index="tx_hypedirectory.palette.address">Angaben zur Adresse</label>
+			<label index="tx_hypedirectory.palette.pages">Zugehörige Seiten</label>
+			<label index="tx_hypedirectory.palette.users">Zugehörige Benutzer</label>
 			<label index="tx_hypedirectory.palette.telephone_number">Telefonnummer</label>
-			<label index="tx_hypedirectory.palette.fax_number">Faxnummer</label>
+			<label index="tx_hypedirectory.palette.fax_number">Faxnnummer</label>
 			<label index="tx_hypedirectory.palette.cellphone_number">Mobilnummer</label>
+			<label index="tx_hypedirectory.palette.email">E-Mail</label>
+			<label index="tx_hypedirectory.palette.website">Website</label>
+			<label index="tx_hypedirectory.palette.access">Zugriffsoptionen</label>
 
 			<label index="tx_hypedirectory_domain_model_contact">Kontakt</label>
 			<label index="tx_hypedirectory_domain_model_contact.type">Typ</label>
@@ -199,7 +221,7 @@
 			<label index="tx_hypedirectory_domain_model_contact.fax_country">Länderkennzahl</label>
 			<label index="tx_hypedirectory_domain_model_contact.fax_area_code">Ortsnetzkennzahl</label>
 			<label index="tx_hypedirectory_domain_model_contact.fax_extension">Durchwahl</label>
-			<label index="tx_hypedirectory_domain_model_contact.email">Email Adresse</label>
+			<label index="tx_hypedirectory_domain_model_contact.email">E-Mail Adresse</label>
 			<label index="tx_hypedirectory_domain_model_contact.website">Website Adresse</label>
 			<label index="tx_hypedirectory_domain_model_contact.remark">Anmerkung</label>
 			<label index="tx_hypedirectory_domain_model_contact.related_page">Zugehörige Seite</label>

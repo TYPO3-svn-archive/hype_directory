@@ -112,7 +112,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.first_name',
 			'config' => array(
 				'type' => 'input',
-				'size' => 20,
+				'size' => 12,
 				'eval' => 'trim',
 			),
 		),
@@ -121,7 +121,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.middle_name',
 			'config' => array(
 				'type' => 'input',
-				'size' => 10,
+				'size' => 12,
 				'eval' => 'trim',
 			),
 		),
@@ -130,7 +130,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.last_name',
 			'config' => array(
 				'type' => 'input',
-				'size' => 20,
+				'size' => 12,
 				'eval' => 'required, trim',
 			),
 		),
@@ -139,7 +139,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.nickname',
 			'config' => array(
 				'type' => 'input',
-				'size' => 10,
+				'size' => 12,
 				'eval' => 'trim',
 			),
 		),
@@ -272,7 +272,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.city',
 			'config' => array(
 				'type' => 'input',
-				'size' => 20,
+				'size' => 12,
 				'eval' => 'trim',
 			),
 		),
@@ -723,49 +723,149 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	),
 	'types' => array(
 		'person' => array('showitem' => '
-			sys_language_uid, l10n_parent, l10n_diffsource, type;;;;1-1-1, label;;;;1-1-1, form_of_address;;;;1-1-1, academic_title, first_name;;2;;1-1-1, last_name, images;;;;1-1-1, remark;;;;1-1-1,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.general;general,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.display;label,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.name;name,
+				--palette--;;name_addition,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.images;images,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.remark;remark,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.details,
-				 gender, date_of_birth, marital_status, nationality, mother_tongue,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.details;details,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.contact,
-				street;;3;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.city;1, country;;4;;, map;;11;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.telephone_number;5;;, --palette--;;6;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.fax_number;7;;, --palette--;;8, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.cellphone_number;9, --palette--;;10;;, email;;;;1-1-1, website,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.address;address,
+				--palette--;;address_addition,
+				map,
+				--palette--;;location,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.telephone_number;telephone,
+				--palette--;;telephone_addition,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.fax_number;fax,
+				--palette--;;fax_addition,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.cellphone_number;cellphone,
+				--palette--;;cellphone_addition,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.email;email,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.website;website,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.relations,
-				related_page, related_address, frontend_user;;;;1-1-1, backend_user,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.pages;pages,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.users;users,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.access,
-				hidden, starttime;;;;1-1-1, endtime, fe_group;;;;1-1-1, editlock;;;;1-1-1
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.access;access,
 		'),
 		'corporation' => array('showitem' => '
-			sys_language_uid, l10n_parent, l10n_diffsource, type;;;;1-1-1, label;;;;1-1-1, corporate_name;;;;1-1-1, images;;;;1-1-1, remark;;;;1-1-1,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.general;general,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.display;label,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.name;corporate_name,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.images;images,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.remark;remark,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.contact,
-				street;;3;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.city;1, country;;4;;, map;;11;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.telephone_number;5;;, --palette--;;6;;, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.fax_number;7;;, --palette--;;8, --palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.cellphone_number;9, --palette--;;10;;, email;;;;1-1-1, website,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.address;address,
+				--palette--;;address_addition,
+				map,
+				--palette--;;location,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.telephone_number;telephone,
+				--palette--;;telephone_addition,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.fax_number;fax,
+				--palette--;;fax_addition,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.cellphone_number;cellphone,
+				--palette--;;cellphone_addition,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.email,email,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.website,website,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.relations,
-				related_page, related_address,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.pages;pages,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.users;users,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.access,
-				hidden, starttime;;;;1-1-1, endtime, fe_group;;;;1-1-1, editlock;;;;1-1-1
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.access;access,
 		'),
 	),
 	'palettes' => array(
-		1 => array('showitem' => 'postal_code, city', 'canNotCollapse' => TRUE),
-		2 => array('showitem' => 'middle_name, nickname'),
-		3 => array('showitem' => 'stair, floor, door'),
-		4 => array('showitem' => 'state'),
-
-		5 => array('showitem' => 'telephone_area_code, telephone_number, telephone_extension', 'canNotCollapse' => TRUE),
-		6 => array('showitem' => 'telephone_country'),
-
-		7 => array('showitem' => 'fax_area_code, fax_number, fax_extension', 'canNotCollapse' => TRUE),
-		8 => array('showitem' => 'fax_country'),
-
-		9 => array('showitem' => 'cellphone_area_code, cellphone_number', 'canNotCollapse' => TRUE),
-		10 => array('showitem' => 'cellphone_country'),
-
-		11 => array('showitem' => 'latitude, longitude'),
+		'general' => array(
+			'showitem' => 'type, sys_language_uid',
+			'canNotCollapse' => TRUE,
+		),
+		'label' => array(
+			'showitem' => 'label',
+			'canNotCollapse' => TRUE,
+		),
+		'name' => array(
+			'showitem' => 'form_of_address, academic_title, --linebreak--, first_name, last_name',
+			'canNotCollapse' => TRUE,
+		),
+		'corporate_name' => array(
+			'showitem' => 'corporate_name',
+			'canNotCollapse' => TRUE,
+		),
+		'name_addition' => array(
+			'showitem' => 'middle_name, nickname',
+		),
+		'images'=> array(
+			'showitem' => 'images',
+			'canNotCollapse' => TRUE,
+		),
+		'remark'=> array(
+			'showitem' => 'remark',
+			'canNotCollapse' => TRUE,
+		),
+		'details'=> array(
+			'showitem' => 'gender, --linebreak--, date_of_birth, --linebreak--, marital_status, --linebreak--, nationality, --linebreak--, mother_tongue',
+			'canNotCollapse' => TRUE,
+		),
+		'address' => array(
+			'showitem' => 'street, --linebreak--, postal_code, city, --linebreak--, stair, floor, door,',
+			'canNotCollapse' => TRUE,
+		),
+		'address_addition' => array(
+			'showitem' => 'country, state',
+		),
+		'location' => array(
+			'showitem' => 'latitude, longitude',
+		),
+		'telephone' => array(
+			'showitem' => 'telephone_area_code, telephone_number, telephone_extension',
+			'canNotCollapse' => TRUE,
+		),
+		'telephone_addition' => array(
+			'showitem' => 'telephone_country',
+		),
+		'fax' => array(
+			'showitem' => 'fax_area_code, fax_number, fax_extension',
+			'canNotCollapse' => TRUE,
+		),
+		'fax_addition' => array(
+			'showitem' => 'fax_country',
+		),
+		'cellphone' => array(
+			'showitem' => 'cellphone_area_code, cellphone_number',
+			'canNotCollapse' => TRUE,
+		),
+		'cellphone_addition' => array(
+			'showitem' => 'cellphone_country',
+		),
+		'email' => array(
+			'showitem' => 'email',
+			'canNotCollapse' => TRUE,
+		),
+		'website' => array(
+			'showitem' => 'website',
+			'canNotCollapse' => TRUE,
+		),
+		'pages' => array(
+			'showitem' => 'related_page, --linebreak--, related_address',
+			'canNotCollapse' => TRUE,
+		),
+		'users' => array(
+			'showitem' => 'frontend_user, --linebreak--, backend_user,',
+			'canNotCollapse' => TRUE,
+		),
+		'access' => array(
+			'showitem' => 'starttime, endtime, --linebreak--, fe_group, --linebreak--, hidden, editlock',
+			'canNotCollapse' => 1,
+		),
 	),
 );
 
