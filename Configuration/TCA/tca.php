@@ -723,15 +723,16 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	),
 	'types' => array(
 		'person' => array('showitem' => '
-				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.general;general,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.contact;general,
 				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.display;label,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.affix;affix,
 				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.name;name,
 				--palette--;;name_addition,
 				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.images;images,
-				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.remark;remark,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.details,
 				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.details;details,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.remark;remark,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.contact,
 				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.address;address,
@@ -755,10 +756,12 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.access;access,
 		'),
 		'corporation' => array('showitem' => '
-				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.general;general,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.contact;general,
 				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.display;label,
 				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.name;corporate_name,
 				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.images;images,
+
+			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.details,
 				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.remark;remark,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.contact,
@@ -792,16 +795,20 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'showitem' => 'label',
 			'canNotCollapse' => TRUE,
 		),
-		'name' => array(
-			'showitem' => 'form_of_address, academic_title, --linebreak--, first_name, last_name',
+		'affix' => array(
+			'showitem' => 'form_of_address, academic_title',
 			'canNotCollapse' => TRUE,
 		),
-		'corporate_name' => array(
-			'showitem' => 'corporate_name',
+		'name' => array(
+			'showitem' => 'first_name, last_name',
 			'canNotCollapse' => TRUE,
 		),
 		'name_addition' => array(
 			'showitem' => 'middle_name, nickname',
+		),
+		'corporate_name' => array(
+			'showitem' => 'corporate_name',
+			'canNotCollapse' => TRUE,
 		),
 		'images'=> array(
 			'showitem' => 'images',
@@ -816,7 +823,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'canNotCollapse' => TRUE,
 		),
 		'address' => array(
-			'showitem' => 'street, --linebreak--, postal_code, city, --linebreak--, stair, floor, door,',
+			'showitem' => 'street, --linebreak--, stair, floor, door, --linebreak--, postal_code, city',
 			'canNotCollapse' => TRUE,
 		),
 		'address_addition' => array(
@@ -863,8 +870,8 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'canNotCollapse' => TRUE,
 		),
 		'access' => array(
-			'showitem' => 'starttime, endtime, --linebreak--, fe_group, --linebreak--, hidden, editlock',
-			'canNotCollapse' => 1,
+			'showitem' => 'starttime, endtime, hidden, --linebreak--, fe_group, --linebreak--, editlock',
+			'canNotCollapse' => TRUE,
 		),
 	),
 );
@@ -1042,14 +1049,34 @@ $TCA['tx_hypedirectory_domain_model_register'] = array(
 	),
 	'types' => array(
 		0 => array('showitem' => '
-			sys_language_uid, l10n_parent, l10n_diffsource, name;;;;1-1-1, contacts;;;;1-1-1,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.register;general,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.name;name,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.contacts;contacts,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.roles,
-				roles;;;;1-1-1,
+				roles,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.access,
-				hidden, starttime;;;;1-1-1, endtime, fe_group;;;;1-1-1, editlock;;;;1-1-1
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.access;access,
 		'),
+	),
+	'palettes' => array(
+		'general' => array(
+			'showitem' => 'sys_language_uid',
+			'canNotCollapse' => TRUE,
+		),
+		'name' => array(
+			'showitem' => 'name',
+			'canNotCollapse' => TRUE,
+		),
+		'contacts' => array(
+			'showitem' => 'contacts',
+			'canNotCollapse' => TRUE,
+		),
+		'access' => array(
+			'showitem' => 'starttime, endtime, hidden, --linebreak--, fe_group, --linebreak--, editlock',
+			'canNotCollapse' => TRUE,
+		),
 	),
 );
 
@@ -1228,11 +1255,31 @@ $TCA['tx_hypedirectory_domain_model_role'] = array(
 	),
 	'types' => array(
 		'0' => array('showitem' => '
-			sys_language_uid, l10n_parent, l10n_diffsource, title;;;;1-1-1, additional_title, contacts;;;;1-1-1, register,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.role;general,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.title;title,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.contacts;contacts,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.access,
-				hidden, starttime;;;;1-1-1, endtime, fe_group;;;;1-1-1, editlock;;;;1-1-1
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.access;access,
 		'),
+	),
+	'palettes' => array(
+		'general' => array(
+			'showitem' => 'register, sys_language_uid',
+			'canNotCollapse' => TRUE,
+		),
+		'title' => array(
+			'showitem' => 'title, --linebreak--, additional_title',
+			'canNotCollapse' => TRUE,
+		),
+		'contacts' => array(
+			'showitem' => 'contacts',
+			'canNotCollapse' => TRUE,
+		),
+		'access' => array(
+			'showitem' => 'starttime, endtime, hidden, --linebreak--, fe_group, --linebreak--, editlock',
+			'canNotCollapse' => TRUE,
+		),
 	),
 );
 ?>
