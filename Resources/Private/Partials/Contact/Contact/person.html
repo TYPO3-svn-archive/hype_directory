@@ -78,6 +78,21 @@
 			<dd class="date_of_birth">{f:format.date(date: '{contact.dateOfBirth}', format: '{settings.view.contact.action.index.property.date_of_birth.format}')}</dd>
 		</f:if>
 
+		<f:if condition="{contact.placeOfBirth}">
+			<dt class="place_of_birth">{f:translate(key: 'place_of_birth')}</dt>
+			<dd class="place_of_birth">{contact.placeOfBirth}</dd>
+		</f:if>
+
+		<f:if condition="{contact.dateOfDeath}">
+			<dt class="date_of_death">{f:translate(key: 'date_of_death')}</dt>
+			<dd class="date_of_death">{f:format.date(date: '{contact.dateOfDeath}', format: '{settings.view.contact.action.index.property.date_of_death.format}')}</dd>
+		</f:if>
+
+		<f:if condition="{contact.placeOfDeath}">
+			<dt class="place_of_death">{f:translate(key: 'place_of_death')}</dt>
+			<dd class="place_of_death">{contact.placeOfDeath}</dd>
+		</f:if>
+
 		<f:if condition="{contact.maritalStatus}">
 			<dt class="marital_status">{f:translate(key: 'marital_status')}</dt>
 			<dd class="marital_status marital_status-{contact.maritalStatus}">{f:translate(key: 'marital_status.{contact.maritalStatus}')}</dd>

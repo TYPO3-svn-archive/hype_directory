@@ -60,6 +60,18 @@
 		</f:if>
 	</dl>
 
+	<dl class="details">
+		<f:if condition="{contact.dateOfFormation}">
+			<dt class="date_of_formation">{f:translate(key: 'date_of_formation')}</dt>
+			<dd class="date_of_formation">{f:format.date(date: '{contact.dateOfFormation}', format: '{settings.view.contact.action.index.property.date_of_formation.format}')}</dd>
+		</f:if>
+
+		<f:if condition="{contact.dateOfClosure}">
+			<dt class="date_of_closure">{f:translate(key: 'date_of_closure')}</dt>
+			<dd class="date_of_closure">{f:format.date(date: '{contact.dateOfClosure}', format: '{settings.view.contact.action.index.property.date_of_closure.format}')}</dd>
+		</f:if>
+	</dl>
+
 	<p class="relations">
 		<f:if condition="{contact.relatedPage}"><f:link.page pageUid="{contact.relatedPage}">{f:translate(key: 'more_information_about', arguments: {0: contact.completeName})}</f:link.page><br /></f:if>
 		<f:if condition="{contact.relatedAddress}"><f:link.external uri="{contact.relatedAddress}">{f:translate(key: 'further_information_about', arguments: {0: contact.completeName})}</f:link.external><br /></f:if>

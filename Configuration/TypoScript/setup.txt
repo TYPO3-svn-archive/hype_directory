@@ -151,6 +151,18 @@ plugin.tx_hypedirectory {
 							date_of_birth {
 								format = {$plugin.tx_hypedirectory.settings.view.contact.action.index.property.date_of_birth.format}
 							}
+
+							date_of_death {
+								format = {$plugin.tx_hypedirectory.settings.view.contact.action.index.property.date_of_death.format}
+							}
+
+							date_of_formation {
+								format = {$plugin.tx_hypedirectory.settings.view.contact.action.index.property.date_of_formation.format}
+							}
+
+							date_of_closure {
+								format = {$plugin.tx_hypedirectory.settings.view.contact.action.index.property.date_of_closure.format}
+							}
 						}
 					}
 				}

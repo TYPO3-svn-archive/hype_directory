@@ -75,6 +75,18 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	 * @var string
 	 * @validate String
 	 */
+	protected $initials;
+
+	/**
+	 * @var string
+	 * @validate String
+	 */
+	protected $maidenName;
+
+	/**
+	 * @var string
+	 * @validate String
+	 */
 	protected $images;
 
 	/**
@@ -87,6 +99,23 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	 * @var DateTime
 	 */
 	protected $dateOfBirth;
+
+	/**
+	 * @var string
+	 * @validate String
+	 */
+	protected $placeOfBirth;
+
+	/**
+	 * @var DateTime
+	 */
+	protected $dateOfDeath;
+
+	/**
+	 * @var string
+	 * @validate String
+	 */
+	protected $placeOfDeath;
 
 	/**
 	 * @var integer
@@ -242,6 +271,44 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	}
 
 	/**
+	 * Getter for initials
+	 *
+	 * @return string
+	 */
+	public function getInitials() {
+		return $this->initials;
+	}
+
+	/**
+	 * Setter for initials
+	 *
+	 * @param string $initials
+	 * @return void
+	 */
+	public function setInitials($initials) {
+		$this->initials = $initials;
+	}
+
+	/**
+	 * Getter for maidenName
+	 *
+	 * @return string
+	 */
+	public function getMaidenName() {
+		return $this->maidenName;
+	}
+
+	/**
+	 * Setter for maidenName
+	 *
+	 * @param string $maidenName
+	 * @return void
+	 */
+	public function setMaidenName($maidenName) {
+		$this->maidenName = $maidenName;
+	}
+
+	/**
 	 * Getter for images
 	 *
 	 * @return array
@@ -296,6 +363,63 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	 */
 	public function setDateOfBirth(DateTime $dateOfBirth) {
 		$this->dateOfBirth = $dateOfBirth;
+	}
+
+	/**
+	 * Getter for placeOfBirth
+	 *
+	 * @return string
+	 */
+	public function getPlaceOfBirth() {
+		return $this->placeOfBirth;
+	}
+
+	/**
+	 * Setter for placeOfBirth
+	 *
+	 * @param string $placeOfBirth
+	 * @return void
+	 */
+	public function setPlaceOfBirth($placeOfBirth) {
+		$this->placeOfBirth = $placeOfBirth;
+	}
+
+	/**
+	 * Getter for dateOfDeath
+	 *
+	 * @return DateTime
+	 */
+	public function getDateOfDeath() {
+		return $this->dateOfDeath;
+	}
+
+	/**
+	 * Setter for dateOfDeath
+	 *
+	 * @param DateTime $dateOfDeath
+	 * @return void
+	 */
+	public function setDateOfDeath(DateTime $dateOfDeath) {
+		$this->dateOfDeath = $dateOfDeath;
+	}
+
+	/**
+	 * Getter for placeOfDeath
+	 *
+	 * @return string
+	 */
+	public function getPlaceOfDeath() {
+		return $this->placeOfDeath;
+	}
+
+	/**
+	 * Setter for placeOfDeath
+	 *
+	 * @param string $placeOfDeath
+	 * @return void
+	 */
+	public function setPlaceOfDeath($placeOfDeath) {
+		$this->placeOfDeath = $placeOfDeath;
 	}
 
 	/**

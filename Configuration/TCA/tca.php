@@ -9,7 +9,7 @@ if(!defined('TYPO3_MODE'))
 $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	'ctrl' => $TCA['tx_hypedirectory_domain_model_contact']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, type, label, form_of_address, academic_title, first_name, middle_name, last_name, nickname, corporate_name, images, gender, date_of_birth, marital_status, nationality, mother_tongue, street, postal_code, city, stair, floor, door, state, country, latitude, longitude, telephone_number, telephone_country, telephone_area_code, telephone_extension, fax_number, fax_country, fax_area_code, fax_extension, cellphone_number, cellphone_country, cellphone_area_code, email, website, remark, related_page, related_address, frontend_user, backend_user, hidden, starttime, endtime, fe_group, editlock'
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, type, label, form_of_address, academic_title, first_name, middle_name, last_name, nickname, initials, maiden_name, corporate_name, images, gender, date_of_birth, place_of_birth, date_of_death, place_of_death, marital_status, nationality, mother_tongue, date_of_formation, date_of_closure, street, postal_code, city, stair, floor, door, state, country, latitude, longitude, telephone_number, telephone_country, telephone_area_code, telephone_extension, fax_number, fax_country, fax_area_code, fax_extension, cellphone_number, cellphone_country, cellphone_area_code, email, website, remark, related_page, related_address, frontend_user, backend_user, hidden, starttime, endtime, fe_group, editlock'
 	),
 	'feInterface' => $TCA['tx_hypedirectory_domain_model_contact']['feInterface'],
 	'columns' => array(
@@ -143,6 +143,24 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				'eval' => 'trim',
 			),
 		),
+		'initials' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.initials',
+			'config' => array(
+				'type' => 'input',
+				'size' => 12,
+				'eval' => 'trim',
+			),
+		),
+		'maiden_name' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.maiden_name',
+			'config' => array(
+				'type' => 'input',
+				'size' => 12,
+				'eval' => 'trim',
+			),
+		),
 		'corporate_name' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.corporate_name',
@@ -184,8 +202,35 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.date_of_birth',
 			'config' => array(
 				'type' => 'input',
-				'size' => 5,
+				'size' => 6,
 				'eval' => 'trim, date',
+			),
+		),
+		'place_of_birth' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.place_of_birth',
+			'config' => array(
+				'type' => 'input',
+				'size' => 20,
+				'eval' => 'trim',
+			),
+		),
+		'date_of_death' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.date_of_death',
+			'config' => array(
+				'type' => 'input',
+				'size' => 6,
+				'eval' => 'trim, date',
+			),
+		),
+		'place_of_death' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.place_of_death',
+			'config' => array(
+				'type' => 'input',
+				'size' => 20,
+				'eval' => 'trim',
 			),
 		),
 		'marital_status' => array(
@@ -248,6 +293,24 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				'maxitems' => 1,
 			),
 			'displayCond' => 'EXT:static_info_tables:LOADED:true',
+		),
+		'date_of_formation' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.date_of_formation',
+			'config' => array(
+				'type' => 'input',
+				'size' => 6,
+				'eval' => 'trim, date',
+			),
+		),
+		'date_of_closure' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.date_of_closure',
+			'config' => array(
+				'type' => 'input',
+				'size' => 6,
+				'eval' => 'trim, date',
+			),
 		),
 		'street' => array(
 			'exclude' => 0,
@@ -762,6 +825,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.images;images,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.details,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.details;corporate_details,
 				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.remark;remark,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.contact,
@@ -800,11 +864,11 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'canNotCollapse' => TRUE,
 		),
 		'name' => array(
-			'showitem' => 'first_name, last_name',
+			'showitem' => 'first_name, last_name, middle_name',
 			'canNotCollapse' => TRUE,
 		),
 		'name_addition' => array(
-			'showitem' => 'middle_name, nickname',
+			'showitem' => 'nickname, initials, maiden_name',
 		),
 		'corporate_name' => array(
 			'showitem' => 'corporate_name',
@@ -819,7 +883,11 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'canNotCollapse' => TRUE,
 		),
 		'details'=> array(
-			'showitem' => 'gender, --linebreak--, date_of_birth, --linebreak--, marital_status, --linebreak--, nationality, --linebreak--, mother_tongue',
+			'showitem' => 'gender, marital_status, --linebreak--, date_of_birth, place_of_birth, --linebreak--, date_of_death, place_of_death, --linebreak--, nationality, --linebreak--, mother_tongue',
+			'canNotCollapse' => TRUE,
+		),
+		'corporate_details' => array(
+			'showitem' => 'date_of_formation, --linebreak--, date_of_closure',
 			'canNotCollapse' => TRUE,
 		),
 		'address' => array(

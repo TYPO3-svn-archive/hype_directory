@@ -23,6 +23,11 @@
 			<label index="email">E-mail</label>
 			<label index="website">Website</label>
 			<label index="date_of_birth">Date of birth</label>
+			<label index="place_of_birth">Place of birth</label>
+			<label index="date_of_death">Date of death</label>
+			<label index="place_of_death">Place of death</label>
+			<label index="date_of_formation">Date of formation</label>
+			<label index="date_of_closure">Date of closure</label>
 			<label index="marital_status">Marital status</label>
 			<label index="marital_status.1">single</label>
 			<label index="marital_status.2">married</label>
@@ -54,6 +59,11 @@
 			<label index="email">E-Mail</label>
 			<label index="website">Website</label>
 			<label index="date_of_birth">Geburtsdatum</label>
+			<label index="place_of_birth">Geburtsort</label>
+			<label index="date_of_death">Sterbedatum</label>
+			<label index="place_of_death">Sterbeort</label>
+			<label index="date_of_formation">Gründungsdatum</label>
+			<label index="date_of_closure">Stilllegungsdatum</label>
 			<label index="marital_status">Familienstand</label>
 			<label index="marital_status.1">ledig</label>
 			<label index="marital_status.2">verheiratet</label>

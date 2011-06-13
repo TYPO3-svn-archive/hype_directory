@@ -42,6 +42,16 @@ class Tx_HypeDirectory_Domain_Model_Contact_Corporation extends Tx_HypeDirectory
 	protected $corporateName;
 
 	/**
+	 * @var DateTime
+	 */
+	protected $dateOfFormation;
+
+	/**
+	 * @var DateTime
+	 */
+	protected $dateOfClosure;
+
+	/**
 	 * Getter for corporateName
 	 *
 	 * @return string
@@ -58,6 +68,44 @@ class Tx_HypeDirectory_Domain_Model_Contact_Corporation extends Tx_HypeDirectory
 	 */
 	public function setCorporateName($corporateName) {
 		$this->corporateName = $corporateName;
+	}
+
+	/**
+	 * Getter for dateOfFormation
+	 *
+	 * @return DateTime
+	 */
+	public function getDateOfFormation() {
+		return $this->dateOfFormation;
+	}
+
+	/**
+	 * Setter for dateOfFormation
+	 *
+	 * @param DateTime $dateOfFormation
+	 * @return void
+	 */
+	public function setDateOfFormation(DateTime $dateOfFormation) {
+		$this->dateOfFormation = $dateOfFormation;
+	}
+
+	/**
+	 * Getter for dateOfClosure
+	 *
+	 * @return DateTime
+	 */
+	public function getDateOfClosure() {
+		return $this->dateOfClosure;
+	}
+
+	/**
+	 * Setter for dateOfClosure
+	 *
+	 * @param DateTime $dateOfClosure
+	 * @return void
+	 */
+	public function setDateOfClosure(DateTime $dateOfClosure) {
+		$this->dateOfClosure = $dateOfClosure;
 	}
 
 

@@ -74,6 +74,18 @@ plugin.tx_hypedirectory {
 							date_of_birth {
 								format = d.m.Y
 							}
+
+							date_of_death {
+								format = d.m.Y
+							}
+
+							date_of_formation {
+								format = d.m.Y
+							}
+
+							date_of_closure {
+								format = d.m.Y
+							}
 						}
 					}
 				}
