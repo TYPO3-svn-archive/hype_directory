@@ -5,7 +5,7 @@
 <f:section name="content">
 	<f:if condition="{contact}">
 		<f:then>
-			<f:render partial="Contact/Contact/{contact.type}.html" arguments="{contact: contact, role: role, settings: settings}" />
+			<f:render partial="Contact/Index/Contact/{contact.type->h:format.camelCase()}.html" arguments="{contact: contact, role: role, settings: settings}" />
 		</f:then>
 
 		<f:else>

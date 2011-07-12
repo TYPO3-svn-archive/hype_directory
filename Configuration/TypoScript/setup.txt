@@ -186,11 +186,19 @@ plugin.tx_hypedirectory {
 # Contact
 tt_content.shortcut.20.0.conf.tx_hypedirectory_domain_model_contact < tt_content.list.20.hypedirectory_contact
 tt_content.shortcut.20.0.conf.tx_hypedirectory_domain_model_contact {
-	action = record
+	switchableControllerActions {
+		Contact {
+			0 = record
+		}
+	}
 }
 
 # Register
 tt_content.shortcut.20.0.conf.tx_hypedirectory_domain_model_register < tt_content.list.20.hypedirectory_register
 tt_content.shortcut.20.0.conf.tx_hypedirectory_domain_model_register {
-	action = record
+	switchableControllerActions {
+		Register {
+			0 = record
+		}
+	}
 }
