@@ -170,12 +170,19 @@ plugin.tx_hypedirectory {
 		}
 	}
 
+	template {
+
+	}
+
 	persistence {
 		storagePid = {$plugin.tx_hypedirectory.persistence.storagePid}
 	}
 
-	template {
-
+	view {
+		templateRootPath = {$plugin.tx_hypedirectory.view.templateRootPath}
+		layoutRootPath = {$plugin.tx_hypedirectory.view.layoutRootPath}
+		partialRootPath = {$plugin.tx_hypedirectory.view.partialRootPath}
+		defaultPid = {$plugin.tx_hypedirectory.view.defaultPid}
 	}
 }
 

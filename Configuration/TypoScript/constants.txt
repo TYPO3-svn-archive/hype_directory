@@ -96,4 +96,11 @@ plugin.tx_hypedirectory {
 	persistence {
 		storagePid =
 	}
+
+	view {
+		templateRootPath =
+		layoutRootPath =
+		partialRootPath =
+		defaultPid =
+	}
 }
