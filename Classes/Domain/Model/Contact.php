@@ -257,6 +257,18 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	protected $relatedAddress;
 
 	/**
+	 * @var Tx_Hype_Domain_Model_Typo3_FrontendUser
+	 * @lazy
+	 */
+	protected $frontendUser;
+
+	/**
+	 * @var Tx_Hype_Domain_Model_Typo3_BackendUser
+	 * @lazy
+	 */
+	protected $backendUser;
+
+	/**
 	 * Getter for pid
 	 *
 	 * @return integer
@@ -1028,6 +1040,44 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	 */
 	public function setRelatedAddress($relatedAddress) {
 		$this->relatedAddress = $relatedAddress;
+	}
+
+	/**
+	 * Getter for frontendUser
+	 *
+	 * @return Tx_Hype_Domain_Model_Typo3_FrontendUser
+	 */
+	public function getFrontendUser() {
+		return $this->frontendUser;
+	}
+
+	/**
+	 * Setter for frontendUser
+	 *
+	 * @param Tx_Hype_Domain_Model_Typo3_FrontendUser $frontendUser
+	 * @return void
+	 */
+	public function setFrontendUser(Tx_Hype_Domain_Model_Typo3_FrontendUser $frontendUser) {
+		$this->frontendUser = $frontendUser;
+	}
+
+	/**
+	 * Getter for backendUser
+	 *
+	 * @return Tx_Hype_Domain_Model_Typo3_BackendUser
+	 */
+	public function getBackendUser() {
+		return $this->backendUser;
+	}
+
+	/**
+	 * Setter for backendUser
+	 *
+	 * @param Tx_Hype_Domain_Model_Typo3_BackendUser $backendUser
+	 * @return void
+	 */
+	public function setBackendUser(Tx_Hype_Domain_Model_Typo3_BackendUser $backendUser) {
+		$this->backendUser = $backendUser;
 	}
 }
 ?>

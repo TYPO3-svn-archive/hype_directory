@@ -133,18 +133,6 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	protected $motherTongue;
 
 	/**
-	 * @var Tx_Hype_Domain_Model_Typo3_FrontendUser
-	 * @lazy
-	 */
-	protected $frontendUser;
-
-	/**
-	 * @var Tx_Hype_Domain_Model_Typo3_BackendUser
-	 * @lazy
-	 */
-	protected $backendUser;
-
-	/**
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_HypeDirectory_Domain_Model_Role>
 	 * @lazy
 	 */
@@ -477,44 +465,6 @@ class Tx_HypeDirectory_Domain_Model_Contact_Person extends Tx_HypeDirectory_Doma
 	 */
 	public function setMotherTongue(Tx_Hype_Domain_Model_StaticLanguage $motherTongue) {
 		$this->motherTongue = $motherTongue;
-	}
-
-	/**
-	 * Getter for frontendUser
-	 *
-	 * @return Tx_Hype_Domain_Model_Typo3_FrontendUser
-	 */
-	public function getFrontendUser() {
-		return $this->frontendUser;
-	}
-
-	/**
-	 * Setter for frontendUser
-	 *
-	 * @param Tx_Hype_Domain_Model_Typo3_FrontendUser $frontendUser
-	 * @return void
-	 */
-	public function setFrontendUser(Tx_Hype_Domain_Model_Typo3_FrontendUser $frontendUser) {
-		$this->frontendUser = $frontendUser;
-	}
-
-	/**
-	 * Getter for backendUser
-	 *
-	 * @return Tx_Hype_Domain_Model_Typo3_BackendUser
-	 */
-	public function getBackendUser() {
-		return $this->backendUser;
-	}
-
-	/**
-	 * Setter for backendUser
-	 *
-	 * @param Tx_Hype_Domain_Model_Typo3_BackendUser $backendUser
-	 * @return void
-	 */
-	public function setBackendUser(Tx_Hype_Domain_Model_Typo3_BackendUser $backendUser) {
-		$this->backendUser = $backendUser;
 	}
 
 	/**
