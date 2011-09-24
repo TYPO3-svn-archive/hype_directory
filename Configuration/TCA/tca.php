@@ -9,7 +9,7 @@ if(!defined('TYPO3_MODE'))
 $TCA['tx_hypedirectory_domain_model_contact'] = array(
 	'ctrl' => $TCA['tx_hypedirectory_domain_model_contact']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, type, label, form_of_address, academic_title, first_name, middle_name, last_name, nickname, initials, maiden_name, corporate_name, images, gender, date_of_birth, place_of_birth, date_of_death, place_of_death, marital_status, nationality, mother_tongue, date_of_formation, date_of_closure, street, postal_code, city, stair, floor, door, state, country, latitude, longitude, telephone_number, telephone_country, telephone_area_code, telephone_extension, fax_number, fax_country, fax_area_code, fax_extension, cellphone_number, cellphone_country, cellphone_area_code, email, website, remark, related_page, related_address, frontend_user, backend_user, hidden, starttime, endtime, fe_group, editlock'
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, type, label, display_name, form_of_address, academic_title, first_name, middle_name, last_name, nickname, initials, maiden_name, corporate_name, images, gender, date_of_birth, place_of_birth, date_of_death, place_of_death, marital_status, nationality, mother_tongue, date_of_formation, date_of_closure, street, postal_code, city, stair, floor, door, state, country, latitude, longitude, telephone_number, telephone_country, telephone_area_code, telephone_extension, fax_number, fax_country, fax_area_code, fax_extension, cellphone_number, cellphone_country, cellphone_area_code, email, website, remark, related_page, related_address, frontend_user, backend_user, hidden, starttime, endtime, fe_group, editlock'
 	),
 	'feInterface' => $TCA['tx_hypedirectory_domain_model_contact']['feInterface'],
 	'columns' => array(
@@ -84,6 +84,15 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				'size' => 20,
 			),
 			'displayCond' => 'FIELD:label:REQ:true',
+		),
+		'display_name' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.display_name',
+			'config' => array(
+				'type' => 'input',
+				'size' => 20,
+				'eval' => 'trim',
+			),
 		),
 		'form_of_address' => array(
 			'exclude' => 1,
@@ -856,7 +865,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'canNotCollapse' => TRUE,
 		),
 		'label' => array(
-			'showitem' => 'label',
+			'showitem' => 'label, --linebreak--, display_name',
 			'canNotCollapse' => TRUE,
 		),
 		'affix' => array(

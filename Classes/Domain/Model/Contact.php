@@ -109,6 +109,12 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	 * @var string
 	 * @validate String
 	 */
+	protected $displayName;
+
+	/**
+	 * @var string
+	 * @validate String
+	 */
 	protected $street;
 
 	/**
@@ -546,6 +552,25 @@ class Tx_HypeDirectory_Domain_Model_Contact extends Tx_Extbase_DomainObject_Abst
 	 */
 	public function setLabel($label) {
 		$this->label = $label;
+	}
+
+	/**
+	 * Getter for displayName
+	 *
+	 * @return string
+	 */
+	public function getDisplayName() {
+		return $this->displayName;
+	}
+
+	/**
+	 * Setter for displayName
+	 *
+	 * @param string $displayName
+	 * @return void
+	 */
+	public function setDisplayName($displayName) {
+		$this->displayName = $displayName;
 	}
 
 	/**

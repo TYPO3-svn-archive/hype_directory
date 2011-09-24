@@ -12,6 +12,7 @@
 			<label index=".description">Holds contact details.</label>
 			<label index="type.description">Depending on this setting, different fields will be shown.</label>
 			<label index="label.description">Used for sorting the contact and also for displaying it in lists.</label>
+			<label index="display_name.description">Custom name to use for displaying the contact.</label>
 			<label index="form_of_address.description">Form of address of the contact.</label>
 			<label index="academic_title.description">Academic title of the contact.</label>
 			<label index="first_name.description">Forename of the contact.</label>
@@ -69,6 +70,7 @@
 			<label index=".description">Enthält Kontaktinformationen.</label>
 			<label index="type.description">Legt den Typ des Kontakts fest.</label>
 			<label index="label.description">Verwendet zur Sortierung und Anzeige des Kontakts.</label>
+			<label index="display_name.description">Benutzerdefinierter Name zur Anzeige des Kontakts.</label>
 			<label index="form_of_address.description">Anrede des Kontakts.</label>
 			<label index="academic_title.description">Akademischer Titel des Kontakts.</label>
 			<label index="first_name.description">Vorname des Kontakts.</label>

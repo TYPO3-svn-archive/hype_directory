@@ -83,19 +83,25 @@ class tx_hypedirectory_tcemain {
 		# merge record
 		$record = ($this->record) ? array_merge($this->record, $fields) : $fields;
 
+		# overwrite with display name
+		if($record['display_name']) {
+			$label = $record['display_name'];
+
 		# build label accordingly
-		switch($record['type']) {
-			case 'person':
-				$label = implode(' ', array_filter(array($record['last_name'], $record['first_name'])));
-				break;
+		} else {
+			switch($record['type']) {
+				case 'person':
+					$label = implode(' ', array_filter(array($record['last_name'], $record['first_name'])));
+					break;
 
-			case 'corporation':
-				$label = $record['corporate_name'];
-				break;
+				case 'corporation':
+					$label = $record['corporate_name'];
+					break;
 
-			default:
-				$label = NULL;
-				break;
+				default:
+					$label = NULL;
+					break;
+			}
 		}
 
 		# assign label
