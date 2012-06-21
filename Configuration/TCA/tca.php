@@ -647,14 +647,18 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory_domain_model_contact.registers',
 			'config' => array(
-				'type' => 'select',
-				'foreign_table' => 'tx_hypedirectory_domain_model_register',
-				'size' => 10,
-				'autoSizeMax' => 20,
-				'minitems' => 0,
-				'maxitems' => 999999,
-				'MM' => 'tx_hypedirectory_relation_register_contact',
-				'MM_opposite_field' => 'contacts',
+				'type'						=> 'inline',
+				'foreign_table'				=> 'tx_hypedirectory_domain_model_register',
+				'foreign_field'				=> 'contact',
+				'foreign_label'				=> 'title',
+				'foreign_sortby'			=> 'sorting',
+				'MM'						=> 'tx_hypedirectory_relation_register_contact',
+				'minitems'					=> 0,
+				'maxitems'					=> 999999,
+				'appearance'		=> array(
+					'collapseAll'		=> TRUE,
+					'expandSingle'		=> TRUE,
+				),
 			),
 		),
 		'related_page' => array(
@@ -852,6 +856,7 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.website,website,
 
 			--div--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.tab.relations,
+				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.contacts;contacts,
 				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.pages;pages,
 				--palette--;LLL:EXT:hype_directory/Resources/Private/Language/locallang_db.xml:tx_hypedirectory.palette.users;users,
 
@@ -936,6 +941,10 @@ $TCA['tx_hypedirectory_domain_model_contact'] = array(
 		),
 		'website' => array(
 			'showitem' => 'website',
+			'canNotCollapse' => TRUE,
+		),
+		'contacts' => array(
+			'showitem' => 'roles, --linebreak--, registers',
 			'canNotCollapse' => TRUE,
 		),
 		'pages' => array(
